@@ -1,0 +1,9 @@
+{
+  "name": "brain-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iQuixotic/brain-structure.git",
+  "author": "Trey <treyw1850@gmail.com>",
+  "license": "MIT"
+
+}
