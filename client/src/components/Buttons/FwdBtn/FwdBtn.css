@@ -1,16 +1,16 @@
 
-.back-caret {
+.fwd-caret {
     color: rgba(255, 250, 250, 0);
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black
 }
 
-.back-caret:hover {
+.fwd-caret:hover {
     color: rgb(222, 222, 222, 0.5);
     border-color: black;
 }
 
-.back-caret:active {
+.fwd-caret:active {
     color: rgb(41, 163, 41);
     border: 10px gray;
 }
