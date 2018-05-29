@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Row, Container, Col } from './components/Grid';
-import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn } from './components/Buttons/index';
-// import { Col, Row, Container } from "../../components/Grid";
+import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn, SubmitBtn } from './components/Buttons/index';
+import { BackDrop } from './components/Card/index'
+
 
 class App extends Component {
   render() {
@@ -25,13 +26,17 @@ class App extends Component {
           <Dropdown />
         </Row>
         <Row>
-          <FwdBtn size='2x'/>
-          <BackBtn size='5x'/>
-          <LikeBtn size='5x'/>
-          <DislikeBtn size='4x' />
+        <BackDrop>
+          <Row>
+            <FwdBtn size='2x'/>
+            <BackBtn size='5x'/>
+            <LikeBtn size='5x'/>
+            <DislikeBtn size='4x' />
+            <SubmitBtn> I made happieness </SubmitBtn>
+          </Row>
+        </BackDrop>
         </Row>
         </Container>
-
 
 
       </div>

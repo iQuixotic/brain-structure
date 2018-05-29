@@ -10,3 +10,4 @@ export { default as FwdBtn } from "./FwdBtn/FwdBtn";
 export { default as BackBtn } from "./BackBtn/BackBtn";
 export { default as LikeBtn } from "./LikeBtn/LikeBtn";
 export { default as DislikeBtn } from "./DislikeBtn/DislikeBtn";
+export { default as SubmitBtn } from "./SubmitBtn/SubmitBtn";
