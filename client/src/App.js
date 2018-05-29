@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Row, Container, Col } from './components/Grid';
 import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn, SubmitBtn } from './components/Buttons/index';
-import { BackDrop } from './components/Card/index'
+import { BackDrop, NoteCard } from './components/Card/index'
 
 
 class App extends Component {
@@ -35,6 +35,16 @@ class App extends Component {
             <SubmitBtn> I made happieness </SubmitBtn>
           </Row>
         </BackDrop>
+
+        <NoteCard>
+          <Row>
+            <FwdBtn size='2x'/>
+            <BackBtn size='5x'/>
+            <LikeBtn size='5x'/>
+            <DislikeBtn size='4x' />
+            <SubmitBtn> I made happieness </SubmitBtn>
+          </Row>
+        </NoteCard>
         </Row>
         </Container>
 

@@ -1,0 +1,8 @@
+.my-card {
+    background: rgb(105, 110, 116);
+    color: white;
+    border-width: 2px 2px 4px 3px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.568);
+    padding: 50px;
+}

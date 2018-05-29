@@ -1,1 +1,1 @@
-import deafault from './BackDrop';
+export {default} from './BackDrop';
