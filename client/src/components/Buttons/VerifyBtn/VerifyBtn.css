@@ -1,0 +1,19 @@
+.btn-verify {
+    background: green;
+    color: white;
+    padding: 5px;
+    font-size: 1.2em;    
+}
+
+.btn-reject {
+    background: red;
+    color: white;
+    padding: 5px;
+    font-size: 1.2em;    
+}
+
+.marginize {
+    padding: 10px;
+    margin: 10px;
+}
+

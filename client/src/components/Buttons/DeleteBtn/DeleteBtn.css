@@ -1,0 +1,7 @@
+.btn-del {
+    background: red;
+    color: white;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    font-size: 1.2em;    
+}
