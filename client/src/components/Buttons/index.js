@@ -8,3 +8,5 @@ export { default as ComboBtn } from './ComboBtn/ComboBtn';
 export { default as Dropdown } from "./Dropdown/Dropdown";
 export { default as FwdBtn } from "./FwdBtn/FwdBtn";
 export { default as BackBtn } from "./BackBtn/BackBtn";
+export { default as LikeBtn } from "./LikeBtn/LikeBtn";
+export { default as DislikeBtn } from "./DislikeBtn/DislikeBtn";

@@ -4,7 +4,7 @@ import {Icon} from 'react-fa'
  
 
 // a Navigation button for backward nav
-const FwdBtn = (props) => {
+const BackBtn = (props) => {
     return(
     <div>
          <Icon name="caret-left" size={props.size} className="back-caret" />
@@ -12,5 +12,5 @@ const FwdBtn = (props) => {
     );
 }
 
-export default FwdBtn;
+export default BackBtn;
 

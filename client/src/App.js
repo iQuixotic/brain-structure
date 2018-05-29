@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Row, Container, Col } from './components/Grid';
-import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn } from './components/Buttons/index';
+import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn } from './components/Buttons/index';
 // import { Col, Row, Container } from "../../components/Grid";
 
 class App extends Component {
@@ -27,6 +27,8 @@ class App extends Component {
         <Row>
           <FwdBtn size='2x'/>
           <BackBtn size='5x'/>
+          <LikeBtn size='5x'/>
+          <DislikeBtn size='4x' />
         </Row>
         </Container>
 
