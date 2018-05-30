@@ -1,1 +1,0 @@
-import deafault from './Card';

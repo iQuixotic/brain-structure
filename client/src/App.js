@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Row, Container, Col } from './components/Grid';
-import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn, SubmitBtn } from './components/Buttons/index';
-import { BackDrop, NoteCard } from './components/Card/index'
+import { Row, Container, Col } from './components/Grid/Z-index';
+import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn, SubmitBtn } from './components/Buttons/Z-index';
+import { BackDrop, NoteCardL } from './components/Card/Z-index'
 
 
 class App extends Component {
@@ -18,6 +18,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Container>
+          <Col size="md-6">
         <Row>
           <Btn> I ams what I ams </Btn>
           <DelBtn> Delete </DelBtn>
@@ -25,6 +26,7 @@ class App extends Component {
           <VerifyBtn />
           <Dropdown />
         </Row>
+        </Col>
         <Row>
         <BackDrop>
           <Row>
@@ -36,7 +38,7 @@ class App extends Component {
           </Row>
         </BackDrop>
 
-        <NoteCard>
+        <NoteCardL>
           <Row>
             <FwdBtn size='2x'/>
             <BackBtn size='5x'/>
@@ -44,7 +46,7 @@ class App extends Component {
             <DislikeBtn size='4x' />
             <SubmitBtn> I made happieness </SubmitBtn>
           </Row>
-        </NoteCard>
+        </NoteCardL>
         </Row>
         </Container>
 
