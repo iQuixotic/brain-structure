@@ -1,29 +1,32 @@
-# Create React Express App
+# Neuro-Wiki
 
-## About This Boilerplate
+## Setup 
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
 
 Start by installing front and backend dependencies. While in this directory, run the following command:
 
 ```
 yarn install
-``
+```
 
 This should install node modules within the server and the client folder.
 
 After both installations complete, run the following command in your terminal:
 
 ```
-yarn start
+yarn go
 ```
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+This will start up both ports.
 
-## Deployment (Heroku)
+## Purpose
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+The purpose of this App was to create a wiki that uses a login to maintain a unique user experience while allowing everyone access to the same information. After login, a user can access and create private decks, add unique personal notes, contribute new information in the form of small notes, and discover/review content proposed by other users.
+
+## Technologies
+
+* ES6 Javascript
+* Webpack
+* React 
+* Passport
+* Mongo DB
