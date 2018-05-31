@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import { Btn } from '../Buttons/Z-index';
 import { Row, Container, Col } from '../Grid/Z-index';
+import { Div, DivR, DivL, DivC } from '../Div/Z-index'
 import './style-card.css';
 
 //has state

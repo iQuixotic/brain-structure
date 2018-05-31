@@ -1,0 +1,14 @@
+/* Scoped for the DivR */
+#RFloat {
+    float: right;
+}
+
+/* Scoped for the DivL */
+#LFloat {
+    float: left;
+}
+
+/* Scoped for the DivC */
+#CenterDiv {
+    text-align: center;
+}
