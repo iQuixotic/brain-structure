@@ -12,12 +12,13 @@
 /* Scoped for the base Card */
 
 #CardCrd .my-card {
-    background: rgb(105, 110, 116);
+    background: rgb(49, 49, 49);
     color: white;
     border-width: 2px 2px 4px 3px;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.568);
-    padding: 50px;
+    padding: 10px 10px 50px 10px;
+    height: 375px;
 }
 
 /* Scoped for the Headings */
@@ -30,10 +31,38 @@
 
 /* Scoped for the NoteCardL */
 
+.center {
+    align-content: center;
+}
+
 #NoteCardLCrd #note-card {
     color: green;
 }
 
+#NoteCardLCrd #note-card-content {
+    color: black;
+    font-size: 2em;
+    padding: 80px;
+    background: rgb(250, 248, 227);
+    height: 300px;
+}
+
+#NoteCardLCrd #btnR {
+    float: right;
+}
+
+#NoteCardLCrd .note-btn {
+    background: rgb(10, 20, 75);
+    color: white;
+    margin:2px;
+    border-radius: 5px;
+    margin: 5px 10px 5px 10px;
+    font-size: 1.2em;  
+}
+
+#NoteCardLCrd .note-btn:hover {
+    background: rgb(1, 22, 139);
+}
 /* Scoped for the NoteCardS */
 
 /* #NoteCardSCrd */

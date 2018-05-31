@@ -1,22 +1,41 @@
 import React, { Component } from 'react';
-import Card from './Card'
+import Card from './Card';
+import { Btn } from '../Buttons/Z-index';
 import { Row, Container, Col } from '../Grid/Z-index';
 import './style-card.css';
 
+//has state
 // a card for Large notes
 class NoteCardL extends Component {
 constructor(props){
     super(props)
 }
 state = {
-something: 'value'
+peerValidation: 0,
+note: "",
+Content: "",
+Side: true,
+blank: false,
+revove: false
 }
 
     render() {
         return(
         <div id="NoteCardLCrd">
             <Card traits="note-card">
-                  <h1> I made this to See !! </h1>
+                <Col size="md-12" className="center">
+                    <Row>
+                        <Card traits="note-card-content">
+                            I have all of the content that anyone could ever want, right here !!!
+                        </Card>
+                    </Row>
+                </Col>
+                <Col size="md-12">
+                    <Row traits="btnR">
+                        <Btn cn="note-btn">Back</Btn>
+                        <Btn cn="note-btn">Next</Btn>                    
+                    </Row>
+                </Col>
             </Card>
         </div>
         );

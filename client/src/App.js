@@ -38,7 +38,6 @@ class App extends Component {
           </Row>
         </BackDrop>
 
-        <NoteCardL>
           <Row>
             <FwdBtn size='2x'/>
             <BackBtn size='5x'/>
@@ -46,8 +45,10 @@ class App extends Component {
             <DislikeBtn size='4x' />
             <SubmitBtn> I made happieness </SubmitBtn>
           </Row>
-        </NoteCardL>
         </Row>
+        <Col size="md-9">
+          <NoteCardL />
+        </Col>
         </Container>
 
 
