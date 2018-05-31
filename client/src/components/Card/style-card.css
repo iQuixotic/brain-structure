@@ -36,18 +36,38 @@
 }
 
 #NoteCardLCrd #note-card {
+    height: 350px;
+}
+#NoteCardLCrd .green {
     color: green;
+}
+
+#NoteCardLCrd .verified {
+    background: white;
+    float: right;
 }
 
 #NoteCardLCrd #note-card-content {
     color: black;
-    font-size: 2em;
-    padding: 80px;
     background: rgb(250, 248, 227);
-    height: 300px;
+    height: 290px;
+   
+}
+
+#NoteCardLCrd .front {
+    color: black;
+    font-size: 2em;
+    padding: 60px;  
+}
+#NoteCardLCrd .pad-right {
+    padding-right: 7px;
 }
 
 #NoteCardLCrd #btnR {
+    float: right;
+}
+
+#NoteCardLCard .float-right {
     float: right;
 }
 
@@ -62,6 +82,10 @@
 
 #NoteCardLCrd .note-btn:hover {
     background: rgb(1, 22, 139);
+}
+
+.float-right {
+    float: right;
 }
 /* Scoped for the NoteCardS */
 

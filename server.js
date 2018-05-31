@@ -21,6 +21,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+// app.use(expressValidator)
 app.use(morgan("dev"));
  
 // use routes

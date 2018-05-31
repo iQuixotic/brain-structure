@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import { Btn } from '../Buttons/Z-index';
+import { Btn, Plus } from '../Buttons/Z-index';
 import { Row, Container, Col } from '../Grid/Z-index';
 import { Div, DivR, DivL, DivC } from '../Div/Z-index'
 import './style-card.css';
@@ -12,12 +12,12 @@ constructor(props){
     super(props)
 }
 state = {
-peerValidation: 0,
-note: "",
-Content: "",
-Side: true,
-blank: false,
-revove: false
+    peerValidation: 0,
+    note: "",
+    Content: "",
+    Side: true,
+    blank: false,
+    revove: false
 }
 
     render() {
@@ -27,7 +27,20 @@ revove: false
                 <Col size="md-12" className="center">
                     <Row>
                         <Card traits="note-card-content">
-                            I have all of the content that anyone could ever want, right here !!!
+                            <Div cn="float-right green pad-right">
+                            {/* Dynamic plus or minus signs to be printed depending validity ratio */}
+                                <Row>                                                               
+                                    <Plus size="2x"  />
+                                    <Plus size="2x"  />                   
+                                </Row>
+                            </Div>
+                            <Row>
+                                {/* Content must be mapped over to know which card to display... a 
+                                ternary operator will be used to decide whether to dispay the front or back */}
+                                <Div cn="front">
+                                    I have all of the content that anyone could ever want, right here !!!
+                                </Div>
+                            </Row>
                         </Card>
                     </Row>
                 </Col>

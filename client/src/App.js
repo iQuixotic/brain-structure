@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { Row, Container, Col } from './components/Grid/Z-index';
 import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn, SubmitBtn } from './components/Buttons/Z-index';
-import { BackDrop, NoteCardL } from './components/Card/Z-index'
+import { BackDrop, NoteCardL, Card } from './components/Card/Z-index';
+import { Input, TestArea } from './components/Form/Z-index';
 
 
 class App extends Component {
@@ -20,6 +21,18 @@ class App extends Component {
         <Container>
           <Col size="md-6">
         <Row>
+          <Card>
+                <Input />
+                <Input />
+                <Input />
+                <Input />
+                <Input />
+                <Input />
+          <Btn>zzz</Btn>
+      
+      
+
+          </Card>
           <Btn> I ams what I ams </Btn>
           <DelBtn> Delete </DelBtn>
           <ComboBtn side1="what?" side2="OK"> </ComboBtn>
@@ -37,7 +50,6 @@ class App extends Component {
             <SubmitBtn> I made happieness </SubmitBtn>
           </Row>
         </BackDrop>
-
           <Row>
             <FwdBtn size='2x'/>
             <BackBtn size='5x'/>
@@ -46,10 +58,20 @@ class App extends Component {
             <SubmitBtn> I made happieness </SubmitBtn>
           </Row>
         </Row>
-        <Col size="md-9">
+        </Container>
+      <Row>
+      
+        <Col size="md-2">
+          <Card />
+        </Col>
+        <Col size="md-8">
           <NoteCardL />
         </Col>
-        </Container>
+        <Col size="md-2">
+          <Card />
+        </Col>
+      </Row>
+        
 
 
       </div>
