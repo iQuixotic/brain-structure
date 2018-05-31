@@ -1,5 +1,5 @@
 import React from "react";
-import "./R-Float.css";
+import "./Div.css";
 
 const DivR = (props) => <div id="RFloat" cn={props.className}>{props.children}</div>;
 

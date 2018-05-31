@@ -1,4 +1,4 @@
-export { default } from "./Div";
-export { default } from "./DivC";
-export { default } from "./DivR";
-export { default } from "./DivL";
+export { default as Div } from "./Div";
+export { default as DivC } from "./DivC";
+export { default as DivR } from "./DivR";
+export { default as DivL } from "./DivL";
