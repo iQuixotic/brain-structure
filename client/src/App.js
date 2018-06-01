@@ -21,26 +21,30 @@ class App extends Component {
         <Container>
           <Col size="md-12">
         <Row>
+        <Container>
           <Card> 
-            <Container>
+          <Container>
+             
             <Wrap cn="register-form justify-content-center">Register
             <Row> <Col size="md-6"> E-mail: </Col> <Col size="md-6"> User Name: </Col></Row>
             <Row>
-                <Input className="register-input" type="e-mail" placeholder="john@wiredmail.com"/>
-                <Input className="register-input" placeholder="toommy" />
+                <Col size="md-6"><Input className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
+                <Col size="md-6"><Input className="register-input" placeholder="toommy" /></Col>
             </Row>
             
                First Name:
                 <Input type="name" placeholder="John"/>Last Name: 
                 <Input type="name" placeholder="Fred"/>Create a Password:
                 <Input type="password"/>
-          <Btn cn="btn">zzz</Btn>
+          <Btn cn="btn">SUBMIT</Btn>
           </Wrap>
+         
+          
+      
+      
           </Container>
-      
-      
-
           </Card>
+          </Container>
           <Btn> I ams what I ams </Btn>
           <DelBtn> Delete </DelBtn>
           <ComboBtn side1="what?" side2="OK"> </ComboBtn>
