@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Row, Container, Col } from './components/Grid/Z-index';
-import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn, SubmitBtn } from './components/Buttons/Z-index';
+import { Row, Container, Col, Wrap } from './components/Grid/Z-index';
+import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn } from './components/Buttons/Z-index';
 import { BackDrop, NoteCardL, Card } from './components/Card/Z-index';
-import { Input, TestArea } from './components/Form/Z-index';
+import { Input } from './components/Form/Z-index';
 
 
 class App extends Component {
@@ -19,16 +19,24 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Container>
-          <Col size="md-6">
+          <Col size="md-12">
         <Row>
-          <Card>
-                <Input />
-                <Input />
-                <Input />
-                <Input />
-                <Input />
-                <Input />
-          <Btn>zzz</Btn>
+          <Card> 
+            <Container>
+            <Wrap cn="register-form justify-content-center">Register
+            <Row> <Col size="md-6"> E-mail: </Col> <Col size="md-6"> User Name: </Col></Row>
+            <Row>
+                <Input className="register-input" type="e-mail" placeholder="john@wiredmail.com"/>
+                <Input className="register-input" placeholder="toommy" />
+            </Row>
+            
+               First Name:
+                <Input type="name" placeholder="John"/>Last Name: 
+                <Input type="name" placeholder="Fred"/>Create a Password:
+                <Input type="password"/>
+          <Btn cn="btn">zzz</Btn>
+          </Wrap>
+          </Container>
       
       
 
@@ -47,7 +55,7 @@ class App extends Component {
             <BackBtn size='5x'/>
             <LikeBtn size='5x'/>
             <DislikeBtn size='4x' />
-            <SubmitBtn> I made happieness </SubmitBtn>
+            <Btn> I made happieness </Btn>
           </Row>
         </BackDrop>
           <Row>
@@ -55,16 +63,16 @@ class App extends Component {
             <BackBtn size='5x'/>
             <LikeBtn size='5x'/>
             <DislikeBtn size='4x' />
-            <SubmitBtn> I made happieness </SubmitBtn>
+            <Btn> I made happieness </Btn>
           </Row>
         </Row>
         </Container>
       <Row>
       
-        <Col size="md-2">
+        <Col size="md-3">
           <Card />
         </Col>
-        <Col size="md-8">
+        <Col size="md-7">
           <NoteCardL />
         </Col>
         <Col size="md-2">

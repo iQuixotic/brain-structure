@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import { Btn, Plus } from '../Buttons/Z-index';
-import { Row, Container, Col } from '../Grid/Z-index';
-import { Div, DivR, DivL, DivC } from '../Div/Z-index'
+import { Row, Col, Wrap } from '../Grid/Z-index';
 import './style-card.css';
 
 //has state
@@ -27,27 +26,27 @@ state = {
                 <Col size="md-12" className="center">
                     <Row>
                         <Card traits="note-card-content">
-                            <Div cn="float-right green pad-right">
+                            <Wrap cn="float-right green pad-right">
                             {/* Dynamic plus or minus signs to be printed depending validity ratio */}
                                 <Row>                                                               
                                     <Plus size="2x"  />
                                     <Plus size="2x"  />                   
                                 </Row>
-                            </Div>
+                            </Wrap>
                             <Row>
                                 {/* Content must be mapped over to know which card to display... a 
                                 ternary operator will be used to decide whether to dispay the front or back */}
-                                <Div cn="front">
+                                <Wrap cn="front">
                                     I have all of the content that anyone could ever want, right here !!!
-                                </Div>
+                                </Wrap>
                             </Row>
                         </Card>
                     </Row>
                 </Col>
                 <Col size="md-12">
                     <Row traits="btnR">
-                        <Btn cn="note-btn">Back</Btn>
-                        <Btn cn="note-btn">Next</Btn>                    
+                        <Btn cn="note-btn btn">Back</Btn>
+                        <Btn cn="note-btn btn">Next</Btn>                    
                     </Row>
                 </Col>
             </Card>

@@ -1,11 +1,11 @@
 import React from "react";
 import './style-btn.css';
 
-// foundation for ALL button components
+// a reuseable delete button
 const Btn = (props) => {
     return(
-    <div id="Btn">
-        <button className={props.cn}>{props.children}</button>
+    <div >
+        <button id="Btn" className={props.cn}>{props.children}</button>
     </div>
     );
 }

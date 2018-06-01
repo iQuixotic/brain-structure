@@ -22,6 +22,7 @@
 
 #ComboBtn .btn-combo {
     margin: 10px;
+    flex: 0%;
 }
 
 /* Scoped for the delete button*/
@@ -79,13 +80,63 @@
 
 /* Scoped for the submit button */
 
-#SubmitBtn .btn-dk {
-    background: rgb(10, 20, 75);
+#Btn {
+    -moz-box-shadow:    5px 5px  rgb(85, 85, 85);
+    -webkit-box-shadow: 4px 4px rgba(59, 59, 59, 0.76);
+    box-shadow:         4px 4px   rgba(30, 30, 30, 0.521);    
+    transition: background-color .9s ease;
+    background: rgb(102, 147, 202);
     color: white;
-    margin: 5px;
-    padding: 5px 10px 5px 10px;
-    font-size: 1.2em;    
+    border-radius: 5px;
+    margin: 10px 10px 5px 10px;
+    padding: 5px 18px;
+    font-size: 1.2em;  
+    position: relative;
+    overflow: hidden;
 }
+
+#Btn:hover {
+    -moz-box-shadow: 1px 1px rgb(30, 30, 30, 0.5);
+    -webkit-box-shadow: 1px 1px rgb(30, 30, 30, 0.5);
+    box-shadow: 1px 1px   rgb(30, 30, 30, 0.5);    
+    transition: box-shadow 0.7s ease-in-out;
+    transition: background-color 0.5s ease;
+    background: rgb(2, 59, 129);
+}
+
+#Btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(208, 229, 238, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+      
+@keyframes ripple {
+    0% {
+    transform: scale(0, 0);
+    opacity: 1;
+}
+    70% {
+    transform: scale(25, 25);
+    opacity: 1;
+}
+    100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+      
+#Btn:focus:not(:active)::after {
+    animation: ripple .7s ease-out;
+}
+
 
 /* Scoped for the toggle button */
 
