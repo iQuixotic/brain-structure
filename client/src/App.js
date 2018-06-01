@@ -19,9 +19,12 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Container>
-          <Col size="md-12">
+         
         <Row>
+        <Col size="md-3"/>
+          <Col size="md-6">
         <Container>
+          <Wrap cn="text-center">
           <Card> 
           <Container>
              
@@ -38,20 +41,22 @@ class App extends Component {
                 <Input type="password"/>
           <Btn cn="btn">SUBMIT</Btn>
           </Wrap>
-         
+              
           
       
       
           </Container>
           </Card>
+          </Wrap>
           </Container>
           <Btn> I ams what I ams </Btn>
           <DelBtn> Delete </DelBtn>
           <ComboBtn side1="what?" side2="OK"> </ComboBtn>
           <VerifyBtn />
           <Dropdown />
-        </Row>
         </Col>
+        </Row>
+        
         <Row>
         <BackDrop>
           <Row>
