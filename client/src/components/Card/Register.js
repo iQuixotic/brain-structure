@@ -54,7 +54,7 @@ regSubmitHandler = () => {
                                                 <Col size="md-6"><input name="nameF" value={this.state.nameF} onChange={this.regChangeHandler.bind(this)} className="register-input" type="e-mail" placeholder="Fred" /></Col>
                                                 <Col size="md-6"><input name="nameL" value={this.state.nameL} onChange={this.regChangeHandler.bind(this)} className="register-input" placeholder="toommy" /></Col>
                                             </Row>    
-                                            <Row>Password: <input name="password" value={this.state.pass} onChange={this.regChangeHandler.bind.bind(this)} type="password"/></Row>
+                                            <Row>Password: <input name="pass" value={this.state.pass} onChange={this.regChangeHandler.bind(this)} type="password"/></Row>
                                             <Row>Verify Password:<input name="pwordCheck" value={this.state.pwordCheck} onChange={this.regChangeHandler.bind(this)} type="password"/></Row>
                                             <button className="btn my-btn" onClick={this.regSubmitHandler.bind(this)}cn="btn">SUBMIT</button>
                                            
