@@ -1,5 +1,6 @@
 module.exports = {
     register: async (req, res, next) => {
+        // All user information (req.value.body)
         console.log('UsersController.register() called !');
 
         const {email, password, firstN, lastN, userN} = req.value.body;
@@ -11,5 +12,4 @@ module.exports = {
     secret: async (req, res, next) => {
         console.log('UsersController.secret() called !');
     }
-
 }

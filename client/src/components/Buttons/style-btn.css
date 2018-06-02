@@ -80,7 +80,7 @@
 
 /* Scoped for the submit button */
 
-#Btn {
+.my-btn {
     -moz-box-shadow:    5px 5px  rgb(85, 85, 85);
     -webkit-box-shadow: 4px 4px rgba(59, 59, 59, 0.76);
     box-shadow:         4px 4px   rgba(30, 30, 30, 0.521);    
@@ -95,7 +95,7 @@
     overflow: hidden;
 }
 
-#Btn:hover {
+.my-btn:hover {
     -moz-box-shadow: 1px 1px rgb(30, 30, 30, 0.5);
     -webkit-box-shadow: 1px 1px rgb(30, 30, 30, 0.5);
     box-shadow: 1px 1px   rgb(30, 30, 30, 0.5);    
@@ -104,7 +104,7 @@
     background: rgb(2, 59, 129);
 }
 
-#Btn:after {
+.my-btn:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -133,7 +133,7 @@
   }
 }
       
-#Btn:focus:not(:active)::after {
+.my-btn:focus:not(:active)::after {
     animation: ripple .7s ease-out;
 }
 

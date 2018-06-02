@@ -3,6 +3,7 @@ import Card from './Card';
 import { Btn, Plus } from '../Buttons/Z-index';
 import { Row, Col, Wrap } from '../Grid/Z-index';
 import './style-card.css';
+import '../../Global.css';
 
 //has state
 // a card for Large notes
@@ -45,8 +46,8 @@ state = {
                 </Col>
                 <Col size="md-12">
                     <Row traits="btnR">
-                        <Btn cn="note-btn btn">Back</Btn>
-                        <Btn cn="note-btn btn">Next</Btn>                    
+                        <button className="note-btn my-btn btn">Back</button>
+                        <button className="note-btn my-btn btn">Next</button>                    
                     </Row>
                 </Col>
             </Card>
