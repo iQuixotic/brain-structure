@@ -3,13 +3,13 @@ const router = require('express-promise-router')();
 const UsersControllers = require('../../controllers/users');
 const { validateBody, schemas } = require('../../helpers/routeHelpers');
 
-router.route('./register')
-    .post(validateBody(schemas.authSchema), UsersControllers.register);
+router.post('/register', UsersControllers.register);
+    // .post(validateBody(schemas.authSchema), UsersControllers.register);
 
-router.route('./')
+router.route('/')
     .post(UsersControllers.signIn);
 
-router.route('./secret')
+router.route('/secret')
     .get(UsersControllers.secret);
 
 module.exports = router;

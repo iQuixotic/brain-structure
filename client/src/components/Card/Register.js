@@ -15,7 +15,7 @@ constructor(props){
 
 state= {
     email: '',
-    userN: '',
+    nameU: '',
     nameF: '',
     nameL: '',
     pass: '',
@@ -26,13 +26,18 @@ regChangeHandler = event => {
     console.log(this.state.email, this.state.nameF, this.state.nameL, this.state.nameU, this.state.pass, this.state.pwordCheck );
 }
 
-regSubmitHandler = (data) => {   
-    data = {
-        email: this.state.email,
-        userN: this.state.userN,
-        nameL: this.state.nameF,
-        nameF: this.state.nameF,
-        password: this.state.pass
+regSubmitHandler = () => {   
+    let userName = this.state.nameU;
+    let firstName = this.state.nameF;
+    let lastName = this.state.nameL;
+    let email = this.state.email;
+    let password = this.state.pass;   
+    let data = {
+        userName: userName,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password      
     }     
     API.postRegData(data)
 };

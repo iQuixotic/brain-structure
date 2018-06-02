@@ -1,9 +1,15 @@
+const User = require('../models/Users');
+
 module.exports = {
     register: async (req, res, next) => {
         // All user information (req.value.body)
         console.log('UsersController.register() called !');
 
-        const {email, password, firstN, lastN, userN} = req.value.body;
+        const {userName, firstName, lastName, email, password} = req.value.body;
+        const newUser = new User({ userName, firstName, lastName, email, password })
+        await newUser.save();
+
+        res.json({ user: "created"})
     },
     signIn: async (req, res, next) => {
         // Generate token
