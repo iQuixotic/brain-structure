@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { Router, Route } from "react-dom";
-import { Home, Register, Login, Redirect } from './pages/Z-index';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Main, Register, Login, Redirect } from './pages/Z-index';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
       
       <Router>
-        <Route path="/home" component={Home} />
-        <Route path="/register" component={Register} />
-        <Route path="/redir" component={Redirect} />
-        <Route path="/" component={Login} />
+        <div className="App">
+          <Route exact path="/home" component={Main} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/redirect" component={Redirect} />
+          <Route exact path="/" component={Login} />
+        </div>
       </Router>
 
-      </div>
     );
   }
 }
