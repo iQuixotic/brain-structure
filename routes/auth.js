@@ -1,7 +1,17 @@
-// let express = require('express');
-// let router = express.Router();
+const express = require('express');
+const router = require('express-promise-router')();
+const UsersControllers = require('./controllers/users');
 
-// router.get('/', fuction(res, req, next) {
-//     res.render('index', {title: 'Form Validation', sucess: false, errors: req.session.errors});
-//     req.session.errors = null;
-// }); 
+router.route('./register')
+    .post(UsersControllers.register);
+
+router.route('./')
+    .post(UsersControllers.signIn);
+
+router.route('./secret')
+    .get(UsersControllers.secret);
+
+module.exports = router;
+
+
+

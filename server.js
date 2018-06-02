@@ -9,12 +9,12 @@ const app = express();
 // const mongojs = require('mongojs');
 
 // files
-// const db = require('./models');
+const db = require('./models');
 
-//connect to the database brain_db on the server
-// const connectMe = process.env.MONGODB_URI || 'mongodb://localhost/brain_db'; 
-// mongoose.connect(connectMe);
-// mongoose.Promise = global.Promise;
+// connect to the database brain_db on the server
+const connectMe = process.env.MONGODB_URI || 'mongodb://localhost/brain_db'; 
+mongoose.connect(connectMe);
+mongoose.Promise = global.Promise;
 
 // use morgan, bodyParser, and cors
 app.use(cors());
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({
 app.use(morgan("dev"));
  
 // use routes
-// app.use();
+app.use('/users', require('./routes/auth'));
 
 // error handling
 app.use((req, res, next) => {
