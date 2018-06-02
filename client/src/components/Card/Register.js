@@ -32,14 +32,17 @@ regSubmitHandler = () => {
     let lastName = this.state.nameL;
     let email = this.state.email;
     let password = this.state.pass;   
-    let data = {
+    
+    API.postRegData({
         userName: userName,
         firstName: firstName,
         lastName: lastName,
         email: email,
         password: password      
-    }     
-    API.postRegData(data)
+    }).then(res =>
+        this.setState({nameU: "", nameL: "", nameF: "", email: "", pass: "", pwordCheck: "" })
+      )
+      .catch(err => console.log(err));
 };
   render() {
     return (

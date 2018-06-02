@@ -1,8 +1,9 @@
 import axios from "axios";
 
 export default {
-  // send user data to server
+  // send user data to db
   postRegData: function(data) {
-   return axios.post("/register");
+    console.log('im posting it');
+   return axios.post("/register", data);
   }  
 };

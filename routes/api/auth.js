@@ -1,9 +1,10 @@
-const express = require('express');
-const router = require('express-promise-router')();
+const router = require("express").Router();
+// const router = require('express-promise-router')();
 const UsersControllers = require('../../controllers/users');
 const { validateBody, schemas } = require('../../helpers/routeHelpers');
 
-router.post('/register', UsersControllers.register);
+router.route('/register')
+    .get(UsersControllers.register);
     // .post(validateBody(schemas.authSchema), UsersControllers.register);
 
 router.route('/')

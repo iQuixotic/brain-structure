@@ -15,20 +15,18 @@ const db = require('./models');
 // connect to the database brain_db on the server
 const connectMe = process.env.MONGODB_URI || 'mongodb://localhost/brain_db'; 
 mongoose.connect(connectMe);
-mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
 
 // use morgan, bodyParser, and cors
 app.use(cors());
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 // app.use(expressValidator)
 app.use(morgan("dev"));
  
 // use routes
 // app.use('/users', require('./routes/auth'));
 app.use(routes);
-
 
 // error handling
 app.use((req, res, next) => {

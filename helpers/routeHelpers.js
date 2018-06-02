@@ -16,11 +16,12 @@ module.exports = {
     },
     schemas: {
         authSchema: joi.object().keys({
+            userName: joi.string().required(),
+            firstName: joi.string().required(),
+            lastName: joi.string().required(),
             email: joi.string().email().required(),
-            password: joi.string().required(),
-            firstN: joi.string().required(),
-            lastN: joi.string().required(),
-            userN: joi.string().required()
+            password: joi.string().required()
+            
         })
     }
 }
