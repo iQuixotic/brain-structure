@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require("mongoose");
 const cors = require('cors');
+const routes = require('./routes');
 const app = express();
 // const mongojs = require('mongojs');
 
@@ -25,7 +26,9 @@ app.use(bodyParser.urlencoded({
 app.use(morgan("dev"));
  
 // use routes
-app.use('/users', require('./routes/auth'));
+// app.use('/users', require('./routes/auth'));
+app.use(routes);
+
 
 // error handling
 app.use((req, res, next) => {

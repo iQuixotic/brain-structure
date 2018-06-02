@@ -23,11 +23,18 @@ state= {
 }
 regChangeHandler = event => {
     this.setState({[event.target.name]: [event.target.value]});
-    console.log(this.state.email, this.state.nameF, this.state.nameL, this.state.nameU, this.state.pass, this.state.pwordCheck )
+    console.log(this.state.email, this.state.nameF, this.state.nameL, this.state.nameU, this.state.pass, this.state.pwordCheck );
 }
 
-regSubmitHandler = () => {        
-    API.postRegData()
+regSubmitHandler = (data) => {   
+    data = {
+        email: this.state.email,
+        userN: this.state.userN,
+        nameL: this.state.nameF,
+        nameF: this.state.nameF,
+        password: this.state.pass
+    }     
+    API.postRegData(data)
 };
   render() {
     return (

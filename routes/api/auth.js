@@ -1,7 +1,7 @@
 const express = require('express');
 const router = require('express-promise-router')();
-const UsersControllers = require('../controllers/users');
-const { validateBody, schemas } = require('../helpers/routeHelpers');
+const UsersControllers = require('../../controllers/users');
+const { validateBody, schemas } = require('../../helpers/routeHelpers');
 
 router.route('./register')
     .post(validateBody(schemas.authSchema), UsersControllers.register);
