@@ -23,10 +23,20 @@
   to { transform: rotate(360deg); }
 }
 
-
 .register-input {
   width: 80%;
 }
 .register-form {
   text-align: center;
+}
+
+.float-right {
+  float: right;
+}
+
+.pix-pad1 {
+  padding-left: 10px;
+}
+.pix-pad2 {
+  padding-left: 55px;
 }
