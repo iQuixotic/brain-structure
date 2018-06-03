@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import { Row, Container, Col, Wrap } from '../Grid/Z-index';
-import { Btn } from '../Buttons/Z-index';
-import { BackDrop, NoteCardL, Card } from '../Card/Z-index';
-import { Input } from '../Form/Z-index';
-import '../../Global.css';
+import React, {Component} from 'react';
+import {Row, Container, Col, Wrap} from '../Grid/Z-index';
+import {Card} from '../Card/Z-index';
+import '../../Uni.css';
 
 
 class Login extends Component {
@@ -16,17 +14,15 @@ class Login extends Component {
                                 <Card> 
                                     <Container>
                                         <Wrap cn="log-in-form justify-content-center">  Username: 
-                                            <Input type="name" placeholder="tony637"/>Password:
-                                            <Input type="password" placeholder="......"/>
+                                            <input type="name" placeholder="tony637"/>Password:
+                                            <input type="password" placeholder="......"/>
                                             <button className="my-btn btn">Log-in</button>
                                             <button className="my-btn btn">I Don't have a Log-in </button>
                                         </Wrap>      
                                     </Container>
                                 </Card>
                             </Wrap>
-                        </Container>
-                
-            
+                        </Container>            
         </div>
     );
     }

@@ -1,15 +1,14 @@
 import React from "react";
-import './style-btn.css';
+import './style.css';
 import {Icon} from 'react-fa';
 
 // a Navigation button or perhaps used on large screens
-const FwdBtn = (props) => {
+const FwdCaret = (props) => {
     return(
-    <div id="FwdBtn">
+    <div id="FwdCaret">
          <Icon name="caret-right" size={props.size} className="fwd-caret" />
     </div>
     );
 }
 
-export default FwdBtn;
-
+export default FwdCaret;

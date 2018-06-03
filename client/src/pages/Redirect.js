@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from '../logo.svg';
 import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
-import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn } from '../components/Buttons/Z-index';
-import { BackDrop, NoteCardL, Card } from '../components/Card/Z-index';
-import { Input } from '../components/Form/Z-index';
-import '../Global.css';
+import {FwdCaret, BackCaret, DislikeBtn, LikeBtn} from '../components/Buttons/Z-index';
+import {BackDrop, CardSpace, Card} from '../components/Card/Z-index';
+import './Pages.css';
 
 
 class Redirect extends Component {
@@ -31,15 +30,14 @@ class Redirect extends Component {
             <Wrap cn="register-form justify-content-center">Register
             <Row> <Col size="md-6"> E-mail: </Col> <Col size="md-6"> User Name: </Col></Row>
             <Row>
-                <Col size="md-6"><Input className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
-                <Col size="md-6"><Input className="register-input" placeholder="toommy" /></Col>
+                <Col size="md-6"><input className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
+                <Col size="md-6"><input className="register-input" placeholder="toommy" /></Col>
             </Row>
             
                First Name:
-                <Input type="name" placeholder="John"/>Last Name: 
-                <Input type="name" placeholder="Fred"/>Create a Password:
-                <Input type="password"/>
-          <Btn cn="btn">SUBMIT</Btn>
+                <input type="name" placeholder="John"/>Last Name: 
+                <input type="name" placeholder="Fred"/>Create a Password:
+                <input type="password"/>
           </Wrap>
               
           
@@ -49,30 +47,23 @@ class Redirect extends Component {
           </Card>
           </Wrap>
           </Container>
-          <Btn> I ams what I ams </Btn>
-          <DelBtn> Delete </DelBtn>
-          <ComboBtn side1="what?" side2="OK"> </ComboBtn>
-          <VerifyBtn />
-          <Dropdown />
         </Col>
         </Row>
         
         <Row>
         <BackDrop>
           <Row>
-            <FwdBtn size='2x'/>
-            <BackBtn size='5x'/>
+            <FwdCaret size='2x'/>
+            <BackCaret size='5x'/>
             <LikeBtn size='5x'/>
             <DislikeBtn size='4x' />
-            <Btn> I made happieness </Btn>
           </Row>
         </BackDrop>
           <Row>
-            <FwdBtn size='2x'/>
-            <BackBtn size='5x'/>
+            <FwdCaret size='2x'/>
+            <BackCaret size='5x'/>
             <LikeBtn size='5x'/>
             <DislikeBtn size='4x' />
-            <Btn> I made happieness </Btn>
           </Row>
         </Row>
         </Container>
@@ -82,7 +73,7 @@ class Redirect extends Component {
           <Card />
         </Col>
         <Col size="md-7">
-          <NoteCardL />
+          <CardSpace />
         </Col>
         <Col size="md-2">
           <Card />
@@ -104,24 +95,23 @@ class Redirect extends Component {
                                                 <Col size="md-6"> E-mail: </Col> <Col size="md-6"> User Name: </Col>
                                             </Row>
                                             <Row>
-                                                <Col size="md-6"><Input className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
-                                                <Col size="md-6"><Input className="register-input" placeholder="toommy" /></Col>
+                                                <Col size="md-6"><input className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
+                                                <Col size="md-6"><input className="register-input" placeholder="toommy" /></Col>
                                             </Row>       
                                                  
                                             <Row> 
                                                 <Col size="md-6"> First Name: </Col> <Col size="md-6"> Last: </Col>
                                             </Row>
                                             <Row>
-                                                <Col size="md-6"><Input className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
-                                                <Col size="md-6"><Input className="register-input" placeholder="toommy" /></Col>
+                                                <Col size="md-6"><input className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
+                                                <Col size="md-6"><input className="register-input" placeholder="toommy" /></Col>
                                             </Row>    
                                             <Row>Password:  
                                               <Wrap cn="pix-pad2"/>                                         
-                                            <Input type="password pix-pad" /></Row>
+                                            <input type="password pix-pad" /></Row>
                                             <Row>Verify Password:  
                                             <Wrap cn="pix-pad1"/>                                     
-                                            <Input type="password" /></Row>
-                                            <Btn cn="btn">SUBMIT</Btn>
+                                            <input type="password" /></Row>
                                         </Wrap>      
                                     </Container>
                                 </Card>
@@ -135,10 +125,8 @@ class Redirect extends Component {
                                 <Card> 
                                     <Container>
                                         <Wrap cn="log-in-form justify-content-center">  Username: 
-                                            <Input type="name" placeholder="tony637"/>Password:
-                                            <Input type="password" placeholder="......"/>
-                                            <Btn cn="btn">Log-in</Btn>
-                                            <Btn cn="btn">I Don't have a Log-in </Btn>
+                                            <input type="name" placeholder="tony637"/>Password:
+                                            <input type="password" placeholder="......"/>
                                         </Wrap>      
                                     </Container>
                                 </Card>

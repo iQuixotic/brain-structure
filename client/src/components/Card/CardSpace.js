@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import { Btn, Plus } from '../Buttons/Z-index';
-import { Row, Col, Wrap } from '../Grid/Z-index';
-import './style-card.css';
-import '../../Global.css';
+import {Plus} from '../Symbols/Z-index';
+import {Row, Col, Wrap} from '../Grid/Z-index';
+import './style.css';
+import '../../Uni.css';
 
-//has state
+// has state
 // a card for Large notes
 class NoteCardL extends Component {
 constructor(props){

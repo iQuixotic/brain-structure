@@ -1,5 +1,5 @@
 import React from "react";
-import './style-card.css'
+import './style.css'
 
 // a backDrop for the brain
 const BackDrop = ({children}) => {

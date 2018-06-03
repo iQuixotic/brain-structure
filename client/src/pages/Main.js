@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+
 // import logo from '../logo.svg';
 // import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
 // import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn } from '../components/Buttons/Z-index';

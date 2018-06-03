@@ -1,8 +1,8 @@
 import React from "react";
-import './style-btn.css';
+import './style.css';
 import {Icon} from 'react-fa';
 
-// a Navigation button or perhaps used on large screens
+// a plus sign icon
 const Plus = (props) => {
     return(
     <div id="Plus">

@@ -1,5 +1,5 @@
 import React from "react";
-import './style-btn.css'
+import './style.css'
 import {Icon} from 'react-fa';
 
 const DislikeBtn = (props) => {

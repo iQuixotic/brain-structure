@@ -1,11 +1,10 @@
 
-import React, { Component } from 'react';
-import { Row, Container, Col, Wrap } from '../Grid/Z-index';
-import { Btn } from '../Buttons/Z-index';
-import { Card } from '../Card/Z-index';
-import { Login } from '../Card/Z-index';
+import React, {Component} from 'react';
+import {Row, Container, Col, Wrap} from '../Grid/Z-index';
+import {Card} from '../Card/Z-index';
+import {Login} from './Log-in';
 import API from '../../utils/API';
-import '../../Global.css';
+import '../../Uni.css';
 
 
 class Register extends Component {

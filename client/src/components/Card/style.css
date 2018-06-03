@@ -1,0 +1,91 @@
+/* -------------------------------------------------------------------------------------------------------------//
+//                             ALL CSS IS ALPHABETIZED AND BY ID'S, THEN BY CLASS NAME                          //
+//--------------------------------------------------------------------------------------------------------------//
+
+/* Css for components in the CARD FOLDER ONLY */
+
+    /* ID'S */
+#btnR {
+    float: right;
+}
+
+#note-card {
+    height: 365px;
+    align-content: center; 
+}
+
+#note-card-content {
+    color: black;
+    background: rgb(250, 248, 227);
+    height: 290px;
+    perspective: 635px;
+    -moz-box-shadow:    3px 3px  rgb(49, 49, 49);
+    -webkit-box-shadow: 3px 3px   rgb(49, 49, 49);
+    box-shadow: 0px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+#note-card-content:active {
+    transform: rotateY(180deg); 
+}
+    /* CLASSES */
+.center {
+    align-content: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.front {
+    color: black;
+    font-size: 2em;
+    padding: 60px;  
+}
+.green {
+    color: green;
+}
+
+.my-card {
+    background: rgb(105, 110, 116);
+    color: white;
+    border-width: 2px 2px 4px 3px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.568);
+    padding: 50px;
+}
+
+.my-card {
+    background: rgb(66, 66, 66);
+    color: white;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.568);
+    padding: 10px 10px 50px 10px;
+    height: 375px;
+    -moz-box-shadow:    3px 3px 5px 6px  rgb(112, 111, 111);
+    -webkit-box-shadow: 3px 3px 5px 6px  rgb(112, 111, 111);
+    box-shadow:         3px 3px 5px 6px  rgb(112, 111, 111);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.my-card:hover { 
+    transition: box-shadow 0.4s ease-in-out; 
+    -moz-box-shadow:    3px 3px  rgb(112, 111, 111);
+    -webkit-box-shadow: 3px 3px  rgb(112, 111, 111);
+    box-shadow:         3px 3px  rgb(112, 111, 111);
+}
+
+.pad-right {
+    padding-right: 7px;
+}
+
+.verified {
+    background: white;
+    float: right;
+}
+
+
+

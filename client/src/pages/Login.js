@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
-import { Btn } from '../components/Buttons/Z-index';
-import { BackDrop, NoteCardL, Card, Login } from '../components/Card/Z-index';
-import { Input } from '../components/Form/Z-index';
-import '../Global.css';
+import {Row, Container, Col, Wrap} from '../components/Grid/Z-index';
+import {Login} from '../components/Form/Z-index';
+import './Pages.css';
 
 
 class LoginPage extends Component {

@@ -1,15 +1,15 @@
 import React from "react";
-import './style-btn.css';
+import './style.css';
 import {Icon} from 'react-fa';
  
 // a Navigation button for backward nav
-const BackBtn = (props) => {
+const BackCaret = (props) => {
     return(
-    <div id="BackBtn">
+    <div id="BackCaret">
          <Icon name="caret-left" size={props.size} className="back-caret" />
     </div>
     );
 }
 
-export default BackBtn;
+export default BackCaret;
 
