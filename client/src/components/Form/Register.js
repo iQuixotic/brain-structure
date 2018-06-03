@@ -47,9 +47,49 @@ regSubmitHandler = () => {
     return (
     <div className="Register">     
 
+<Card>
+<form>
+  <Wrap cn="form-group">
+    <label for="formGroupExampleInput">Example label</label>
+    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Example input" />
+  </Wrap>
+  <Wrap cn="form-group">
+    <label for="formGroupExampleInput2">Another label</label>
+    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Another input" />
+  </Wrap>
+
+
+
+  <Wrap cn="form-group">
+    <label for="formGroupExampleInput">Example label</label>
+    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Example input" />
+  </Wrap>
+  <Wrap cn="form-group">
+    <label for="formGroupExampleInput2">Another label</label>
+    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Another input" />
+  </Wrap>
+</form>
      
-                      <Container>
-                            <Wrap cn="text-center">
+
+     <form>
+  <Wrap cn="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+  </Wrap>
+  <Wrap cn="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+  </Wrap>
+  <Wrap cn="form-check">
+    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+    <label cn="form-check-label" for="exampleCheck1">Check me out</label>
+  </Wrap>
+  <button type="submit" className="btn my-btn">Submit</button>
+</form>
+</Card>
+                 
+                            {/* <Wrap cn="text-center">
                                 <Card> 
                                     <Container>
                                         <Wrap cn="register-form justify-content-center">Register
@@ -57,26 +97,26 @@ regSubmitHandler = () => {
                                                 <Col size="md-6"> E-mail: </Col> <Col size="md-6"> User Name: </Col>
                                             </Row>
                                             <Row>
-                                                <Col size="md-6"><input name="email" value={this.state.email} onChange={this.regChangeHandler.bind(this)} className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
-                                                <Col size="md-6"><input name="nameU" value={this.state.nameU} onChange={this.regChangeHandler.bind(this)} className="register-input" placeholder="toommy" /></Col>
+                                                <Col size="md-6"><input name="email" value={this.state.email} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
+                                                <Col size="md-6"><input name="nameU" value={this.state.nameU} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" placeholder="toommy" /></Col>
                                             </Row>       
                                                  
                                             <Row> 
                                                 <Col size="md-6"> First Name: </Col> <Col size="md-6"> Last Name: </Col>
                                             </Row>
                                             <Row>
-                                                <Col size="md-6"><input name="nameF" value={this.state.nameF} onChange={this.regChangeHandler.bind(this)} className="register-input" type="e-mail" placeholder="Fred" /></Col>
-                                                <Col size="md-6"><input name="nameL" value={this.state.nameL} onChange={this.regChangeHandler.bind(this)} className="register-input" placeholder="toommy" /></Col>
+                                                <Col size="md-6"><input name="nameF" value={this.state.nameF} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" type="e-mail" placeholder="Fred" /></Col>
+                                                <Col size="md-6"><input name="nameL" value={this.state.nameL} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" placeholder="toommy" /></Col>
                                             </Row>    
                                             <Row>Password: <input name="pass" value={this.state.pass} onChange={this.regChangeHandler.bind(this)} type="password"/></Row>
                                             <Row>Verify Password:<input name="pwordCheck" value={this.state.pwordCheck} onChange={this.regChangeHandler.bind(this)} type="password"/></Row>
-                                            <button className="btn my-btn" onClick={this.regSubmitHandler.bind(this)}cn="btn">SUBMIT</button>
+                                            <button classNameName="btn my-btn" onClick={this.regSubmitHandler.bind(this)}cn="btn">SUBMIT</button>
                                            
                                         </Wrap>      
                                     </Container>
                                 </Card>
-                            </Wrap>
-                         </Container> 
+                            </Wrap> */}
+                         
                    
     </div>
     );

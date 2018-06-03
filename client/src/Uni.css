@@ -30,13 +30,6 @@
   to { transform: rotate(360deg); }
 }
 
-.register-input {
-  width: 80%;
-}
-.register-form {
-  text-align: center;
-}
-
 .float-right {
   float: right;
 }
@@ -46,12 +39,6 @@
 }
 .pix-pad2 {
   padding-left: 55px;
-}
-
-.click-div {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
 }
 
 .my-btn {
@@ -113,4 +100,12 @@
 
 .pad-top {
   padding-top: 100px;
+}
+
+.register-form {
+  text-align: center;
+}
+
+.register-input {
+  width: 80%;
 }

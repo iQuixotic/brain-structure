@@ -5,7 +5,7 @@ import './style.css';
 const Card = (props) => {
     return(
     <div id="CardCrd">
-        <div id={props.traits}  className="card-body my-card">
+        <div id={props.id}  className="card-body my-card">
            {props.children}        
         </div>
     </div>

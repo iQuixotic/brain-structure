@@ -15,9 +15,9 @@ class RegisterPage extends Component {
             <Row>    
                 {/* <Col size="md-1" /> */}
                 <Wrap cn='pad-top'> 
-                    <Col size="md-10">
+                    
                         <Register />
-                    </Col>
+                        
                 </Wrap>
                 
                 <Wrap cn="pad-top">                                 

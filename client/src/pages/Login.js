@@ -8,14 +8,9 @@ class LoginPage extends Component {
   render() {
     return (
         <div id="LoginPage">
-                <Container>
-                    <Row>
-                        <Col size="md-4" />
                         <Wrap cn="pad-top">
                             <Login />
-                        </Wrap>
-                    </Row>
-                </Container>                 
+                        </Wrap>                 
         </div>
     );
     }
