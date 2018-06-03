@@ -14,18 +14,21 @@ class Login extends Component {
         <Container>
             <Card>
                 <form>
+
+                <h1 className="title"> Login </h1>
+
                     <Wrap cn="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label className="text">Email address</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                     </Wrap>
                     <Wrap cn="form-group">
-                        <label for="exampleInputPassword1">Password</label>
+                        <label className="text">Password</label>
                         <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                     </Wrap>
                     <Wrap cn="form-check">
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                        <label className="form-check-label text" >Forgot My Password</label>
                     </Wrap>
                     <Wrap cn="form-group">
                         <button type="submit" className="btn my-btn">SUBMIT</button>

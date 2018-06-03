@@ -7,6 +7,7 @@ class LoginPage extends Component {
   render() {
     return (
         <div id="LoginPage">
+       
             <Container>                
                 <Wrap cn="pad-top cent">
                     <Row>

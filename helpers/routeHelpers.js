@@ -13,7 +13,7 @@ module.exports = {
             req.value['body'] = result.value;
             next();
         }
-    },
+    },  
     schemas: {
         authSchema: joi.object().keys({
             userName: joi.array().items(joi.string().min(5).max(25).required()),

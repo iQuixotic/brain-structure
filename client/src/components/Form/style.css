@@ -1,9 +1,14 @@
+/* -------------------------------------------------------------------------------------------------------------//
+//                                           ALL CSS IS ALPHABETIZED                                            //
+//--------------------------------------------------------------------------------------------------------------//
 
+/* CSS for components in the Button folder */
+    /* ID's */
 #login-card {
-    /* padding: 50px 250px;
-    margin: 0 300px; */
     height: 80%;
 }
+
+    /* Classes */
 .pad-top-form {
     padding-top: 18px;
 }
@@ -27,6 +32,19 @@
 
 .spacing-top {
     margin-top: 40px;
+}
+
+.text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.15em;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 40px 20px;
+    border-bottom: 1px solid #777;
+    font-size: 3.7em;
+    font-style: italic;
 }
 
 .width-control {
