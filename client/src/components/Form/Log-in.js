@@ -3,9 +3,24 @@ import {Container, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
 import './style.css';
 import '../../Uni.css';
+import {
+    withRouter
+  } from 'react-router-dom'
+
 
 
 class Login extends Component {
+constructor() {
+    super();
+    this.toRegPathHandler = this.toRegPathHandler.bind(this);
+}
+
+// navigate to the Register page
+toRegPathHandler(e) {
+    e.preventDefault();
+    this.props.history.push('/register');
+}
+
   render() {
     return (
         <div id="Login">        
@@ -32,7 +47,7 @@ class Login extends Component {
                     </Wrap>
                     <Wrap cn="form-group">
                         <button type="submit" className="btn my-btn">SUBMIT</button>
-                        <button type="submit" className="btn my-btn">REGISTER</button>
+                        <button type="submit" onClick={this.toRegPathHandler} className="btn my-btn">REGISTER</button>
                     </Wrap>
                 </form>
             </Card>
@@ -75,4 +90,4 @@ class Login extends Component {
     }
 }      
 
-export default Login;
+export default withRouter(Login);
