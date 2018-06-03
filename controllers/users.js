@@ -5,11 +5,11 @@ module.exports = {
         // All user information (req.value.body)
         console.log('UsersController.register() called !');
 
-        const {userName, firstName, lastName, email, password} = req.value.body;
+        const {userName, firstName, lastName, email, password} = req.body;
         const newUser = new User({ userName, firstName, lastName, email, password })
         await newUser.save();
 
-        res.json({ user: "created"})
+        res.json({ user: "created"});
     },
     signIn: async (req, res, next) => {
         // Generate token

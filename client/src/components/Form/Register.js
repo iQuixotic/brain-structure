@@ -47,7 +47,7 @@ regSubmitHandler = () => {
     return (
     <div className="Register">     
 
-<Card>
+{/* <Card>
 <form>
   <Wrap cn="form-group">
     <label for="formGroupExampleInput">Example label</label>
@@ -87,9 +87,9 @@ regSubmitHandler = () => {
   </Wrap>
   <button type="submit" className="btn my-btn">Submit</button>
 </form>
-</Card>
+</Card> */}
                  
-                            {/* <Wrap cn="text-center">
+                             <Wrap cn="text-center">
                                 <Card> 
                                     <Container>
                                         <Wrap cn="register-form justify-content-center">Register
@@ -97,25 +97,25 @@ regSubmitHandler = () => {
                                                 <Col size="md-6"> E-mail: </Col> <Col size="md-6"> User Name: </Col>
                                             </Row>
                                             <Row>
-                                                <Col size="md-6"><input name="email" value={this.state.email} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
-                                                <Col size="md-6"><input name="nameU" value={this.state.nameU} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" placeholder="toommy" /></Col>
+                                                <Col size="md-6"><input name="email" value={this.state.email} onChange={this.regChangeHandler.bind(this)} className="register-input" type="e-mail" placeholder="john@wiredmail.com" /></Col>
+                                                <Col size="md-6"><input name="nameU" value={this.state.nameU} onChange={this.regChangeHandler.bind(this)} className="register-input" placeholder="toommy" /></Col>
                                             </Row>       
                                                  
                                             <Row> 
                                                 <Col size="md-6"> First Name: </Col> <Col size="md-6"> Last Name: </Col>
                                             </Row>
                                             <Row>
-                                                <Col size="md-6"><input name="nameF" value={this.state.nameF} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" type="e-mail" placeholder="Fred" /></Col>
-                                                <Col size="md-6"><input name="nameL" value={this.state.nameL} onChange={this.regChangeHandler.bind(this)} classNameName="register-input" placeholder="toommy" /></Col>
+                                                <Col size="md-6"><input name="nameF" value={this.state.nameF} onChange={this.regChangeHandler.bind(this)} className="register-input" type="e-mail" placeholder="Fred" /></Col>
+                                                <Col size="md-6"><input name="nameL" value={this.state.nameL} onChange={this.regChangeHandler.bind(this)} className="register-input" placeholder="toommy" /></Col>
                                             </Row>    
                                             <Row>Password: <input name="pass" value={this.state.pass} onChange={this.regChangeHandler.bind(this)} type="password"/></Row>
                                             <Row>Verify Password:<input name="pwordCheck" value={this.state.pwordCheck} onChange={this.regChangeHandler.bind(this)} type="password"/></Row>
-                                            <button classNameName="btn my-btn" onClick={this.regSubmitHandler.bind(this)}cn="btn">SUBMIT</button>
+                                            <button className="btn my-btn" onClick={this.regSubmitHandler}cn="btn">SUBMIT</button>
                                            
                                         </Wrap>      
                                     </Container>
                                 </Card>
-                            </Wrap> */}
+                            </Wrap> 
                          
                    
     </div>
