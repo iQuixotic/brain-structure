@@ -3,12 +3,10 @@ import {Container, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
 import './style.css';
 import '../../Uni.css';
-import {
-    withRouter
-  } from 'react-router-dom'
+import {withRouter} from 'react-router-dom';
 
-
-
+// login component is stateful
+// and contains 2 input fields
 class Login extends Component {
 constructor() {
     super();

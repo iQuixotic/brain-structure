@@ -9,7 +9,7 @@ class LoginPage extends Component {
         <div id="LoginPage">
        
             <Container>                
-                <Wrap cn="pad-top cent">
+                <Wrap cn="pad-vert cent">
                     <Row>
                         <Col size="md-1" />
                         <Col size="md-10">                    
