@@ -1,8 +1,7 @@
 
 import React, {Component} from 'react';
-import {Row, Container, Col, Wrap} from '../Grid/Z-index';
+import {Row, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
-import {Login} from './Log-in';
 import API from '../../utils/API';
 import '../../Uni.css';
 
@@ -47,49 +46,95 @@ regSubmitHandler = () => {
     return (
     <div className="Register">     
 
-{/* <Card>
+<Card>
 <form>
-  <Wrap cn="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Example input" />
-  </Wrap>
-  <Wrap cn="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Another input" />
-  </Wrap>
-
-
+    
+<Wrap cn="pad-top-form" />
+<Wrap cn="pad-top-form" />
 
   <Wrap cn="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Example input" />
+  <Row>
+  <Wrap cn="col-md-2 cent ">
+    First Name
+    </Wrap>
+    <Wrap cn="col-md-10">
+    <input name="nameF" value={this.state.nameF} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" type="e-mail" placeholder="John" />
+        </Wrap>
+        </Row>
   </Wrap>
+
+  <Wrap cn="pad-top-form" />
+
   <Wrap cn="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Another input" />
+  <Row>
+  <Wrap cn="col-md-2 cent ">
+    Last Name
+    </Wrap>
+    <Wrap cn="col-md-10">
+    <input name="nameL" value={this.state.nameL} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" placeholder="Nichols" />
+    </Wrap>
+        </Row>
   </Wrap>
+
+  <Wrap cn="pad-top-form" />
+   
+  <Wrap cn="form-group">
+  <Row>
+  <Wrap cn="col-md-2 cent ">
+    E-mail
+    </Wrap>
+    <Wrap cn="col-md-10">
+    <input name="email" value={this.state.email} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" type="e-mail" placeholder="john@wiredmail.com" />
+    </Wrap>
+        </Row>
+  </Wrap>
+
+<Wrap cn="pad-top-form" />
+
+      <Wrap cn="form-group">
+  <Row>
+  <Wrap cn="col-md-2 cent ">
+  User Name
+    </Wrap>
+    <Wrap cn="col-md-10">
+   <input name="nameU" value={this.state.nameU} onChange={this.regChangeHandler.bind(this)} className=" form-control register-input" placeholder="Johnyy777" />
+   </Wrap>
+        </Row>
+  </Wrap>
+
+  <Wrap cn="pad-top-form" />
+
+    <Wrap cn="form-group">
+  <Row>
+  <Wrap cn="col-md-2 cent ">
+  Password
+    </Wrap>
+    <Wrap cn="col-md-10">
+    <input name="pass" value={this.state.pass} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" type="password"/>
+    </Wrap>
+        </Row>
+  </Wrap>
+
+<Wrap cn="pad-top-form" />
+
+ <Wrap cn="form-group">
+  <Row>
+  <Wrap cn="col-md-2 cent ">
+  Confirm Password
+    </Wrap>
+    <Wrap cn="col-md-10">
+    <input name="pwordCheck" value={this.state.pwordCheck} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" type="password"/>
+    </Wrap>
+        </Row>
+  </Wrap>
+
+  <Wrap cn="pad-top-form" />
+
+  <button className="btn my-btn" onClick={this.regSubmitHandler}cn="btn">SUBMIT</button>
 </form>
-     
-
-     <form>
-  <Wrap cn="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-  </Wrap>
-  <Wrap cn="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-  </Wrap>
-  <Wrap cn="form-check">
-    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-    <label cn="form-check-label" for="exampleCheck1">Check me out</label>
-  </Wrap>
-  <button type="submit" className="btn my-btn">Submit</button>
-</form>
-</Card> */}
+</Card> 
                  
-                             <Wrap cn="text-center">
+                             {/* <Wrap cn="text-center">
                                 <Card> 
                                     <Container>
                                         <Wrap cn="register-form justify-content-center">Register
@@ -116,7 +161,7 @@ regSubmitHandler = () => {
                                     </Container>
                                 </Card>
                             </Wrap> 
-                         
+                          */}
                    
     </div>
     );

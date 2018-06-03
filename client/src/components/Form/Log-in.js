@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Container, Col, Wrap} from '../Grid/Z-index';
+import {Container, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
 import './style.css';
 import '../../Uni.css';

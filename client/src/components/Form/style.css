@@ -4,19 +4,25 @@
     margin: 0 300px; */
     height: 80%;
 }
+.pad-top-form {
+    padding-top: 18px;
+}
 
-/* .cent {
-     display: flex; 
-    justify-content: center;
-    align-content: center;
-} */
+.register-form {
+    text-align: center;
+}
+  
+.register-input {
 
-.spacing {
-    margin: 15px;
+    width: 90%;
 }
 
 .space {
     margin-left: 39px;
+}
+
+.spacing {
+    margin: 15px;
 }
 
 .spacing-top {
