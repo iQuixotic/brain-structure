@@ -138,12 +138,12 @@ regSubmitHandler = () => {
                             <input name="pwordCheck" value={this.state.pwordCheck} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" type="password"/>
                         </Wrap>
                     </Row>
+                    
+                    {/* on button click, fires off regSubmitHandler */}
+                    <button className="btn my-btn" onClick={this.regSubmitHandler}cn="btn">SUBMIT</button>
                 </Wrap>
 
-                <Wrap cn="pad-top-form" />
-
-                {/* on button click, fires off regSubmitHandler */}
-                <button className="btn my-btn" onClick={this.regSubmitHandler}cn="btn">SUBMIT</button>
+               
 
             </form>
         </Card> 
