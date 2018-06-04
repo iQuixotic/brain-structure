@@ -4,16 +4,22 @@ import {Wrap} from '../Grid/Z-index';
 import {Jumbotron} from '../Jumbotron/Z-index';
 import './style.css';
 
+
+
 class Navbar extends Component {
-//   constructor(props) {
-//     super(props);
-// }
+  constructor(props) {
+    super(props);
+  }
+state = {
+}
+
+
   render() {
     return (
       <div>
       <Jumbotron id="topper">
         <Wrap cn="jumbo-moon">
-          Words
+          Neuro App
         </Wrap>
       </Jumbotron>
 
@@ -23,20 +29,28 @@ class Navbar extends Component {
     <ul className="nav">
      
       <li className="each-nav">
-        <Link className="each-nav nav-link active" to="/home">Home</Link>
+        <Link className="each-nav nav-link active"  
+        // onClick={}   
+        to="/home">Home</Link>
       </li>
       <li className="each-nav">
-        <Link className="each-nav nav-link" to="/redirect">Cards</Link>
+        <Link className="each-nav nav-link"  
+        // onClick={} 
+        to="/redirect">Cards</Link>
       </li>
       <li className="">
-        <Link className="each-nav nav-link" to="/">Login</Link>
+        <Link className="each-nav nav-link"
+        //  onClick={}
+         to="/">Login</Link>
       </li>
      
       </ul>
       <ul className="nav ml-auto">
       <li className="">
       
-        <Link className="each-nav right-side nav-link" to="/register">Register</Link>
+        <Link className="each-nav right-side nav-link" 
+        // onClick={}
+        to="/register">Register</Link>
       </li>
       </ul>
       </Wrap>

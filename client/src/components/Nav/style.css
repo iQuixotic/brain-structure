@@ -17,13 +17,15 @@
 }
 
 .jumbo-moon  {
+    font-family: 'Josefin Sans', sans-serif;
     padding-top: 70px;
-    font-size: 3em;
+    font-size: 4em;
     color: white;
 }
 
 .each-nav {
     color: white;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .naver {
