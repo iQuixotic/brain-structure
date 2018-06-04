@@ -2,18 +2,19 @@
 const router = require('express-promise-router')();
 const passport = require('passport');
 const passportConf = require('../../passport');
-const UsersControllers = require('../../controllers/users');
+const UsersController = require('../../controllers/users');
 const {validateBody, schemas} = require('../../helpers/routeHelpers');
 
 router.route('/register')
     // .post(UsersControllers.register); //no-auth route for testing
-    .post(validateBody(schemas.authSchema), UsersControllers.register);
+    .post(validateBody(schemas.authSchema), UsersController.register);
 
-router.route('/sign-in')
-    .get(UsersControllers.signIn);
+router.route('/signin')
+    .post(validateBody(schemas.authSchema), passport.authenticate('local', {session: false}),  UsersController.signIn);
+    // .get(UsersControllers.signIn);
 
 router.route('/secret')
-    .get(passport.authenticate('jwt', {session: false}), UsersControllers.secret);
+    .get(passport.authenticate('jwt', {session: false}), UsersController.secret);
 
 module.exports = router;
 

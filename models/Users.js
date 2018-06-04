@@ -32,15 +32,29 @@ let UserSchema = new Schema({
 UserSchema.pre('save', async function (next){ 
     try {
 
-        
+        // generate a salt and trap to variable
         const salt = await bcrypt.genSalt(10);
-        const hashed = await bcrypt.hash(this.password, salt);
-        this.password = hashed;
+
+        // hashedword = the hashed version of 
+        // itself with salt concatenated to it
+        const hashedword = await bcrypt.hash(this.password, salt);
+        this.password = hashedword;
         next();
     } catch(error){
         next(error)
     }
 })
+
+// using method, pass the password (post-hashed) from user as 
+// perameter through an anonomous function and AWAIT use bcrypt's 
+// built-in compare method to check against database
+UserSchema.method.isValidPassword = async function(thisPassword) {
+    try {
+        return await bcrypt.compare(thisPassword, this.password);
+    } catch(error) {
+        throw new Error(error)
+    }
+}
 
 let User = mongoose.model('User', UserSchema);
 

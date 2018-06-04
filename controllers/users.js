@@ -14,7 +14,7 @@ signedToken = user => {
 module.exports = {
     register: async (req, res, next) => {
         console.log('you hit me')
-        
+
         // deconstruct
         const {userName, firstName, lastName, email, password} = req.body;
 
@@ -34,13 +34,12 @@ module.exports = {
     },
     signIn: async (req, res, next) => {
         // Generate token
-        const token = signedToken(newUser)
-
+        const token = signedToken(req.user);
         res.status(200).json({token});
-        console.log('the users sign in route has been hit !');
+        console.log('successful login');
     },
-    secret: async (req, res, next) => {
-        console.log('Im in the secret place !');
+    secret: async (req, res, next) => {       
         res.json({secret: 'resource'});
+        console.log('Im in the secret place !');
     }
 }

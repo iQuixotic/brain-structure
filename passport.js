@@ -28,19 +28,27 @@ passport.use(new JwtStrat({
 }
 }))
 
-// local strategy
+// Login
 passport.use(new LocalStrat({
     usernameField: 'userName'
 }, async (username, password, done) => {
+    try {
+        // find user by username
+        if (!user) {
+            return done(null, false);
+        }
 
-    // find user by username
-    if(!user) {
-        return done(null, false);
+        // verify pasword is correct
+        const doesMatch = await user.isValidPassword(password)
+
+        // if not found, exit
+        if (!doesMatch) {
+            return done(null, false)
+        }
+
+        // else, return the user
+        done(null, user);
+    } catch (error) {
+        done(error, false);
     }
-
-    // verify pasword is correct
-
-    // if not found, exit
-
-    // else, return the user
 }));
