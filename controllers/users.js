@@ -1,4 +1,15 @@
+const JWT = require('jsonwebtoken');
 const User = require('../models/Users');
+const {JWT_SECRET} = require('../configuration');
+
+signedToken = user => {
+    return JWT.sign({
+        iss: 'iQuixotic',
+        sub: user.id,
+        iat: new Date().getTime(), 
+        exp: new Date().setDate(new Date().getDate()+1)
+    }, JWT_SECRET);
+}
 
 module.exports = {
     register: async (req, res, next) => {
@@ -22,9 +33,12 @@ module.exports = {
     },
     signIn: async (req, res, next) => {
         // Generate token
+        const token = signedToken(newUser)
+
+        res.status(200).json({token});
         console.log('the users sign in route has been hit !');
     },
     secret: async (req, res, next) => {
-        console.log('UsersController.secret() called !');
+        console.log('Im in the secret place !');
     }
 }
