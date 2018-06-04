@@ -7,8 +7,15 @@ import '../../Uni.css';
 import {withRouter} from 'react-router-dom';
 
 class Register extends Component {
-constructor(props){
-    super(props)
+constructor(props) {
+    super(props);
+    this.LoginPathHandler = this.LoginPathHandler.bind(this);
+}
+
+// navigate to the Login page
+LoginPathHandler(e) {
+    e.preventDefault();
+    this.props.history.push('/');
 }
 
 state= {
@@ -138,9 +145,11 @@ regSubmitHandler = () => {
                             <input name="pwordCheck" value={this.state.pwordCheck} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" type="password"/>
                         </Wrap>
                     </Row>
-                    
-                    {/* on button click, fires off regSubmitHandler */}
-                    <button className="btn my-btn" onClick={this.regSubmitHandler}cn="btn">SUBMIT</button>
+                    <Wrap cn="form-group">
+                        <button type="submit" onClick={this.LoginPathHandler} className="btn my-btn">LOGIN</button>
+                        {/* on button click, fires off regSubmitHandler */}
+                        <button className="btn my-btn" onClick={this.regSubmitHandler}cn="btn">SUBMIT</button>
+                    </Wrap>
                 </Wrap>
 
                
@@ -182,4 +191,4 @@ regSubmitHandler = () => {
   }
 }      
      
-export default Register;
+export default withRouter(Register);

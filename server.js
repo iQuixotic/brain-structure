@@ -7,13 +7,16 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 const routes = require('./routes');
 const app = express();
+
+//connection to server and listening port
+const PORT = process.env.PORT || 3001;
+const connectMe = process.env.MONGODB_URI || 'mongodb://localhost/brain_db'; 
 // const mongojs = require('mongojs');
 
 // files
 const db = require('./models');
 
 // connect to the database brain_db on the server
-const connectMe = process.env.MONGODB_URI || 'mongodb://localhost/brain_db'; 
 mongoose.connect(connectMe);
 // mongoose.Promise = global.Promise;
 
@@ -28,6 +31,7 @@ app.use(morgan("dev"));
 // app.use('/users', require('./routes/auth'));
 app.use(routes);
 
+// - - - - - - - - - - - - - - - - - - 
 // error handling
 app.use((req, res, next) => {
     const error = new Error('Not found');
@@ -45,10 +49,8 @@ app.use((error, req, res, next) => {
   })
 });
 // - - - - - - - - - - - - - - - - - - 
-//listening port
-const PORT = process.env.PORT || 3001;
+// start server
 app.listen(PORT, function() {
-
   console.log("Server listening on: http://localhost:" + PORT);
 });
 
