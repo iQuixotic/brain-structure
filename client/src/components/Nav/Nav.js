@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {withRouter, Link} from 'react-router-dom';
+import {Wrap} from '../Grid/Z-index';
+import {Jumbotron} from '../Jumbotron/Z-index';
 import './style.css';
 
 class Navbar extends Component {
@@ -8,22 +10,37 @@ class Navbar extends Component {
 // }
   render() {
     return (
-  <nav id="Nav">
-    <ul>
-      <li>
+
+  <nav id="Nav" >   
+  <Wrap cn="nav">
+    <ul className="nav">
+     
+      <li className="">
         <Link className="nav-link active" to="/home">Home</Link>
       </li>
-      <li>
+      <li className="">
         <Link className="nav-link" to="/redirect">Cards</Link>
       </li>
-      <li>
+      <li className="">
         <Link className="nav-link" to="/">Login</Link>
       </li>
-      <li>
-        <Link className="nav-link disabled" to="/register">Register</Link>
+     
+      </ul>
+
+      
+      {/* <Wrap cn=""> */}
+      <ul className="nav ml-auto">
+      <li className="right-side">
+      
+        <Link className="right-side nav-link disabled" to="/register">Register</Link>
       </li>
-    </ul>
+      </ul>
+      </Wrap>
+      {/* </Wrap> */}
+     
+
   </nav>
+  
 
     )
   }
