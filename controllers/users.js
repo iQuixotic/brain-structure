@@ -14,6 +14,7 @@ signedToken = user => {
 module.exports = {
     register: async (req, res, next) => {
         console.log('you hit me')
+        
         // deconstruct
         const {userName, firstName, lastName, email, password} = req.body;
 

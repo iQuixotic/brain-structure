@@ -29,18 +29,18 @@ passport.use(new JwtStrat({
 }))
 
 // local strategy
-// passport.use(new LocalStrat({
-//     usernameField: 'userName'
-// }, async (username, password, done) => {
+passport.use(new LocalStrat({
+    usernameField: 'userName'
+}, async (username, password, done) => {
 
-//     // find user by username
-//     if(!user) {
-//         return done(null, false);
-//     }
+    // find user by username
+    if(!user) {
+        return done(null, false);
+    }
 
-//     // verify pasword is correct
+    // verify pasword is correct
 
-//     // if not found, exit
+    // if not found, exit
 
-//     // else, return the user
-// }));
+    // else, return the user
+}));
