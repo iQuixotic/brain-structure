@@ -1,10 +1,11 @@
 const passport = require('passport');
-const JwtStrategy = require('passport-jwt').Strategy;
+const JwtStrat = require('passport-jwt').Strategy;
 const {ExtractJwt} = require('passport-jwt');
+const LocalStrat = require('passport-local').Strategy;
 const {JWT_SECRET} = require('./configuration')
 const User = require('./models/Users'); 
 
-passport.use(new JwtStrategy({
+passport.use(new JwtStrat({
     jwtFromRequest: ExtractJwt.fromHeader('authorization'),
     secretOrKey: JWT_SECRET
 
@@ -26,3 +27,20 @@ passport.use(new JwtStrategy({
         done(error, false);
 }
 }))
+
+// local strategy
+// passport.use(new LocalStrat({
+//     usernameField: 'userName'
+// }, async (username, password, done) => {
+
+//     // find user by username
+//     if(!user) {
+//         return done(null, false);
+//     }
+
+//     // verify pasword is correct
+
+//     // if not found, exit
+
+//     // else, return the user
+// }));

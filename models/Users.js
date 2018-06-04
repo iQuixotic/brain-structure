@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const bcrypt = require('bcryptjs')
 
 // has a one to many relationship with notes, BlogPosts, BlogResp,
 // decks, and cards
@@ -26,6 +27,15 @@ let UserSchema = new Schema({
         // required: true
     }   
 });
+
+// 
+UserSchema.pre('save', async function (next){ 
+    try {
+
+    } catch(error){
+        next(error)
+    }
+})
 
 let User = mongoose.model('User', UserSchema);
 
