@@ -1,8 +1,19 @@
-// import React, { Component } from 'react';
+import React, {Component} from 'react';
+// import {Row, Container, Col, Wrap} from '../components/Grid/Z-index';
+import {Navbar} from '../components/Nav/Z-index';
+import './Pages.css';
 
-// import logo from '../logo.svg';
-// import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
-// import { VerifyBtn, DelBtn, Btn, ComboBtn, Dropdown, FwdBtn, BackBtn, DislikeBtn, LikeBtn } from '../components/Buttons/Z-index';
-// import { BackDrop, NoteCardL, Card } from '../components/Card/Z-index';
-// import { Input } from '../components/Form/Z-index';
-// import '../Global.css';
+class MainPage extends Component {
+  render() {
+    return (
+        <div id="MainPage">
+
+        <Navbar />
+       
+              
+        </div>
+    );
+    }
+}      
+
+export default MainPage;

@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import {Row, Container, Col, Wrap} from '../components/Grid/Z-index';
 import {Login} from '../components/Form/Z-index';
+import {Navbar} from '../components/Nav/Z-index';
 import './Pages.css';
 
 class LoginPage extends Component {
   render() {
     return (
         <div id="LoginPage">
+
+        <Navbar />
        
             <Container>                
                 <Wrap cn="pad-vert cent">

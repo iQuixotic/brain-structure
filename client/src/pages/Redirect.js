@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
 import {FwdCaret, BackCaret, DislikeBtn, LikeBtn} from '../components/Buttons/Z-index';
 import {BackDrop, CardSpace, Card} from '../components/Card/Z-index';
+import {Navbar} from '../components/Nav/Z-index';
 import './Pages.css';
 
 
@@ -17,6 +18,7 @@ class Redirect extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Navbar />
         <Container>
          
         <Row>

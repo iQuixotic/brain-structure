@@ -8,7 +8,7 @@ class App extends Component {
       
       <Router>
         <div className="App">
-          {/* <Route exact path="/home" component={Main} /> */}
+          <Route exact path="/home" component={Main} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/redirect" component={Redirect} />
           <Route exact path="/" component={LoginPage} />
