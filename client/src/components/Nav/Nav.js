@@ -1,19 +1,11 @@
 import React, {Component} from "react";
 import {withRouter, Link} from 'react-router-dom';
-// import { Link } from 'react-router';
-
 import './style.css';
 
-// GetReactPathHandler(e) {
-//   e.preventDefault();
-//   this.props.history.push('/');
-// }
-
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    // this.GetReactPathHandler = this.GetReactPathHandler.bind(this);
-}
+//   constructor(props) {
+//     super(props);
+// }
   render() {
     return (
   <nav id="Nav">

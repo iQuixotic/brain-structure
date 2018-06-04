@@ -8,9 +8,9 @@ import '../../Uni.css';
 // has state
 // a card for Large notes
 class NoteCardL extends Component {
-constructor(props){
-    super(props)
-}
+// constructor(props){
+//     super(props)
+// }
 state = {
     peerValidation: 0,
     note: "",
