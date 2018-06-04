@@ -1,8 +1,29 @@
 
 
-.right-side {
-    text-align:right;
-    display-inline:block;
+#all-nav-links {
+    padding: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    color: white;
+    background-color: black;
+    border-radius: 0;
+}
+
+#topper {
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0;
+}
+
+.jumbo-moon  {
+    padding-top: 70px;
+    font-size: 3em;
+    color: white;
+}
+
+.each-nav {
+    color: white;
 }
 
 .naver {

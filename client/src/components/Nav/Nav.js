@@ -10,37 +10,39 @@ class Navbar extends Component {
 // }
   render() {
     return (
+      <div>
+      <Jumbotron id="topper">
+        <Wrap cn="jumbo-moon">
+          Words
+        </Wrap>
+      </Jumbotron>
 
+      <Jumbotron id="all-nav-links">
   <nav id="Nav" >   
   <Wrap cn="nav">
     <ul className="nav">
      
-      <li className="">
-        <Link className="nav-link active" to="/home">Home</Link>
+      <li className="each-nav">
+        <Link className="each-nav nav-link active" to="/home">Home</Link>
+      </li>
+      <li className="each-nav">
+        <Link className="each-nav nav-link" to="/redirect">Cards</Link>
       </li>
       <li className="">
-        <Link className="nav-link" to="/redirect">Cards</Link>
-      </li>
-      <li className="">
-        <Link className="nav-link" to="/">Login</Link>
+        <Link className="each-nav nav-link" to="/">Login</Link>
       </li>
      
       </ul>
-
-      
-      {/* <Wrap cn=""> */}
       <ul className="nav ml-auto">
-      <li className="right-side">
+      <li className="">
       
-        <Link className="right-side nav-link disabled" to="/register">Register</Link>
+        <Link className="each-nav right-side nav-link" to="/register">Register</Link>
       </li>
       </ul>
       </Wrap>
-      {/* </Wrap> */}
-     
-
   </nav>
-  
+  </Jumbotron>
+  </div>
 
     )
   }
