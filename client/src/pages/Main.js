@@ -13,13 +13,14 @@ class MainPage extends Component {
         
             <Row id="main-bd-row"> 
                 <Col id="" size="md-2">
-                    <Card />
+                    <Card id="button-card" />
                 </Col>
                 <Col size="md-8">
                     <BackDrop />
                 </Col>
                 <Col size="md-2">
-                    <Card />
+                    <Card id="long2"/>
+                    <Card id="long2" />
                 </Col>
             </Row>
         
@@ -30,13 +31,12 @@ class MainPage extends Component {
                     <InputCard />
                 </Col>
                 <Col id="crd-col" size="md-6">
-                    <CardSpace />
+                    <CardSpace  />
                 </Col>
                 <Col size="md-3">
-                    <Card />
+                    <Card id="length" />
                 </Col>
             </Row>
-            {/* </Container> */}
 
             <Footer />
               

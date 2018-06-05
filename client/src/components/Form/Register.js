@@ -88,7 +88,9 @@ regSubmitHandler = () => {
                         
                         <Wrap cn="col-md-10">
                             {/* is bound to state nameL */}
-                            <input name="nameL" value={this.state.nameL} onChange={this.regChangeHandler.bind(this)} className="form-control register-input" placeholder="Nichols" />
+                            <input name="nameL" value={this.state.nameL} 
+                            onChange={this.regChangeHandler.bind(this)} 
+                            className="form-control register-input" placeholder="Nichols" />
                         </Wrap>
                     </Row>
                 </Wrap>

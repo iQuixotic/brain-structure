@@ -26,11 +26,18 @@
 .each-nav {
     color: white;
     font-family: 'PT Sans', sans-serif;
+    font-size: 1.35em;
+}
+
+.each-nav:hover {
+    color: rgb(255, 10, 112);
 }
 
 .footer {
     padding: 22px;
     margin-top: 20px;
+    width: 100%;
+    position: absolute;
     color: white;
     background: rgb(255, 10, 112);
 }

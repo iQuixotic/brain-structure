@@ -4,14 +4,28 @@
 
 /* Css for components in the PAGES FOLDER ONLY */
     /* ID's */
+#button-card {
+    height: 389px;
+}
+
 #index-card-row {
     margin: 20px 0 0 0;
+}
+
+#length {
+    height: 400px;
+}
+
+#long2 {
+    height: 187px;
+    margin-bottom: 14px;
 }
 
 #main-bd-row {
     margin: 15px 0 0 0;
     padding: 10px;
 }
+
     /* CLASSES */
 .cent {
     float: none;

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import {withRouter, Link} from 'react-router-dom';
 import {Wrap} from '../Grid/Z-index';
 import {Jumbotron} from '../Jumbotron/Z-index';
@@ -20,12 +20,12 @@ const Navbar =(props) => {
   <Wrap cn="nav">
     <ul className="nav">
      
-      <li className="each-nav">
-        <Link className="each-nav nav-link active"  
+      <li className="">
+        <Link className="each-nav nav-link"  
         // onClick={}   
         to="/home">Home</Link>
       </li>
-      <li className="each-nav">
+      <li className="">
         <Link className="each-nav nav-link"  
         // onClick={} 
         to="/redirect">Cards</Link>

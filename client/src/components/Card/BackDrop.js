@@ -7,8 +7,8 @@ import './style.css';
 const BackDrop = (props) => {
     return(
     <div id="BackDropCrd">
-        <Card>
-            <Jumbotron>
+        <Card id="brain-card">
+            <Jumbotron id="brain-space">
                 {props.children} 
             </Jumbotron>       
         </Card>

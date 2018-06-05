@@ -36,12 +36,15 @@
 
 .text {
     font-family: 'PT Sans', sans-serif;
-    font-size: 1.15em;
+    font-size: 1.35em;
+    color: rgb(8, 54, 14);
+    /* color: rgb(247, 2, 116); */
 }
 
 .title {
     font-family: 'Josefin Sans', sans-serif;
     margin: 40px 20px;
+    color: rgb(102, 147, 202);
     border-bottom: 1px solid rgb(121, 118, 118);
     /* #777; */
     font-size: 3.7em;

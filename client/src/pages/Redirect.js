@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from '../logo.svg';
 import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
 import {FwdCaret, BackCaret, DislikeBtn, LikeBtn} from '../components/Buttons/Z-index';
 import {BackDrop, CardSpace, Card} from '../components/Card/Z-index';
