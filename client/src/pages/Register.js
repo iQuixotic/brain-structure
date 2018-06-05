@@ -11,7 +11,7 @@ class RegisterPage extends Component {
   render() {
     return (
     <div className="RegisterPage">   
-        <Navbar />
+        <Navbar header="You are the greatest coder of all time !!!"/>
             <Container>                
                 <Wrap cn="pad-vert cent">
                     <Row>

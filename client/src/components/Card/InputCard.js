@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import {Plus} from '../Symbols/Z-index';
-import {Row, Col, Wrap} from '../Grid/Z-index';
+import {Row} from '../Grid/Z-index';
 import './style.css';
 import '../../Uni.css';
 

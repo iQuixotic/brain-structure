@@ -4,6 +4,10 @@
 
 /* REUSABLE UNIVERSAL CSS */
 
+body {
+  background: rgb(241, 241, 241);
+}
+
     /* CLASSES */
 .App {
   text-align: center;

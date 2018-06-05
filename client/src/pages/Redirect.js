@@ -18,7 +18,7 @@ class Redirect extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-        <Navbar />
+        <Navbar header="You are amazing !!"/>
         <Container>
          
         <Row>

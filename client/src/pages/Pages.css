@@ -7,6 +7,11 @@
 #index-card-row {
     margin: 20px 0 0 0;
 }
+
+#main-bd-row {
+    margin: 15px 0 0 0;
+    padding: 10px;
+}
     /* CLASSES */
 .cent {
     float: none;

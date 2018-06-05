@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Navbar, Footer} from '../components/Nav/Z-index';
-import {CardSpace, Card, InputCard} from '../components/Card/Z-index';
+import {CardSpace, Card, InputCard, BackDrop} from '../components/Card/Z-index';
 import {Wrap, Container, Col, Row} from '../components/Grid/Z-index';
 import './Pages.css';
 
@@ -9,8 +9,22 @@ class MainPage extends Component {
     return (
         <div id="MainPage">
 
-        <Navbar />
-            {/* <Container> */}
+            <Navbar header="I Believe"/>
+        
+            <Row id="main-bd-row"> 
+                <Col id="" size="md-2">
+                    <Card />
+                </Col>
+                <Col size="md-8">
+                    <BackDrop />
+                </Col>
+                <Col size="md-2">
+                    <Card />
+                </Col>
+            </Row>
+        
+
+
             <Row id="index-card-row">
                 <Col id="input-col" size="md-3">
                     <InputCard />

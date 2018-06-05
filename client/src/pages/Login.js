@@ -9,7 +9,7 @@ class LoginPage extends Component {
     return (
         <div id="LoginPage">
 
-        <Navbar />
+        <Navbar header="You Can do it" />
        
             <Container>                
                 <Wrap cn="pad-vert cent">
