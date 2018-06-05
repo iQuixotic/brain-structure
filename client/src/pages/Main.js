@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import {Row, Container, Col, Wrap} from '../components/Grid/Z-index';
 import {Navbar} from '../components/Nav/Z-index';
 import './Pages.css';
 

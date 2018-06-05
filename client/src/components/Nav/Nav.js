@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {withRouter, Link} from 'react-router-dom';
+import {withRouter, Link, Switch} from 'react-router-dom';
 import {Wrap} from '../Grid/Z-index';
 import {Jumbotron} from '../Jumbotron/Z-index';
 import './style.css';
@@ -11,6 +11,17 @@ class Navbar extends Component {
     super(props);
   }
 state = {
+}
+
+
+componentDidUpdate(prevProps) {
+  // if (this.props.location !== prevProps.location) {
+    this.onRouteChanged();
+  // }
+}
+
+onRouteChanged() {
+  console.log("ROUTE CHANGED");
 }
 
 
@@ -53,6 +64,7 @@ state = {
         to="/register">Register</Link>
       </li>
       </ul>
+     
       </Wrap>
   </nav>
   </Jumbotron>

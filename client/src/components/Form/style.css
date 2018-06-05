@@ -42,7 +42,8 @@
 .title {
     font-family: 'Josefin Sans', sans-serif;
     margin: 40px 20px;
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid rgb(255, 0, 149);
+    /* #777; */
     font-size: 3.7em;
     font-style: italic;
 }
