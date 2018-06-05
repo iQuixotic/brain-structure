@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Row, Container, Col, Wrap} from '../components/Grid/Z-index';
-import {Navbar} from '../components/Nav/Z-index';
+import {Navbar, Footer} from '../components/Nav/Z-index';
 // import {Login} from '../components/Form/Z-index';
 import {Register} from '../components/Form/Z-index';
 import './Pages.css';
@@ -22,6 +22,7 @@ class RegisterPage extends Component {
                     </Row> 
                 </Wrap>                   
             </Container>
+        <Footer />
     </div>
     );
   }

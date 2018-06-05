@@ -7,7 +7,7 @@ import '../../Uni.css';
 
 // has state
 // a card for Large notes
-class NoteCardL extends Component {
+class CardSpace extends Component {
 // constructor(props){
 //     super(props)
 // }
@@ -22,11 +22,11 @@ state = {
 
     render() {
         return(
-        <div id="NoteCardLCrd">
-            <Card traits="note-card">
+        <div id={this.props.id} className={this.props.cn}>
+            <Card id="note-card">
                 <Col size="md-12" className="center">
                     <Row>
-                        <Card traits="note-card-content">
+                        <Card id="note-card-content">
                             <Wrap cn="float-right green pad-right">
                             {/* Dynamic plus or minus signs to be printed depending validity ratio */}
                                 <Row>                                                               
@@ -45,7 +45,7 @@ state = {
                     </Row>
                 </Col>
                 <Col size="md-12">
-                    <Row traits="btnR">
+                    <Row id="btnR">
                         <button className="note-btn my-btn btn">Back</button>
                         <button className="note-btn my-btn btn">Next</button>                    
                     </Row>
@@ -56,7 +56,7 @@ state = {
     }
 }
 
-export default NoteCardL;
+export default CardSpace;
 
 
 // right here if I try to extend class card, it doesnt like that. there is 

@@ -28,6 +28,13 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+.footer {
+    padding: 22px;
+    margin-top: 20px;
+    color: white;
+    background: rgb(255, 10, 112);
+}
+
 .naver {
     display: inline;
 }

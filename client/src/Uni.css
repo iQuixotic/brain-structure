@@ -37,6 +37,7 @@
 .pix-pad1 {
   padding-left: 10px;
 }
+
 .pix-pad2 {
   padding-left: 55px;
 }
@@ -84,6 +85,7 @@
   transform: scale(0, 0);
   opacity: 1;
 }
+
   70% {
   transform: scale(25, 25);
   opacity: 1;

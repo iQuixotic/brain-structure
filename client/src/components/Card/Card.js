@@ -1,7 +1,6 @@
 import React from "react";
 import './style.css';
 
-// a backDrop for the brain
 const Card = (props) => {
     return(
     <div id="CardCrd">

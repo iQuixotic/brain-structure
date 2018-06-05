@@ -9,20 +9,26 @@
     float: right;
 }
 
+#input-crd-btn-row {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    justify-content: center;
+}
+
 #note-card {
-    height: 365px;
+    /* height: 500px; */
     align-content: center; 
 }
 
 #note-card-content {
     color: black;
     background: rgb(250, 248, 227);
-    height: 290px;
-    perspective: 635px;
+    margin: 1px;
+    /* perspective: 635px; */
     -moz-box-shadow:    3px 3px  rgb(49, 49, 49);
     -webkit-box-shadow: 3px 3px   rgb(49, 49, 49);
     box-shadow: 0px;
-    position: relative;
+    /* position: relative; */
     transition: transform 1s;
     transform-style: preserve-3d;
 }
@@ -30,6 +36,11 @@
 #note-card-content:active {
     transform: rotateY(180deg); 
 }
+
+#note-input-crd {
+    padding: 10px 8px 20px 8px;
+}
+
     /* CLASSES */
 .center {
     align-content: center;
@@ -46,6 +57,10 @@
 }
 .green {
     color: green;
+}
+
+.input-field {
+    width: 100%
 }
 /*
 .my-card {
@@ -66,7 +81,7 @@
     border-width: 0 1px 1px 0;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.568);
-    /* padding: 10px 10px 50px 10px; */
+    padding: 7px 7px 60px 7px;
     -moz-box-shadow:    3px 3px 5px 6px  rgb(106, 80, 255);
     -webkit-box-shadow: 3px 3px 5px 6px  rgb(207, 207, 207);
     box-shadow:         2px 2px 5px 5px  rgb(134, 133, 134);
@@ -85,6 +100,12 @@
 
 .pad-right {
     padding-right: 7px;
+}
+
+.pretty-form {
+    border: 10px solid #333;
+    border-top: 22px solid #333;
+    background: #333;
 }
 
 .verified {

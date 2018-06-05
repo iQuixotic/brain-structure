@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
 import {FwdCaret, BackCaret, DislikeBtn, LikeBtn} from '../components/Buttons/Z-index';
 import {BackDrop, CardSpace, Card} from '../components/Card/Z-index';
-import {Navbar} from '../components/Nav/Z-index';
+import {Navbar, Footer} from '../components/Nav/Z-index';
 import './Pages.css';
 
 
@@ -137,6 +137,7 @@ class Redirect extends Component {
                     </Col>
             </Row>
         </Container>
+        <Footer />
       </div>
     );
   }
