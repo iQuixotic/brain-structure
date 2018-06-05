@@ -57,6 +57,12 @@
 }
 
     /* CLASSES */
+.archive {
+    padding: 37px 0 0 0;
+    justify-content: center;
+    color: rgb(102, 147, 202);
+}
+
 .center {
     align-content: center;
 }

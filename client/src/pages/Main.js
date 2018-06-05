@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Navbar, Footer} from '../components/Nav/Z-index';
-import {CardSpace, Card, InputCard, BackDrop} from '../components/Card/Z-index';
+import {CardSpace, Card, InputCard, BackDrop, MyDecks} from '../components/Card/Z-index';
 import {Wrap, Container, Col, Row} from '../components/Grid/Z-index';
 import './Pages.css';
 
@@ -20,11 +20,9 @@ class MainPage extends Component {
                 </Col>
                 <Col size="md-2">
                     <Card id="long2"/>
-                    <Card id="long2" />
+                    <MyDecks crdId="MyDecksCard" />
                 </Col>
             </Row>
-        
-
 
             <Row id="index-card-row">
                 <Col id="input-col" size="md-3">
