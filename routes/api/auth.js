@@ -7,10 +7,10 @@ const {validateBody, schemas} = require('../../helpers/routeHelpers');
 
 router.route('/register')
     // .post(UsersControllers.register); //no-auth route for testing
-    .post(validateBody(schemas.authSchema), UsersController.register);
+    .post(validateBody(schemas.addAuthSchema), UsersController.register);
 
 router.route('/signin')
-    .post(validateBody(schemas.authSchema), passport.authenticate('local', {session: false}),  UsersController.signIn);
+    .post(validateBody(schemas.loginAuthSchema), passport.authenticate('local', {session: false}),  UsersController.signIn);
     // .get(UsersControllers.signIn);
 
 router.route('/secret')

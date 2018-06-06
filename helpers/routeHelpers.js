@@ -15,11 +15,15 @@ module.exports = {
         }
     },  
     schemas: {
-        authSchema: joi.object().keys({
+        addAuthSchema: joi.object().keys({
             userName: joi.array().items(joi.string().min(5).max(25).required()),
             firstName: joi.array().items(joi.string().min(2).max(30).required()),
             lastName: joi.array().items(joi.string().min(2).max(30).required()),
             email: joi.array().items(joi.string().min(5).max(30).email().required()),
+            password: joi.array().items(joi.string().min(7).max(25).required())
+        }),
+        loginAuthSchema: joi.object().keys({
+            userName: joi.array().items(joi.string().min(5).max(25).required()),
             password: joi.array().items(joi.string().min(7).max(25).required())
         })
     }
