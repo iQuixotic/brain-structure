@@ -1,4 +1,5 @@
 import React from 'react';
+import {Btn} from '../Buttons/Z-index';
 import Card from './Card';
 import {Row} from '../Grid/Z-index';
 import './style.css';
@@ -12,13 +13,13 @@ const InputCard =(props) => {
                 <form className="form-control pretty-form">
                     <textarea className="input-field" type="text" name="name" rows="11" />
                     <Row id="input-crd-btn-row">
-                        <button className="btn my-btn">Make</button> 
-                        <button className="btn my-btn">Add</button>
+                        <Btn>Make</Btn> 
+                        <Btn>Add</Btn>
                     </Row>
                 </form>
             </Card>
         </div>
-        );
+    );
 }
 
 export default InputCard;

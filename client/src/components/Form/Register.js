@@ -1,5 +1,6 @@
 
 import React, {Component} from 'react';
+import {Btn} from '../Buttons/Z-index';
 import {Row, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
 import API from '../../utils/API';
@@ -148,9 +149,8 @@ regSubmitHandler = () => {
                         </Wrap>
                     </Row>
                     <Wrap cn="form-group">
-                        <button type="submit" onClick={this.LoginPathHandler} className="btn my-btn">LOGIN</button>
-                        {/* on button click, fires off regSubmitHandler */}
-                        <button className="btn my-btn" onClick={this.regSubmitHandler}cn="btn">SUBMIT</button>
+                        <Btn type="submit" click={this.LoginPathHandler} >LOGIN</Btn>
+                        <Btn click={this.regSubmitHandler}type="submit">SUBMIT</Btn>
                     </Wrap>
                 </Wrap>
 

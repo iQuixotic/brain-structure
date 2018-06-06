@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Btn} from '../Buttons/Z-index';
 import Card from './Card';
 import {Plus} from '../Symbols/Z-index';
 import {Row, Col, Wrap} from '../Grid/Z-index';
@@ -46,8 +47,8 @@ state = {
                 </Col>
                 <Col size="md-12">
                     <Row id="btnR">
-                        <button className="note-btn my-btn btn">Back</button>
-                        <button className="note-btn my-btn btn">Next</button>                    
+                        <Btn>Back</Btn>
+                        <Btn>Next</Btn>                    
                     </Row>
                 </Col>
             </Card>

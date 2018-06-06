@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Btn} from '../Buttons/Z-index';
 import {Container, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
 import './style.css';
@@ -44,8 +45,8 @@ toRegPathHandler(e) {
                         <label className="form-check-label text" >Forgot My Password</label>
                     </Wrap>
                     <Wrap cn="form-group">
-                        <button type="submit" className="btn my-btn">SUBMIT</button>
-                        <button type="submit" onClick={this.toRegPathHandler} className="btn my-btn">REGISTER</button>
+                        <Btn type="submit">SUBMIT</Btn>
+                        <Btn type="submit" click={this.toRegPathHandler} className="btn my-btn">REGISTER</Btn>
                     </Wrap>
                 </form>
             </Card>
