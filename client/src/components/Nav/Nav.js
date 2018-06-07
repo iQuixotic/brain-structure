@@ -5,7 +5,6 @@ import {Jumbotron} from '../Jumbotron/Z-index';
 import './style.css';
 
 
-
 const Navbar =(props) => {
     return (
       <div>

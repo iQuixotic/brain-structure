@@ -1,27 +1,25 @@
 import React, {Component} from 'react';
 import {Navbar, Footer} from '../components/Nav/Z-index';
 import {CardSpace, Card, InputCard, BackDrop, MyDecks} from '../components/Card/Z-index';
-import {Wrap, Container, Col, Row} from '../components/Grid/Z-index';
+import {Col, Row} from '../components/Grid/Z-index';
 import {Carousel} from '../components/Carousel/Z-index';
-import {Img} from '../components/Img/Z-index';
-import {fc} from '../assets/brainImages/Z-index';
 import './Pages.css';
 
 
 // must pass a ref through main page to update backdrop
-const style1 = {
-    backgroundImage: {fc},
-    backgroundSize: "100% 100%"
-}
+// const style1 = {
+//     backgroundImage: {fc},
+//     backgroundSize: "100% 100%"
+// }
 
-const style2 = {
-   backgroundColor: "rgb(94, 92, 92)"
-}
+// const style2 = {
+//    backgroundColor: "rgb(94, 92, 92)"
+// }
 
 class MainPage extends Component {
-constructor(props){
-    super(props)
-}
+// constructor(props){
+//     super(props)
+// }
   render() {
     return (
         <div id="MainPage">
@@ -58,8 +56,9 @@ constructor(props){
                     <Card id="length" />
                 </Col>
             </Row>
-
-            <Footer />
+            <Row>
+                <Footer />
+            </Row>
               
         </div>
     );

@@ -9,9 +9,9 @@ import {fc, ls, fhl, fba} from '../../assets/brainImages/Z-index'
 let picArr = [{img: fc}, {img: ls}, {img: fhl}, {img: fba}];
 
 class Carousel extends Component {
-constructor(props){
-    super(props)
-}
+// constructor(props){
+//     super(props)
+// }
 state = {
     picNumber: 1,
     showThisPic: picArr[0],
@@ -21,7 +21,7 @@ state = {
 //should display picture in backdrop by passing reference
 updateBackDrop = () => {
     let temp = this.state.using;
-    let picFrame = this.state.picNumber; 
+    // let picFrame = this.state.picNumber; 
     this.setState({
         using: !temp
         // i dont know if i can change 2 at once...
@@ -89,7 +89,6 @@ startOverHandler = () => {
     console.log(this.state.picNumber);
     console.log(this.state.showThisPic.img);
 }
-
 
     render(){
     return(

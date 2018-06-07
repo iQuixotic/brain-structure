@@ -9,6 +9,13 @@
     border-radius: 0;
 }
 
+.footer { 
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: justify;
+}
+
 #topper {
     background-color: black;
     padding: 0px;
