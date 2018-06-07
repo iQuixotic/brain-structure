@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Navbar, Footer} from '../components/Nav/Z-index';
 import {CardSpace, Card, InputCard, BackDrop, MyDecks} from '../components/Card/Z-index';
 import {Wrap, Container, Col, Row} from '../components/Grid/Z-index';
+import {Carousel} from '../components/Carousel/Z-index';
 import './Pages.css';
 
 class MainPage extends Component {
@@ -19,7 +20,9 @@ class MainPage extends Component {
                     <BackDrop />
                 </Col>
                 <Col size="md-2">
-                    <Card id="long2"/>
+                    <Card id="long2">
+                        
+                    </Card>
                     <MyDecks crdId="MyDecksCard" />
                 </Col>
             </Row>

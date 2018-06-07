@@ -1,24 +1,26 @@
 import React from "react";
-import {Card} from "./Z-index";
-import {Jumbotron} from "../Jumbotron/Z-index";
-import './style.css';
+import {Img} from "../Img/Z-index";
+import {Wrap} from "../Grid/Z-index";
+// import {Card} from "./Z-index";
+// import {Jumbotron} from "../Jumbotron/Z-index";
+// import './style.css';
 
-// a backDrop for the brain
+
 const Carousel = (props) => {
     return(
-        <div className="Carousel">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="..." alt="First slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Second slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Third slide" />
-                    </div>
-                </div>
+        <Wrap cn={props.cn}>
+            <Wrap id="carouselExampleControls" cn="carousel slide" data-ride="carousel">
+                <Wrap cn="carousel-inner">
+                    <Wrap cn="carousel-item active">
+                        <Img cn="d-block w-100" src="." alt="First slide" />
+                    </Wrap>
+                    <Wrap cn="carousel-item">
+                        <Img cn="d-block w-100" src="..." alt="Second slide" />
+                    </Wrap>
+                    <Wrap cn="carousel-item">
+                        <Img cn="d-block w-100" src="..." alt="Third slide" />
+                    </Wrap>
+                </Wrap>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
@@ -27,8 +29,8 @@ const Carousel = (props) => {
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
-      </div>
+            </Wrap>
+      </Wrap>
 
 
     );
