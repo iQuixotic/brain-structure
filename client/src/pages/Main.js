@@ -6,7 +6,11 @@ import {Carousel} from '../components/Carousel/Z-index';
 import {Img} from '../components/Img/Z-index';
 import './Pages.css';
 
+
+
+
 class MainPage extends Component {
+
   render() {
     return (
         <div id="MainPage">
@@ -20,6 +24,8 @@ class MainPage extends Component {
                     </Card>
                 </Col>
                 <Col size="md-8">
+                {/* i think i need to update something here maybe, but maybe
+                i can do it from the other component... */}
                     <BackDrop />
                 </Col>
                 <Col size="md-2">

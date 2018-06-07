@@ -7,7 +7,7 @@ const Disorders = (props) => {
     <div id="Disorders">
         <div id={props.id}  className={props.cn}>
 
-           <h1 className="dis-header">{props.title}</h1>
+           <h1 id={props.disorder} className="dis-header">{props.title}</h1>
                 <p className="p">{props.description}</p>
 
             <h3 className="dis-header">Brain Architecture</h3>
