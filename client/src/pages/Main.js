@@ -16,9 +16,7 @@ class MainPage extends Component {
             <Row id="main-bd-row"> 
                 <Col id="" size="md-2">
                     <Card id="button-card" >
-                        <img className="d-block w-100" 
-                        src="../assets/brainImages/whole-brain.jpg"
-                         alt="First slide" />
+                        <Carousel />
                     </Card>
                 </Col>
                 <Col size="md-8">

@@ -1,11 +1,26 @@
-import React from "react";
+import React, {Component} from "react";
 import {Img} from "../Img/Z-index";
 import {Wrap} from "../Grid/Z-index";
 
-import {fc} from '../../assets/brainImages/Z-index'
+import {fc, ls, fhl, fba} from '../../assets/brainImages/Z-index'
 
 
-const Carousel = (props) => {
+
+
+class Carousel extends Component {
+// constructor(props){
+//     super(props)
+// }
+state = {
+        
+}
+
+pickClickHandler = () => {
+    
+}
+
+
+    render(){
     return(
         <Wrap cn={props.cn}>
             <Wrap id="carouselExampleControls" cn="carousel slide" data-ride="carousel">
@@ -17,28 +32,31 @@ const Carousel = (props) => {
                     </Wrap>
                     <Wrap cn="carousel-item">
                         <Img cn="d-block w-100" 
-                        src="../../assets/brainImages/functions-by-area.jpg"
+                        src={fba}
                          alt="Second slide" />
                     </Wrap>
                     <Wrap cn="carousel-item">
                         <Img cn="d-block w-100" 
-                        src="../../assets/brainImages/function-control.jpg"
+                        src={ls}
                          alt="Third slide" />
                     </Wrap>
                 </Wrap>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                <a className="carousel-control-prev" href="#carouselExampleControls" 
+                role="button" data-slide="prev" onClick={props.next}>
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                <a className="carousel-control-next" href="#carouselExampleControls" 
+                role="button" data-slide="next" onClick={props.back}>
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
                 </a>
             </Wrap>
-      </Wrap>
+        </Wrap>
 
 
-    );
+        );
+    }
 }
 
 export default Carousel;

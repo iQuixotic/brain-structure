@@ -1,39 +1,30 @@
 import React from "react";
-import {Img} from "../Img/Z-index";
-import {Wrap} from "../Grid/Z-index";
+import './style.css';
 
-
-const Carousel = (props) => {
+// will map over array and supply formated text
+const Disorders = (props) => {
     return(
-        <Wrap cn={props.cn}>
-            <Wrap id="carouselExampleControls" cn="carousel slide" data-ride="carousel">
-                <Wrap cn="carousel-inner">
-                    <Wrap cn="carousel-item active">
-                        <Img cn="d-block w-100" src="." alt="First slide" />
-                    </Wrap>
-                    <Wrap cn="carousel-item">
-                        <Img cn="d-block w-100" src="..." alt="Second slide" />
-                    </Wrap>
-                    <Wrap cn="carousel-item">
-                        <Img cn="d-block w-100" src="..." alt="Third slide" />
-                    </Wrap>
-                </Wrap>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </Wrap>
-      </Wrap>
+    <div id="Disorders">
+        <div id={props.id}  className={props.cn}>
 
+           <h1 className="dis-header">{props.title}</h1>
+                <p className="p">{props.description}</p>
 
+            <h3 className="dis-header">Brain Architecture</h3>
+                <p className="p">{props.sructureData}</p>
+
+            <h3 className="dis-header">Neurochemistry</h3>
+                <p className="p">{props.chem}</p>
+
+            <h3 className="dis-header">DSM-V</h3>
+                <p className="p">{props.data}</p>
+
+            <h3 className="dis-header">Studies</h3>
+                <p className="p">{props.studies}</p>
+        </div>
+    </div>
     );
 }
 
-export default Carousel;
-
-
+export default Disorders;
 
