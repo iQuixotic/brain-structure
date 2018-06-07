@@ -8,17 +8,6 @@ import {fc, ls, fhl, fba} from '../../assets/brainImages/Z-index'
 // check what should display and where
 let picArr = [{img: fc}, {img: ls}, {img: fhl}, {img: fba}];
 
-
-// must pass a ref through main page to update backdrop
-// const style1 = {
-//     backgroundImage: {fc},
-//     backgroundSize: "100% 100%"
-// }
-
-// const style2 = {
-//    backgroundColor: "rgb(94, 92, 92)"
-// }
-
 class Carousel extends Component {
 constructor(props){
     super(props)
@@ -29,9 +18,8 @@ state = {
     using: false
 }
 
-
 //should display picture in backdrop by passing reference
-picClickHandler = () => {
+updateBackDrop = () => {
     let temp = this.state.using;
     let picFrame = this.state.picNumber; 
     this.setState({
@@ -57,7 +45,6 @@ prevClickHandler = () => {
 }
 
 addLengthHandler = () => {
-
     this.setState({
         picNumber: picArr.length-1,
         showThisPic: picArr[this.state.picNumber]
@@ -80,8 +67,8 @@ nextClickHandler = () => {
     this.startOverHandler();
 }
 
-// increment/decrement carousel if number
-// is not 0 or length of pic array
+// increment/decrement carousel by 1 pic if
+// number is not 0 or length of pic array
 changeSlideHandler = (stateHolder) => {
     this.setState({
         picNumber: stateHolder,
@@ -92,6 +79,7 @@ changeSlideHandler = (stateHolder) => {
     console.log(this.state.showThisPic.img);
 }
 
+// start the count over at 0
 startOverHandler = () => {
     this.setState({
         picNumber: 0,
@@ -103,8 +91,6 @@ startOverHandler = () => {
 }
 
 
-
-
     render(){
     return(
         <Wrap cn={this.props.cn}>
@@ -112,27 +98,16 @@ startOverHandler = () => {
                 <Wrap cn="carousel-inner">
                     <Wrap cn="carousel-item active">
                         <Img cn="d-block w-100" 
-                        src= {this.state.showThisPic.img}
+                         click={this.updateBackDrop}
+                         src= {this.state.showThisPic.img}
                          alt="First slide" />
                     </Wrap>
-                    {/* <Wrap cn="carousel-item">
-                        <Img cn="d-block w-100" 
-                        src={fba}
-                         alt="Second slide" />
-                    </Wrap>
-                    <Wrap cn="carousel-item">
-                        <Img cn="d-block w-100" 
-                        src={ls}
-                         alt="Third slide" />
-                    </Wrap> */}
                 </Wrap>
                 <a className="carousel-control-prev" onClick={this.prevClickHandler}>
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
                 </a>
                 <a className="carousel-control-next" onClick={this.nextClickHandler}>
                     <span className="carousel-control-next-icon"></span>
-                    <span className="sr-only">Next</span>
                 </a>
             </Wrap>
         </Wrap>
