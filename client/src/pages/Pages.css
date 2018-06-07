@@ -8,6 +8,16 @@
     height: 389px;
 }
 
+#cp-cards {
+    width: 80%;
+    align-content: center;
+    height: 200px;
+    padding: 20px;
+    margin: 30px;
+    background: rgb(250, 250, 220);
+    border: solid rgb(243, 243, 237) 2px;
+}
+
 #index-card-row {
     margin: 20px 0 0 0;
 }
@@ -34,11 +44,28 @@
 }
 
     /* CLASSES */
+.bl {
+    float: left;
+    width: 20%;
+    height: 20%;
+    margin-top: 138px;
+}
+
+.bll {
+    font-size: 1.20em;
+    margin-top: 141px;
+    color: rgb(255, 10, 112);
+    bottom: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .cent {
     float: none;
     margin-right: auto;
     margin-left: auto;
 }
+
 
 .pad-vert {
     padding: 100px 0;

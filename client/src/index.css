@@ -14,6 +14,10 @@ body {
   float: right;
 }
 
+.pad {
+  padding-top: 27px;
+}
+
 .pix-pad1 {
   padding-left: 10px;
 }

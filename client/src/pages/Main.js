@@ -35,7 +35,7 @@ class MainPage extends Component {
                 <Col size="md-8">
                 {/* i think i need to update something here maybe, but maybe
                 i can do it from the other component... */}
-                    <BackDrop />
+                    <BackDrop id="bd"/>
                 </Col>
                 <Col size="md-2">
                     <Card id="long2">

@@ -5,11 +5,10 @@ import './style.css';
 
 // a backDrop for the various dynamic content
 const BackDrop = (props) => {
-
     return(
     <div id="BackDropCrd">
-        <Card id="brain-card">
-            <Jumbotron style={props.background} id="brain-space" >
+        <Card id={props.id} className="brain-card" >
+            <Jumbotron style={props.background}  className={props.cnJumbo} id="brain-space" >
                 {props.children} 
             </Jumbotron>       
         </Card>

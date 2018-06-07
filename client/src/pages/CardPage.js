@@ -1,25 +1,379 @@
 import React, { Component } from "react";
-import {Container} from "../components/Grid/Z-index";
+import {Navbar, Footer} from "../components/Nav/Z-index";
+import {Card} from "../components/Card/Z-index";
+import {LikeBtn, DislikeBtn} from "../components/Buttons/Z-index";
+import {Container, Wrap, Row, Col} from "../components/Grid/Z-index";
+import './Pages.css';
+
 
 class CardPage extends Component {
+// constructor(props) {
+//   super(props)
+// }
+
 //   state = {
     
 //   };
-  // When this component mounts, grab ten content cards 
-  // for adademic value/validity to be judged
-//   componentDidMount() {
-//     API.getTen(this.props.match.params.id)
-//       .then(res => this.setState({ card: res.data }))
-//       .catch(err => console.log(err));
-//   }
 
   render() {
     return (
+      <Wrap>
+          <Navbar header="The Great and Powerful Cards"/>
+          <Wrap cn="pad"/>
+          <Container>
+              <Row>
+                
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
 
 
-        <Container>
 
-        </Container>
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+
+
+
+
+
+
+
+
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+              </Row>
+
+
+
+
+
+
+
+              <Row>
+                
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+
+
+
+
+
+
+
+
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+              </Row>
+
+
+
+
+
+
+
+
+
+
+
+              <Row>
+                
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+
+
+
+
+
+
+
+
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+              </Row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Row>
+                
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+
+
+
+
+
+
+
+
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+              </Row>
+
+
+
+
+
+
+
+
+
+
+
+              <Row>
+                
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+
+
+
+
+
+
+
+
+                <Col size="md-6">
+                <Card id="cp-cards">
+                    <Row> 
+
+                    </Row>
+
+
+
+                    <Row>
+                      <Col size="md-3">
+                        <input type="checkbox" className="bl" />
+                        <label className="bll" for="bl">Add</label>
+                      </Col>
+                      <Col size="md-6" />
+                      <Col size="md-3">
+                        <Row> 
+                          <DislikeBtn size="2x" cn="bl" />
+                          <Col size="md-1" />
+                          <LikeBtn size="2x" cn="bl"/>                          
+                        </Row>
+                      </Col>
+                    </Row>                 
+                  </Card> 
+                </Col>
+
+              </Row>
+
+              
+          </Container>
+          <Footer />
+        </Wrap>
     );
   }
 }

@@ -27,7 +27,7 @@ const Navbar =(props) => {
       <li className="">
         <Link className="each-nav nav-link"  
         // onClick={} 
-        to="/redirect">Cards</Link>
+        to="/cards/all">Cards</Link>
       </li>
       <li className="">
         <Link className="each-nav nav-link"

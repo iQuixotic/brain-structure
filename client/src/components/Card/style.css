@@ -5,18 +5,15 @@
 /* Css for components in the CARD FOLDER ONLY */
 
     /* ID'S */
-#brain-card {
-    justify-content: center;
-    padding: 4px;
-    border: 0px;
-    border-bottom: 0px;
+#bd {
+    padding: 3px;
 }
 
 #brain-space {
     border: 0px;
     margin: 0px;
     padding: 0px;
-    height: 380px;
+    height: 382px;
     background: rgb(94, 92, 92);
 }
 
@@ -61,6 +58,13 @@
     position: relative;
     padding: 37px 0 0 0;
     color: rgb(102, 147, 202);
+}
+
+.brain-card {
+    justify-content: center;
+    padding: 4px;
+    border: 0px;
+    border-bottom: 0px;
 }
 
 .center {
