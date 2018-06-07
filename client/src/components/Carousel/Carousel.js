@@ -1,9 +1,8 @@
 import React from "react";
 import {Img} from "../Img/Z-index";
 import {Wrap} from "../Grid/Z-index";
-// import {Card} from "./Z-index";
-// import {Jumbotron} from "../Jumbotron/Z-index";
-// import './style.css';
+
+import {fc} from '../../assets/brainImages/Z-index'
 
 
 const Carousel = (props) => {
@@ -12,13 +11,19 @@ const Carousel = (props) => {
             <Wrap id="carouselExampleControls" cn="carousel slide" data-ride="carousel">
                 <Wrap cn="carousel-inner">
                     <Wrap cn="carousel-item active">
-                        <Img cn="d-block w-100" src="." alt="First slide" />
+                        <Img cn="d-block w-100" 
+                        src= {fc}
+                         alt="First slide" />
                     </Wrap>
                     <Wrap cn="carousel-item">
-                        <Img cn="d-block w-100" src="..." alt="Second slide" />
+                        <Img cn="d-block w-100" 
+                        src="../../assets/brainImages/functions-by-area.jpg"
+                         alt="Second slide" />
                     </Wrap>
                     <Wrap cn="carousel-item">
-                        <Img cn="d-block w-100" src="..." alt="Third slide" />
+                        <Img cn="d-block w-100" 
+                        src="../../assets/brainImages/function-control.jpg"
+                         alt="Third slide" />
                     </Wrap>
                 </Wrap>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
