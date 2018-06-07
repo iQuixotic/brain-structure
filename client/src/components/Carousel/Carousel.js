@@ -6,25 +6,26 @@ import {fc, ls, fhl, fba} from '../../assets/brainImages/Z-index'
 
 // will need this array to map over and 
 // check what should display and where
-let picArr = [{fc}, {ls}, {fhl}, {fba}] 
+let picArr = [{img: fc}, {img: ls}, {img: fhl}, {img: fba}];
+
 
 // must pass a ref through main page to update backdrop
-const style1 = {
-    backgroundImage: {fc},
-    backgroundSize: "100% 100%"
-}
+// const style1 = {
+//     backgroundImage: {fc},
+//     backgroundSize: "100% 100%"
+// }
 
-const style2 = {
-   backgroundColor: "rgb(94, 92, 92)"
-}
+// const style2 = {
+//    backgroundColor: "rgb(94, 92, 92)"
+// }
 
 class Carousel extends Component {
-// constructor(props){
-//     super(props)
-// }
+constructor(props){
+    super(props)
+}
 state = {
-    picNumber: 0,
-    showThisPic: 0,
+    picNumber: 1,
+    showThisPic: picArr[0],
     using: false
 }
 
@@ -43,26 +44,67 @@ picClickHandler = () => {
 }
 
 // should decrement the number being pointed to in the carousel array
-backClickHandler = () => {
-    !0 ?
-    this.state.picNumber-- :
+prevClickHandler = () => {
+
+      // holder variables
+      let stateHolder = this.state.picNumber;
+      stateHolder--;
+  
+      this.state.picNumber >
+      0 ?
+      this.changeSlideHandler(stateHolder) :   
+      this.addLengthHandler()
+}
+
+addLengthHandler = () => {
+
     this.setState({
-        picNumber: picArr.length
+        picNumber: picArr.length-1,
+        showThisPic: picArr[this.state.picNumber]
     })
     console.log(picArr.length);
     console.log(this.state.picNumber);
+    console.log(this.state.showThisPic.img);
 }
 
 // should increment the number being pointed to in the carousel array
 nextClickHandler = () => {
-    !picArr.length ?
-    this.state.picNumber++ :
+
+    // holder variables
+    let stateHolder = this.state.picNumber;
+    stateHolder++;
+
+    this.state.picNumber <
+    picArr.length-1 ?
+    this.changeSlideHandler(stateHolder) :
+    this.startOverHandler();
+}
+
+// increment/decrement carousel if number
+// is not 0 or length of pic array
+changeSlideHandler = (stateHolder) => {
     this.setState({
-        picNumber: 0
+        picNumber: stateHolder,
+        showThisPic: picArr[this.state.picNumber]
+    })  
+    console.log(picArr.length);
+    console.log(this.state.picNumber);
+    console.log(this.state.showThisPic.img);
+}
+
+startOverHandler = () => {
+    this.setState({
+        picNumber: 0,
+        showThisPic: picArr[this.state.picNumber]
     })
     console.log(picArr.length);
     console.log(this.state.picNumber);
+    console.log(this.state.showThisPic.img);
 }
+
+
+
+
     render(){
     return(
         <Wrap cn={this.props.cn}>
@@ -70,10 +112,10 @@ nextClickHandler = () => {
                 <Wrap cn="carousel-inner">
                     <Wrap cn="carousel-item active">
                         <Img cn="d-block w-100" 
-                        src= {fc}
+                        src= {this.state.showThisPic.img}
                          alt="First slide" />
                     </Wrap>
-                    <Wrap cn="carousel-item">
+                    {/* <Wrap cn="carousel-item">
                         <Img cn="d-block w-100" 
                         src={fba}
                          alt="Second slide" />
@@ -82,16 +124,14 @@ nextClickHandler = () => {
                         <Img cn="d-block w-100" 
                         src={ls}
                          alt="Third slide" />
-                    </Wrap>
+                    </Wrap> */}
                 </Wrap>
-                <a className="carousel-control-prev" href="#carouselExampleControls" 
-                role="button" data-slide="prev" onClick={this.props.next}>
+                <a className="carousel-control-prev" onClick={this.prevClickHandler}>
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only">Previous</span>
                 </a>
-                <a className="carousel-control-next" href="#carouselExampleControls" 
-                role="button" data-slide="next" onClick={this.props.back}>
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <a className="carousel-control-next" onClick={this.nextClickHandler}>
+                    <span className="carousel-control-next-icon"></span>
                     <span className="sr-only">Next</span>
                 </a>
             </Wrap>
