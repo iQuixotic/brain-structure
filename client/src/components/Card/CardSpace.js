@@ -4,7 +4,7 @@ import Card from './Card';
 import {Plus} from '../Symbols/Z-index';
 import {Row, Col, Wrap} from '../Grid/Z-index';
 import './style.css';
-import '../../Uni.css';
+import '../../index.css';
 
 // has state
 // a card for Large notes

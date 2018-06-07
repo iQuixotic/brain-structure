@@ -3,7 +3,7 @@ import {Btn} from '../Buttons/Z-index';
 import {Container, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
 import './style.css';
-import '../../Uni.css';
+import '../../index.css';
 import {withRouter} from 'react-router-dom';
 
 // login component is stateful

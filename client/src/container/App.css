@@ -1,12 +1,6 @@
 /* -------------------------------------------------------------------------------------------------------------//
 //                             ALL CSS IS ALPHABETIZED AND BY ID'S, THEN BY CLASS NAME                          //
-//--------------------------------------------------------------------------------------------------------------//
-
-/* REUSABLE UNIVERSAL CSS */
-
-body {
-  background: rgb(241, 241, 241);
-}
+//--------------------------------------------------------------------------------------------------------------*/
 
     /* CLASSES */
 .App {
@@ -32,17 +26,5 @@ body {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-.float-right {
-  float: right;
-}
-
-.pix-pad1 {
-  padding-left: 10px;
-}
-
-.pix-pad2 {
-  padding-left: 55px;
 }
 

@@ -19,6 +19,7 @@
 #long2 {
     height: 187px;
     margin-bottom: 14px;
+    justify-content: center;
 }
 
 #MyDecksCard {

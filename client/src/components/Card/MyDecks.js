@@ -3,7 +3,7 @@ import {Icon} from 'react-fa';
 import Card from './Card';
 import {Row} from '../Grid/Z-index';
 import './style.css';
-import '../../Uni.css';
+import '../../index.css';
 
 const MyDecks =(props) => {
         return(

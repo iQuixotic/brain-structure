@@ -4,7 +4,7 @@ import {Btn} from '../Buttons/Z-index';
 import {Row, Wrap} from '../Grid/Z-index';
 import {Card} from '../Card/Z-index';
 import API from '../../utils/API';
-import '../../Uni.css';
+import '../../index.css';
 import {withRouter} from 'react-router-dom';
 
 class Register extends Component {

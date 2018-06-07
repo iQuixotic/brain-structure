@@ -3,7 +3,7 @@ import {Btn} from '../Buttons/Z-index';
 import Card from './Card';
 import {Row} from '../Grid/Z-index';
 import './style.css';
-import '../../Uni.css';
+import '../../index.css';
 
 const InputCard =(props) => {
         return(

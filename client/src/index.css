@@ -2,4 +2,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: rgb(241, 241, 241);
+}
+
+
+.App {
+  text-align: center;
+}
+
+.float-right {
+  float: right;
+}
+
+.pix-pad1 {
+  padding-left: 10px;
+}
+
+.pix-pad2 {
+  padding-left: 55px;
 }
