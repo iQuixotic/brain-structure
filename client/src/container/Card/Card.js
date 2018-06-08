@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './style.css';
+// import './style.css';
  
 class Card extends Component {
 // constructor(props){
@@ -7,7 +7,21 @@ class Card extends Component {
 // }
 
 state = {
-
+    using: {
+        pic: true,
+        brain3d: false,
+        disorder: false
+    },
+    // object to manage state on CardSpace
+    // must talk with noteSpace
+    iCard: {
+        peerValidation: 0,
+        note: "written",
+        Content: "",
+        Side: true,
+        blank: false,
+        revove: false
+    }
 }
 
     render() {

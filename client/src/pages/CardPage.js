@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Navbar, Footer} from "../components/Nav/Z-index";
-import {Card} from "../components/Card/Z-index";
+import {Card} from '../container/Card/index';
 import {LikeBtn, DislikeBtn} from "../components/Buttons/Z-index";
 import {Container, Wrap, Row, Col} from "../components/Grid/Z-index";
 import './Pages.css';

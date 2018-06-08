@@ -1,5 +1,5 @@
 import React from "react";
-import {Card} from "./Z-index";
+import {Card} from '../../container/Card/index';
 import {Jumbotron} from "../Jumbotron/Z-index";
 import './style.css';
 

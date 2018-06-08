@@ -1,11 +1,11 @@
 import React from 'react';
 import {Btn} from '../Buttons/Z-index';
-import Card from './Card';
+import {Card} from '../../container/Card/index';
 import {Row} from '../Grid/Z-index';
 import './style.css';
 import '../../index.css';
 
-const InputCard =(props) => {
+const InputCard = (props) => {
         return(
         <div id={props.id} className={props.cn}>
         

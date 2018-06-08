@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Btn} from '../Buttons/Z-index';
 import {Container, Wrap} from '../Grid/Z-index';
-import {Card} from '../Card/Z-index';
+import {Card} from '../../container/Card/index';
 import './style.css';
 import '../../index.css';
 import {withRouter} from 'react-router-dom';
@@ -52,35 +52,6 @@ toRegPathHandler(e) {
             </Card>
         </Container>
     </Container>
-                            {/* <Container>
-                                <Card id="login-card"> 
-                             
-                                
-                                    
-                                        
-                                        <Wrap cn="cent"> 
-                                      
-                                           
-                                                
-                                            <Row>   
-                                            <Col size="md-1" />                                         
-                                                 Username: 
-                                                <input className="spacing width-input " type="name" placeholder="tony637"/>
-                                             </Row>
-                                            <Row> <Col size="md-1" />
-                                                Password:
-                                                <input className="spacing width-input " type="password" placeholder="......"/>
-                                            </Row>
-                                            <Row>
-                                                <Wrap >
-                                                    <button className="space spacing-top width-control my-btn btn">Log-in</button>  
-                                                    <button className="space spacing-top width-control my-btn btn">I Don't have a Log-in </button>                                              
-                                                </Wrap>
-                                            </Row>
-                                        </Wrap> 
-                                      
-                                   </Card>
-                                </Container> */}
                                 
                          
                                  

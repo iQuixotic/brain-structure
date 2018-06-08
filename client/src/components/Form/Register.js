@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import {Btn} from '../Buttons/Z-index';
 import {Row, Wrap} from '../Grid/Z-index';
-import {Card} from '../Card/Z-index';
+import {Card} from '../../container/Card/index';
 import API from '../../utils/API';
 import '../../index.css';
 import {withRouter} from 'react-router-dom';

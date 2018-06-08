@@ -1,29 +1,16 @@
 import React, { Component } from 'react';
 import {Btn} from '../Buttons/Z-index';
-import Card from './Card';
+import {Card} from '../../container/Card/index';
 import {Plus} from '../Symbols/Z-index';
 import {Row, Col, Wrap} from '../Grid/Z-index';
 import './style.css';
 import '../../index.css';
 
-// has state
-// a card for Large notes
-class CardSpace extends Component {
-// constructor(props){
-//     super(props)
-// }
-state = {
-    peerValidation: 0,
-    note: "",
-    Content: "",
-    Side: true,
-    blank: false,
-    revove: false
-}
+const CardSpace = (props) =>  {
 
-    render() {
+
         return(
-        <div id={this.props.id} className={this.props.cn}>
+        <div id={props.id} className={props.cn}>
             <Card id="note-card">
                 <Col size="md-12" className="center">
                     <Row>
@@ -55,7 +42,6 @@ state = {
         </div>
         );
     }
-}
 
 export default CardSpace;
 
