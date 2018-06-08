@@ -1,7 +1,11 @@
 
 // export all of the symobols/buttons
-export { default as Btn } from "./Btn";
-export { default as FwdCaret } from "./CaretFwd";
-export { default as BackCaret } from "./CaretBack";
-export { default as LikeBtn } from "./LikeBtn";
-export { default as DislikeBtn } from "./DislikeBtn";
+export { default as Btn } from "./btn";
+
+export { default as FwdCaret } from "./caretFwd";
+
+export { default as BackCaret } from "./caretBack";
+
+export { default as Like } from "./like";
+
+export { default as Dislike } from "./dislike";

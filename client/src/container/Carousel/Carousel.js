@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {Img} from "../Img/index";
-import {Wrap} from "../Grid/index";
+import {Img} from "../../components/Img/index";
+import {Wrap} from "../../components/Grid/index";
 
 import {fc, ls, fhl, fba} from '../../assets/brainImages/index'
 
@@ -9,9 +9,7 @@ import {fc, ls, fhl, fba} from '../../assets/brainImages/index'
 let picArr = [{img: fc}, {img: ls}, {img: fhl}, {img: fba}];
 
 class Carousel extends Component {
-// constructor(props){
-//     super(props)
-// }
+    
 state = {
     picNumber: 1,
     showThisPic: picArr[0],

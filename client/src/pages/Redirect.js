@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Row, Container, Col, Wrap } from '../components/Grid/index';
-import {FwdCaret, BackCaret, DislikeBtn, LikeBtn} from '../components/Buttons/index';
+import {FwdCaret, BackCaret, Dislike, Like} from '../components/Buttons/index';
 import {BackDrop, CardSpace} from '../components/Card/index';
 import {Card} from '../container/Card/index';
 import {Navbar, Footer} from '../components/Nav/index';
@@ -57,15 +57,15 @@ class Redirect extends Component {
           <Row>
             <FwdCaret size='2x'/>
             <BackCaret size='5x'/>
-            <LikeBtn size='5x'/>
-            <DislikeBtn size='4x' />
+            <Like size='5x'/>
+            <Dislike size='4x' />
           </Row>
         </BackDrop>
           <Row>
             <FwdCaret size='2x'/>
             <BackCaret size='5x'/>
-            <LikeBtn size='5x'/>
-            <DislikeBtn size='4x' />
+            <Like size='5x'/>
+            <Dislike size='4x' />
           </Row>
         </Row>
         </Container>

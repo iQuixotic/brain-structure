@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Navbar, Footer} from "../components/Nav/index";
 import {Card} from '../container/Card/index';
-import {LikeBtn, DislikeBtn} from "../components/Buttons/index";
+import {Like, Dislike} from "../components/Buttons/index";
 import {Container, Wrap, Row, Col} from "../components/Grid/index";
 import './Pages.css';
 
@@ -46,9 +46,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -77,9 +77,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -113,9 +113,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -144,9 +144,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -180,9 +180,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -211,9 +211,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -247,9 +247,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -278,9 +278,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -314,9 +314,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   
@@ -345,9 +345,9 @@ class CardPage extends Component {
                         <Col size="md-5" />
                         <Col size="md-3">
                           <Row> 
-                            <DislikeBtn size="2x" cn="bl" />
+                            <Dislike size="2x" cn="bl" />
                             <Col size="md-1" />
-                            <LikeBtn size="2x" cn="bl"/>                          
+                            <Like size="2x" cn="bl"/>                          
                           </Row>
                         </Col>
                       </Row>   

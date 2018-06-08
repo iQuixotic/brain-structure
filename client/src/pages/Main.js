@@ -3,7 +3,7 @@ import {Navbar, Footer} from '../components/Nav/index';
 import {CardSpace, InputCard, BackDrop, MyDecks} from '../components/Card/index';
 import {Card} from '../container/Card/index';
 import {Col, Row} from '../components/Grid/index';
-import {Carousel} from '../components/Carousel/index';
+import {Carousel} from '../container/Carousel/index';
 import './Pages.css';
 
 
