@@ -93,14 +93,14 @@
     animation: ripple .7s ease-out;
 }
   
-.thumbs-down {
-    color: gray;
+ .thumbs-up:active, .thumbs-down:active {
+    color: rgb(2, 59, 129);
+    font-size: 2.1em;
 }
 
-.thumbs-up {
-    color: gray;
+.thumbs-down:hover, .thumbs-up:hover {
+    color: rgb(102, 147, 202);
 }
-
 
 
 /* -------------------------------------------- NOT IN USE -----------------------------------------------------------*/
