@@ -1,30 +1,31 @@
-// const mongoose = require('mongoose');
-// const Decks = require('./Decks.js');
-// const Users = require('./Users.js');
-// let Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-// // has a many to many relationship with Decks
-// let CardModel = new Schema({
+let NoteCardSchema = new Schema({
 
-//     user: {
-//         type: String,                        // later will be type: Users.Types.ObjectId, 
-//         required: true
-//     },
-//     title: {
-//         type: String,
-//         required: true,
-//     }, 
-//     content: {
-//         front: { type: String, required: true},
-//         back: {type: String, required: true}
-//     },
-//     verified: {
-//         type: Number,
-//         required: true,
-//         default: 0
-//     }   
-// });
+    content: {
+        front: {
+            type: String
+        },
+        back: {
+            type: String
+        }
+    },
+    category: {
+        type: String,
+    },
+    author: {
+        type: String, // reference
+    },
+    likes: {
+        type: Number,
+    },
+    disikes: {
+        type: Number,
+    }
+ 
+});
 
-// let Card = mongoose.model('Card', CardModel);
+let NoteCard = mongoose.model('NoteCard', NoteCardSchema);
 
-// module.exports = Card;
+module.exports = NoteCard;

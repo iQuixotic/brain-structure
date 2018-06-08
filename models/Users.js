@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcryptjs')
 
-// has a one to many relationship with notes, BlogPosts, BlogResp,
-// decks, and cards
 let UserSchema = new Schema({
 
     userName: {
@@ -25,7 +23,17 @@ let UserSchema = new Schema({
     password: {
         type: String,
         // required: true
-    }   
+    }, 
+    decks: {
+        title: {
+            type: String,
+        },
+        cards: Array,  // ref to cards here
+    },
+    hasLikedOrDis: {
+        type: Array, // must contain a reference to card
+
+    }  
 });
 
 // 
