@@ -1,11 +1,12 @@
 
 import React, {Component} from 'react';
-import {Btn} from '../Buttons/index';
-import {Row, Wrap} from '../Grid/index';
-import {Card} from '../../container/Card/index';
-import API from '../../utils/API';
-import '../../index.css';
 import {withRouter} from 'react-router-dom';
+import {Btn} from '../../components/buttons/index';
+import {Row, Wrap} from '../../components/grid/index';
+import API from '../../utils/API';
+import {Card} from '../Card/index';
+import '../../index.css';
+
 
 class Register extends Component {
 constructor(props) {

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {Navbar, Footer} from '../components/Nav/index';
-import {CardSpace, InputCard, BackDrop, MyDecks} from '../components/Card/index';
+import {Navbar, Footer} from '../components/nav/index';
+import {CardSpace, InputCard, BackDrop, MyDecks} from '../components/cards/index';
+import {Col, Row} from '../components/grid/index';
 import {Card} from '../container/Card/index';
-import {Col, Row} from '../components/Grid/index';
 import {Carousel} from '../container/Carousel/index';
-import './Pages.css';
+import './pages.css';
 
 
 // must pass a ref through main page to update backdrop

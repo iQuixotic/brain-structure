@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Row, Container, Col, Wrap} from '../components/Grid/index';
-import {Navbar, Footer} from '../components/Nav/index';
-// import {Login} from '../components/Form/index';
-import {Register} from '../components/Form/index';
-import './Pages.css';
+import {Row, Container, Col, Wrap} from '../components/grid/index';
+import {Navbar, Footer} from '../components/nav/index';
+import {Register} from '../container/Forms/index';
+import './pages.css';
 
 
 class RegisterPage extends Component {

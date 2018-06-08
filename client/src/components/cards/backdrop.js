@@ -1,6 +1,6 @@
 import React from "react";
+import {Jumbotron} from "../jumbotron/index";
 import {Card} from '../../container/Card/index';
-import {Jumbotron} from "../Jumbotron/index";
 import './style.css';
 
 // a backDrop for the various dynamic content

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import {Btn} from '../Buttons/index';
+import React from 'react';
+import {Btn} from '../buttons/index';
+import {Plus} from '../../assets/symbols/index';
+import {Row, Col, Wrap} from '../grid/index';
 import {Card} from '../../container/Card/index';
-import {Plus} from '../Symbols/index';
-import {Row, Col, Wrap} from '../Grid/index';
 import './style.css';
 import '../../index.css';
 

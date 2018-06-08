@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {Img} from "../../components/Img/index";
-import {Wrap} from "../../components/Grid/index";
+import {Img} from "../../components/img/index";
+import {Wrap} from "../../components/grid/index";
 
 import {fc, ls, fhl, fba} from '../../assets/brainImages/index'
 

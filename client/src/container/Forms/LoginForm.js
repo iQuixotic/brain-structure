@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {Btn} from '../Buttons/index';
-import {Container, Wrap} from '../Grid/index';
-import {Card} from '../../container/Card/index';
+import {withRouter} from 'react-router-dom';
+import {Btn} from '../../components/buttons/index';
+import {Container, Wrap} from '../../components/grid/index';
+import {Card} from '../Card/index';
 import './style.css';
 import '../../index.css';
-import {withRouter} from 'react-router-dom';
+
 
 // login component is stateful
 // and contains 2 input fields

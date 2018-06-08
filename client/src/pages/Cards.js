@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import {Navbar, Footer} from "../components/Nav/index";
+import {Navbar, Footer} from "../components/nav/index";
+import {Like, Dislike} from "../components/buttons/index";
+import {Container, Wrap, Row, Col} from "../components/grid/index";
 import {Card} from '../container/Card/index';
-import {Like, Dislike} from "../components/Buttons/index";
-import {Container, Wrap, Row, Col} from "../components/Grid/index";
-import './Pages.css';
+import './pages.css';
 
 
 class CardPage extends Component {

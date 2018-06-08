@@ -1,7 +1,7 @@
 import React from "react";
 import {withRouter, Link} from 'react-router-dom';
-import {Wrap} from '../Grid/index';
-import {Jumbotron} from '../Jumbotron/index';
+import {Wrap} from '../grid/index';
+import {Jumbotron} from '../jumbotron/index';
 import './style.css';
 
 
