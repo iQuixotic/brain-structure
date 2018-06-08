@@ -21,6 +21,17 @@ class MainPage extends Component {
 // constructor(props){
 //     super(props)
 // }
+state = {
+    backDropUsing: 'pic',
+}
+
+changeViewHandler = using => {
+    console.log('i made it here ')
+    this.setState({
+        backDropUsing: using
+    })
+}
+
   render() {
     return (
         <div id="MainPage">
@@ -30,17 +41,17 @@ class MainPage extends Component {
             <Row id="main-bd-row"> 
                 <Col id="" size="md-2">
                     <Card id="button-card" >
-                        <Carousel />
+                        {/* <Carousel /> */}
                     </Card>
                 </Col>
                 <Col size="md-8">
                 {/* i think i need to update something here maybe, but maybe
                 i can do it from the other component... */}
-                    <BackDrop id="bd"/>
+                    <BackDrop view={this.state.backDropUsing} id="bd"/>
                 </Col>
                 <Col size="md-2">
                     <Card id="long2">
-                        <Carousel />
+                        <Carousel view={this.changeViewHandler.bind(this)} />
                     </Card>
                     <MyDecks crdId="MyDecksCard" />
                 </Col>

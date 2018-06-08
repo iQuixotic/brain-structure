@@ -30,6 +30,16 @@ state = {
     }
 }
 
+// <div onMouseOver={() => this.setState({ bool: true })} onMouseOut={() => this.setState({ bool: false })}>
+//   {
+//     this.state.bool ? (
+//       <span>[OPTION1] show after onMouseEnter</span>
+//     ) : (
+//       <div>[OPTION2] show after onMouseLeave</div>
+//     )
+//   }
+// </div>
+
 changeBackdropHandler = (whatToUse) => {
 
     switch(whatToUse) {
@@ -55,9 +65,13 @@ changeBackdropHandler = (whatToUse) => {
 
 }
 
+flipCardHandler = () => {
+    console.log('Im gonna flip')
+}
+
     render() {
     return(
-    <div id="CardCrd">
+    <div id="CardCrd" onClick={this.props.clicked} onMouseOver={this.props.mo}>
         <div id={this.props.id}  className="card-body my-card">
            {this.props.children}        
         </div>

@@ -9,7 +9,7 @@ import {fc, ls, fhl, fba} from '../../assets/brainImages/index'
 let picArr = [{img: fc}, {img: ls}, {img: fhl}, {img: fba}];
 
 class Carousel extends Component {
-    
+
 state = {
     picNumber: 1,
     showThisPic: picArr[0],
@@ -88,6 +88,10 @@ startOverHandler = () => {
     console.log(this.state.showThisPic.img);
 }
 
+updateView = () => {
+    this.props.view(this.state.showThisPic.img)
+}
+
     render(){
     return(
         <Wrap cn={this.props.cn}>
@@ -95,7 +99,7 @@ startOverHandler = () => {
                 <Wrap cn="carousel-inner">
                     <Wrap cn="carousel-item active">
                         <Img cn="d-block w-100" 
-                         click={this.updateBackDrop}
+                         click={this.updateView}
                          src= {this.state.showThisPic.img}
                          alt="First slide" />
                     </Wrap>

@@ -28,7 +28,7 @@ let UserSchema = new Schema({
         title: {
             type: String,
         },
-        cards: Array,  // ref to cards here
+        cards: Schema.Types.ObjectId // ref to cards here
     },
     hasLikedOrDis: {
         type: Array, // must contain a reference to card

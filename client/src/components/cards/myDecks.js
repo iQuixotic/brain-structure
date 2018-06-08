@@ -6,8 +6,8 @@ import '../../index.css';
 
 const MyDecks =(props) => {
         return(
-        <div id={props.id} className={props.cn}>
-            <Card id={props.crdId}>
+        <div id={props.id} className={props.cn} >
+            <Card id={props.crdId} clicked={this.flipCardHandler}>
                 <Icon name="fas fa-archive" size='5x' className="archive" />
             </Card>
         </div>
