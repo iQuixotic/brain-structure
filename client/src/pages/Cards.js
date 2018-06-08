@@ -7,9 +7,6 @@ import './pages.css';
 
 
 class CardPage extends Component {
-// constructor(props) {
-//   super(props)
-// }
 
 //   state = {
     

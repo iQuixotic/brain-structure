@@ -12,10 +12,10 @@ let DisorderSchema = new Schema({
     brainArchitecture: {
         type: String,
     },
-    NeuroChem: {
+    neuroChem: {
         type: String,
     },
-    Studies: {
+    studies: {
         type: String,
     }
  

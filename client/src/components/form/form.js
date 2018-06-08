@@ -8,9 +8,7 @@ const Form = (props) => {
     <div>
         <div id={props.id}  className={props.cn}>
 
-        </div>
-
-           
+        </div>           
     </div>
     );
 }
