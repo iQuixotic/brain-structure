@@ -1,14 +1,15 @@
 import React, {Component} from "react";
 import './style.css';
-
+ 
 class Card extends Component {
 // constructor(props){
 //     super(props)
 // }
 
-// state = {
+state = {
 
-// }
+}
+
     render() {
     return(
     <div id="CardCrd">
