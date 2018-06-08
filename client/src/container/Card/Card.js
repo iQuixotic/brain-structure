@@ -1,27 +1,58 @@
 import React, {Component} from "react";
-// import './style.css';
- 
+
+let pic = {test: "test"}
+let brain3d = {test: "test"}
+let disorder = {test: "test"}
+
 class Card extends Component {
 // constructor(props){
 //     super(props)
 // }
 
 state = {
-    using: {
-        pic: true,
-        brain3d: false,
-        disorder: false
-    },
+    // determines what is displaying in the 
+    // backdrop's background
+    using: pic,
     // object to manage state on CardSpace
     // must talk with noteSpace
     iCard: {
-        peerValidation: 0,
-        note: "written",
-        Content: "",
-        Side: true,
-        blank: false,
-        revove: false
+        likes: 0,
+        dislikes: 0,
+        makingNote: false,
+        content: "",
+        // back: "",        // think i just need an array, might not need 
+    },
+    // watches decks and communicates
+    // with iCard
+    decks: {
+        front: true,
+        back: false
     }
+}
+
+changeBackdropHandler = (whatToUse) => {
+
+    switch(whatToUse) {
+        case "pic":
+        this.setState({
+            using: pic
+        })
+            break;
+        case "brain3d":
+        this.setState({
+            using: brain3d
+        })
+            break;
+        case "disorder":
+        this.setState({
+            using: disorder
+        })
+            break;
+        default: this.setState({
+            using: brain3d
+        })
+    }
+
 }
 
     render() {
