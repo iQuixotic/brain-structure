@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {Main, RegisterPage, LoginPage, Redirect, CardPage} from '../pages/Z-index';
+import {Main, RegisterPage, LoginPage, Redirect, CardPage} from '../pages/index';
 
 class App extends Component {
   render() {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {Btn} from '../Buttons/Z-index';
+import {Btn} from '../Buttons/index';
 import {Card} from '../../container/Card/index';
-import {Plus} from '../Symbols/Z-index';
-import {Row, Col, Wrap} from '../Grid/Z-index';
+import {Plus} from '../Symbols/index';
+import {Row, Col, Wrap} from '../Grid/index';
 import './style.css';
 import '../../index.css';
 
@@ -45,6 +45,3 @@ const CardSpace = (props) =>  {
 
 export default CardSpace;
 
-
-// right here if I try to extend class card, it doesnt like that. there is 
-// a lot here to look at !!!!!!!!!

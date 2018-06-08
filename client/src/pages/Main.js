@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {Navbar, Footer} from '../components/Nav/Z-index';
-import {CardSpace, InputCard, BackDrop, MyDecks} from '../components/Card/Z-index';
+import {Navbar, Footer} from '../components/Nav/index';
+import {CardSpace, InputCard, BackDrop, MyDecks} from '../components/Card/index';
 import {Card} from '../container/Card/index';
-import {Col, Row} from '../components/Grid/Z-index';
-import {Carousel} from '../components/Carousel/Z-index';
+import {Col, Row} from '../components/Grid/index';
+import {Carousel} from '../components/Carousel/index';
 import './Pages.css';
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {Container} from '../Grid/Z-index';
+import {Container} from '../Grid/index';
 import './style.css';
 
 const Footer = props => (

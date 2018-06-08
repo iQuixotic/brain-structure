@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Row, Container, Col, Wrap} from '../components/Grid/Z-index';
-import {Login} from '../components/Form/Z-index';
-import {Navbar, Footer} from '../components/Nav/Z-index';
+import {Row, Container, Col, Wrap} from '../components/Grid/index';
+import {Login} from '../components/Form/index';
+import {Navbar, Footer} from '../components/Nav/index';
 import './Pages.css';
 
 class LoginPage extends Component {

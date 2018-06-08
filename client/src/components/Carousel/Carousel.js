@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {Img} from "../Img/Z-index";
-import {Wrap} from "../Grid/Z-index";
+import {Img} from "../Img/index";
+import {Wrap} from "../Grid/index";
 
-import {fc, ls, fhl, fba} from '../../assets/brainImages/Z-index'
+import {fc, ls, fhl, fba} from '../../assets/brainImages/index'
 
 // will need this array to map over and 
 // check what should display and where

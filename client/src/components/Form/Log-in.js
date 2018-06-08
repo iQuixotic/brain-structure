@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Btn} from '../Buttons/Z-index';
-import {Container, Wrap} from '../Grid/Z-index';
+import {Btn} from '../Buttons/index';
+import {Container, Wrap} from '../Grid/index';
 import {Card} from '../../container/Card/index';
 import './style.css';
 import '../../index.css';

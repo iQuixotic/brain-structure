@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import {Navbar, Footer} from "../components/Nav/Z-index";
+import {Navbar, Footer} from "../components/Nav/index";
 import {Card} from '../container/Card/index';
-import {LikeBtn, DislikeBtn} from "../components/Buttons/Z-index";
-import {Container, Wrap, Row, Col} from "../components/Grid/Z-index";
+import {LikeBtn, DislikeBtn} from "../components/Buttons/index";
+import {Container, Wrap, Row, Col} from "../components/Grid/index";
 import './Pages.css';
 
 

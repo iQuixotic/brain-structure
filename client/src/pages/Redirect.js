@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import { Row, Container, Col, Wrap } from '../components/Grid/Z-index';
-import {FwdCaret, BackCaret, DislikeBtn, LikeBtn} from '../components/Buttons/Z-index';
-import {BackDrop, CardSpace} from '../components/Card/Z-index';
+import { Row, Container, Col, Wrap } from '../components/Grid/index';
+import {FwdCaret, BackCaret, DislikeBtn, LikeBtn} from '../components/Buttons/index';
+import {BackDrop, CardSpace} from '../components/Card/index';
 import {Card} from '../container/Card/index';
-import {Navbar, Footer} from '../components/Nav/Z-index';
+import {Navbar, Footer} from '../components/Nav/index';
 import './Pages.css';
 
 

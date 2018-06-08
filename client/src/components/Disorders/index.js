@@ -1,2 +1,2 @@
 
-export { default as Disorders } from "./Disorders";
+export { default as Disorders } from "./disorders";

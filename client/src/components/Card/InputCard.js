@@ -1,7 +1,7 @@
 import React from 'react';
-import {Btn} from '../Buttons/Z-index';
+import {Btn} from '../Buttons/index';
 import {Card} from '../../container/Card/index';
-import {Row} from '../Grid/Z-index';
+import {Row} from '../Grid/index';
 import './style.css';
 import '../../index.css';
 

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Row, Container, Col, Wrap} from '../components/Grid/Z-index';
-import {Navbar, Footer} from '../components/Nav/Z-index';
-// import {Login} from '../components/Form/Z-index';
-import {Register} from '../components/Form/Z-index';
+import {Row, Container, Col, Wrap} from '../components/Grid/index';
+import {Navbar, Footer} from '../components/Nav/index';
+// import {Login} from '../components/Form/index';
+import {Register} from '../components/Form/index';
 import './Pages.css';
 
 
