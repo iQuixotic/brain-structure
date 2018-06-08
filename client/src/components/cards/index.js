@@ -1,6 +1,5 @@
 
-
-// dumb components
+// export cards
 export { default as CardSpace } from "./cardspace";
 
 export { default as InputCard } from "./inputCard";
