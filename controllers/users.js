@@ -12,6 +12,8 @@ signedToken = user => {
 }
 
 module.exports = {
+
+    // create a new user to add to the database
     register: async (req, res, next) => {
         console.log('you hit me')
 
@@ -32,12 +34,16 @@ module.exports = {
 
         res.json({ user: "created"});
     },
+
+    // allow a user to sign in
     signIn: async (req, res, next) => {
         // Generate token
         const token = signedToken(req.user);
         res.status(200).json({token});
         console.log('successful login');
     },
+
+    // create a secret  
     secret: async (req, res, next) => {       
         res.json({secret: 'resource'});
         console.log('Im in the secret place !');
