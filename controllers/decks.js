@@ -10,7 +10,13 @@ module.exports = {
             .catch(res => res.json(error))
     },    
 
-    // create a private note card associated with a deck
+    // find a deck when named clicked on
+
+    // create a new deck
+
+    // update a deck by deleting a card
+
+    // update a deck by adding a card
 
      
 
