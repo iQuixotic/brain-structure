@@ -5,19 +5,16 @@ import {Col, Row} from '../components/grid/index';
 import {Card} from '../container/Card/index';
 import {Carousel} from '../container/Carousel/index';
 import './pages.css';
+import API from '../utils/API';
 import {fc} from '../assets/brainImages/index'
 
 let startingBD = {img: fc}
 
 
 class MainPage extends Component {
-// constructor(props){
-//     super(props)
-// }
 
 state = {
     backDropView: startingBD.img,
-  
     iCard: {
         likes: 0,
         dislikes: 0,
@@ -27,8 +24,49 @@ state = {
     decks: {
         front: true,
         back: false
-    }
+    },
+    disorders: []
 }
+
+componentDidMount = () => {
+    this.getAllDisorders();
+}
+
+// componentDidMount () {
+    getAllDisorders = async () => {     
+            // let disorders = []
+        API.getDisData()
+            console.log('res.json')
+            // console.log(res.data)
+            // await (res => disorders.push(res.json))
+            await (res => this.setState({
+                
+               disorders: res.data
+            })        
+          )
+          await console.log(this.state.disorders)
+        //   .catch(err => console.log(err));
+    };
+// }
+
+// regSubmitHandler = () => {   
+//     let userName = this.state.nameU;
+//     let firstName = this.state.nameF;
+//     let lastName = this.state.nameL;
+//     let email = this.state.email;
+//     let password = this.state.pass;   
+    
+//     API.postRegData({
+//         userName: userName,
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         password: password      
+//     }).then(res =>
+//         this.setState({nameU: "", nameL: "", nameF: "", email: "", pass: "", pwordCheck: "" })
+//       )
+//       .catch(err => console.log(err));
+// };
 
 changeViewHandler = using => {
     console.log('i made it here ')
