@@ -10,20 +10,13 @@ class Card extends Component {
 // }
 
 state = {
-    // determines what is displaying in the 
-    // backdrop's background
     using: pic,
-    // object to manage state on CardSpace
-    // must talk with noteSpace
     iCard: {
         likes: 0,
         dislikes: 0,
         makingNote: false,
         content: "",
-        // back: "",        // think i just need an array, might not need 
     },
-    // watches decks and communicates
-    // with iCard
     decks: {
         front: true,
         back: false

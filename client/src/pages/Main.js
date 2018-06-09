@@ -6,13 +6,13 @@ import {Card} from '../container/Card/index';
 import {Carousel} from '../container/Carousel/index';
 import './pages.css';
 
-
+import {fc} from '../assets/brainImages/index'
 // must pass a ref through main page to update backdrop
 // const style1 = {
 //     backgroundImage: {fc},
 //     backgroundSize: "100% 100%"
 // }
-
+let startingBD = {img: fc}
 // const style2 = {
 //    backgroundColor: "rgb(94, 92, 92)"
 // }
@@ -22,7 +22,18 @@ class MainPage extends Component {
 //     super(props)
 // }
 state = {
-    backDropUsing: 'pic',
+    backDropUsing: startingBD.img,
+  
+    iCard: {
+        likes: 0,
+        dislikes: 0,
+        makingNote: false,
+        content: "",
+    },
+    decks: {
+        front: true,
+        back: false
+    }
 }
 
 changeViewHandler = using => {
@@ -33,6 +44,7 @@ changeViewHandler = using => {
 }
 
   render() {
+    console.log(startingBD.img)
     return (
         <div id="MainPage">
 
