@@ -8,16 +8,17 @@ module.exports = {
          console.log('made it here') 
         db.Disorder
             .find({})  
-            await console.log(res.json())
-            await (dbModel => res.json(dbModel)) 
-            await console.log((dbModel))
-            .catch(err => res.status(422).json(err));
+                await console.log(res.json())
+                await (dbModel => res.json(dbModel)) 
+                await console.log((dbModel))
+                .catch(err => res.json(error));
     },    
     
     // find a single disorder by name
     findOne: async (req, res, next) => {
-        db.Disorder.find({ name: req.body.disName}) 
-        await (res => res.json())
+        db.Disorder
+            .find({ name: req.body.disName}) 
+            await (res => res.json())
             .catch(res => res.json(error))
     }    
 

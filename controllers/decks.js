@@ -6,7 +6,7 @@ module.exports = {
     // delete a card reference from users profile
     erase: async (req, res, next) => {
         db.User.decks
-            .remove({ cards: req.body.cards})   // < -- can i do this ?
+            .remove({ _id: req.params.id }, req.body)   // < -- can i do this ?
             await (res => res.json())
             .catch(res => res.json(error))
     },    
@@ -14,8 +14,8 @@ module.exports = {
     // find all decks belonging to a particular user
     findAll: async (req, res, next) => {
         db.User.decks
-        .find({})
-            await(dbModel => res.json(dbModel))
+            .find({})
+            await (dbModel => res.json(dbModel))
             .catch(res => re.json(error))
     }, 
 

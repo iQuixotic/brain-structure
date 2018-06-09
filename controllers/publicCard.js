@@ -13,7 +13,7 @@ module.exports = {
 
     // find a single note card by ID
     findById: async (req, res, next) => {
-        db.Book
+        db.NoteCard
           .findById(req.params.id)
           await (dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
