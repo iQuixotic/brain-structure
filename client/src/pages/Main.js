@@ -5,24 +5,18 @@ import {Col, Row} from '../components/grid/index';
 import {Card} from '../container/Card/index';
 import {Carousel} from '../container/Carousel/index';
 import './pages.css';
-
 import {fc} from '../assets/brainImages/index'
-// must pass a ref through main page to update backdrop
-// const style1 = {
-//     backgroundImage: {fc},
-//     backgroundSize: "100% 100%"
-// }
+
 let startingBD = {img: fc}
-// const style2 = {
-//    backgroundColor: "rgb(94, 92, 92)"
-// }
+
 
 class MainPage extends Component {
 // constructor(props){
 //     super(props)
 // }
+
 state = {
-    backDropUsing: startingBD.img,
+    backDropView: startingBD.img,
   
     iCard: {
         likes: 0,
@@ -39,12 +33,40 @@ state = {
 changeViewHandler = using => {
     console.log('i made it here ')
     this.setState({
-        backDropUsing: using
+        backDropView: using
     })
 }
 
+// changeBackdropHandler = (whatToUse) => {
+
+//     switch(whatToUse) {
+//         case "pic":
+//         this.setState({
+//             backDropView: pic
+//         })
+//             break;
+//         case "brain3d":
+//         this.setState({
+//             backDropView: brain3d
+//         })
+//             break;
+//         case "disorder":
+//         this.setState({
+//             backDropView: disorder
+//         })
+//             break;
+//         default: this.setState({
+//             using: brain3d
+//         })
+//     }
+
+// }
+
+flipCardHandler = () => {
+    console.log('Im gonna flip')
+}
+
   render() {
-    console.log(startingBD.img)
     return (
         <div id="MainPage">
 
@@ -59,7 +81,7 @@ changeViewHandler = using => {
                 <Col size="md-8">
                 {/* i think i need to update something here maybe, but maybe
                 i can do it from the other component... */}
-                    <BackDrop view={this.state.backDropUsing} id="bd"/>
+                    <BackDrop view={this.state.backDropView} id="bd"/>
                 </Col>
                 <Col size="md-2">
                     <Card id="long2">

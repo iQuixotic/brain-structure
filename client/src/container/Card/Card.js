@@ -9,19 +9,19 @@ class Card extends Component {
 //     super(props)
 // }
 
-state = {
-    using: pic,
-    iCard: {
-        likes: 0,
-        dislikes: 0,
-        makingNote: false,
-        content: "",
-    },
-    decks: {
-        front: true,
-        back: false
-    }
-}
+// state = {
+//     using: pic,
+//     iCard: {
+//         likes: 0,
+//         dislikes: 0,
+//         makingNote: false,
+//         content: "",
+//     },
+//     decks: {
+//         front: true,
+//         back: false
+//     }
+// }
 
 // <div onMouseOver={() => this.setState({ bool: true })} onMouseOut={() => this.setState({ bool: false })}>
 //   {
