@@ -118,6 +118,10 @@
     background: #333;
 }
 
+.whole-con {
+    width: 100%;
+    height: 100%;
+}
 .verified {
     background: white;
     float: right;

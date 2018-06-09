@@ -10,7 +10,7 @@ const BackDrop = (props) => {
     <div id="BackDropCrd">
         <Card id={props.id} className="brain-card" >
             <Jumbotron style={props.background}  className={props.cnJumbo} id="brain-space" >
-                <Img src={props.view}></Img>
+                <Img cn="whole-con" src={props.view}></Img>
             </Jumbotron>       
         </Card>
     </div>
