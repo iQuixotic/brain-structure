@@ -9,6 +9,6 @@ const pubCards = require('./publicCard');
 router.use(auth);
 router.use(disorders);
 router.use(decks);
-// router.use(pubCards);
+router.use(pubCards);
 
 module.exports = router;

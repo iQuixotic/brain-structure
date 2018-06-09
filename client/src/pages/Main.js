@@ -28,23 +28,23 @@ state = {
     disorders: []
 }
 
-componentDidMount = () => {
+componentWillMount = () => {
     this.getAllDisorders();
 }
-
 // componentDidMount () {
-    getAllDisorders = async () => {     
+    getAllDisorders = () => {     
             // let disorders = []
         API.getDisData()
-            console.log('res.json')
-            // console.log(res.data)
-            // await (res => disorders.push(res.json))
-            await (res => this.setState({
-                
-               disorders: res.data
-            })        
-          )
-          await console.log(this.state.disorders)
+            .then(res => { console.log('res.json')
+            this.setState({
+               disorders: res.data                
+            })      
+            console.log(res.data) 
+
+            })
+        
+          
+          console.log(this.state.disorders)
         //   .catch(err => console.log(err));
     };
 // }
