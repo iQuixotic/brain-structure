@@ -1,29 +1,35 @@
 import React, {Component} from "react";
+// import {Cards} from '../../pages/index';
 
-// let pic = {test: "test"}
-// let brain3d = {test: "test"}
-// let disorder = {test: "test"}
+
 
 class Card extends Component {
+constructor(props) {
+    super(props)
+    this.state = {
+        contentShowingBool: false
+}
+}  
+    
+  
 
-
-// <div onMouseOver={() => this.setState({ bool: true })} onMouseOut={() => this.setState({ bool: false })}>
-//   {
-//     this.state.bool ? (
-//       <span>[OPTION1] show after onMouseEnter</span>
-//     ) : (
-//       <div>[OPTION2] show after onMouseLeave</div>
-//     )
-//   }
-// </div>
-
+flipUpdateHandler() {
+  
+    let contentShowingBool = this.state.contentShowingBool;
+    this.setState({
+        contentShowingBool: !contentShowingBool
+    })
+}
 
 
     render() {
     return(
-    <div id="CardCrd" onClick={this.props.clicked} onMouseOver={this.props.mo}>
-        <div id={this.props.id}  className="card-body my-card">
-           {this.props.children}        
+    <div id="CardCrd" onClick={this.props.click} onMouseOver={this.props.mo}>
+        <div onClick={() => this.flipUpdateHandler(this.props.id)} id={this.props.id}  className="card-body my-card">
+           {
+            this.state.contentShowingBool ? <div>{this.props.front} </div> :
+            <div> {this.props.back}  </div>  
+           }
         </div>
     </div>
     );

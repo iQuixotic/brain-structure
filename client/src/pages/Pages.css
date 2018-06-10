@@ -4,18 +4,24 @@
 
 /* Css for components in the PAGES FOLDER ONLY */
     /* ID's */
+
+
+
 #button-card {
     height: 389px;
 }
 
 #cp-cards {
-    width: 80%;
+    justify-content: center;
+    width: 65%;
     align-content: center;
     height: 200px;
     padding: 20px;
-    margin: 30px;
+    margin: 40px auto;
     background: rgb(250, 250, 220);
     border: solid rgb(243, 243, 237) 2px;
+    /* margin: 0 auto; */
+    float: none;
 }
 
 #index-card-row {
@@ -78,3 +84,4 @@
 .pad-vert {
     padding: 100px 0;
 }
+
