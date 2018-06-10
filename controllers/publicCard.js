@@ -4,11 +4,15 @@ const db = require('../models');
 module.exports = {
 
     // return all cards from the db
-    findAll: async (req, res, next) => {
+    findAll: function(req, res, next) {
+        console.log('already here')
         db.NoteCard
             .find({})
-            await (res => res.json())
-            .catch(res => res.json(error))
+            .then((dbModel) => { 
+                console.log(res)
+                res.json(dbModel) 
+            })
+            .catch(err => res.json(err))
     },
 
     // find a single note card by ID

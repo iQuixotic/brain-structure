@@ -3,14 +3,32 @@ import {Navbar, Footer} from "../components/nav/index";
 import {Like, Dislike} from "../components/buttons/index";
 import {Container, Wrap, Row, Col} from "../components/grid/index";
 import {Card} from '../container/Card/index';
+import API from '../utils/API';
 import './pages.css';
+
+
 
 
 class CardPage extends Component {
 
-//   state = {
-    
-//   };
+state = {
+    liCards: []
+};
+
+componentWillMount = () => {
+  this.getAllPublicCards();
+}
+
+getAllPublicCards = () => {     
+  API.getAllPublicCards()
+      .then(res => { console.log('res.json')
+      this.setState({
+          liCards: res.data                
+      })      
+      console.log(res.data) 
+      })          
+      console.log(this.state.liCards)
+};
 
   render() {
     return (

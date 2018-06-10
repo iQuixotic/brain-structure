@@ -20,4 +20,10 @@ export default {
    return axios.get("/disorders/:name", data);
   },
 
+  // request all cards (public) from db
+  getAllPublicCards: function() {
+  console.log('im getting all public cards');
+  return axios.get("/cards/public");
+  },
+
 };

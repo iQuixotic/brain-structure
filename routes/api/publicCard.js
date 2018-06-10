@@ -4,9 +4,9 @@ const passportConf = require('../../passport');
 const pubCardController = require('../../controllers/publicCard');
 
 // all cards
-router.route('/cards')
+router.route('/cards/public')
     .get(pubCardController.findAll)
-    .post(pubCardController.create);
+    // .post(pubCardController.create);
 
 // cards by id
 router.route('/cards/:id')
@@ -15,7 +15,7 @@ router.route('/cards/:id')
     .put(pubCardController.update);
 
 // cards by category name
-router.route('cards/category/:name')
+router.route('cards/category/:category')
     .get(pubCardController.findbyCat);
 
     
