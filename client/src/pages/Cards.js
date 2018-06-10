@@ -9,22 +9,12 @@ import './pages.css';
 
 
 class CardPage extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       liCards: [], 
-      contentShowing: true
     }
   }
-
-  onUpdate = (val) => {
-    this.setState({
-      contentShowing: val
-    })
-  };
-
-
 
 componentWillMount = () => {
   this.getAllPublicCards();
@@ -32,25 +22,18 @@ componentWillMount = () => {
 
 getAllPublicCards = () => {     
   API.getAllPublicCards()
-      .then(res => { console.log('res.json')
+      .then(res => { 
       this.setState({
           liCards: res.data                
       })      
-      console.log(res.data) 
       })          
-      console.log(this.state.liCards)
 };
 
-frontOrBack = () => {
-  console.log('this is where my callback lives')
- console.log(Card.flipUpdateHandler)
-  
+frontOrBack = () => {  
   Card.flipUpdateHandler() 
 }
 
   render() {
-
-
     return (
       <Wrap>
           <Navbar header="The Great and Powerful Cards"/>
@@ -68,18 +51,10 @@ frontOrBack = () => {
             frontOrBack={this.frontOrBack}
             front = {liCard.content.front}
             back = {liCard.content.back}
-            // click={this.flipCard}
->
-            {/* Inner card row for content */}
-            <Wrap id="mini-card-d1">
+            className="safe-div"
            
-              <Row> 
-                <p>  </p> 
-              </Row> :
-            
-            </Wrap>
-            
-
+>
+          
             {/* Inner Card row for bottom */}
             <Wrap id="mini-card-d2">
               <Row>
@@ -99,8 +74,7 @@ frontOrBack = () => {
             </Wrap>              
           </Card>   
           </Wrap>
-              
-                  
+          
           ))}
           </Container>
           <Footer />
