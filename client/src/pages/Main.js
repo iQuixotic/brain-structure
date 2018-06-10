@@ -25,48 +25,38 @@ state = {
         front: true,
         back: false
     },
-    disorders: []
+    disorders: [],
+    disorderUsing: 'Schizophrenia'
 }
 
 componentWillMount = () => {
     this.getAllDisorders();
+    this.getOneDisorder();
 }
-// componentDidMount () {
-    getAllDisorders = () => {     
-            // let disorders = []
-        API.getDisData()
-            .then(res => { console.log('res.json')
+
+getAllDisorders = () => {     
+    API.getDisData()
+        .then(res => { console.log('res.json')
+        this.setState({
+            disorders: res.data                
+        })      
+        console.log(res.data) 
+        })          
+        console.log(this.state.disorders)
+};
+
+getOneDisorder = (disorderUsing) => {
+    API.getThisDisData()
+        .then(res => {
+            console.log('get this disorder booooyyyy')
             this.setState({
-               disorders: res.data                
-            })      
-            console.log(res.data) 
-
+                disorderUsing: res.data
             })
-        
-          
-          console.log(this.state.disorders)
-        //   .catch(err => console.log(err));
-    };
-// }
+            console.log(res.data)
+        })
+        console.log(this.state.disorders)
+}
 
-// regSubmitHandler = () => {   
-//     let userName = this.state.nameU;
-//     let firstName = this.state.nameF;
-//     let lastName = this.state.nameL;
-//     let email = this.state.email;
-//     let password = this.state.pass;   
-    
-//     API.postRegData({
-//         userName: userName,
-//         firstName: firstName,
-//         lastName: lastName,
-//         email: email,
-//         password: password      
-//     }).then(res =>
-//         this.setState({nameU: "", nameL: "", nameF: "", email: "", pass: "", pwordCheck: "" })
-//       )
-//       .catch(err => console.log(err));
-// };
 
 changeViewHandler = using => {
     console.log('i made it here ')
@@ -75,30 +65,6 @@ changeViewHandler = using => {
     })
 }
 
-// changeBackdropHandler = (whatToUse) => {
-
-//     switch(whatToUse) {
-//         case "pic":
-//         this.setState({
-//             backDropView: pic
-//         })
-//             break;
-//         case "brain3d":
-//         this.setState({
-//             backDropView: brain3d
-//         })
-//             break;
-//         case "disorder":
-//         this.setState({
-//             backDropView: disorder
-//         })
-//             break;
-//         default: this.setState({
-//             using: brain3d
-//         })
-//     }
-
-// }
 
 flipCardHandler = () => {
     console.log('Im gonna flip')

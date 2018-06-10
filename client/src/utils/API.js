@@ -17,7 +17,7 @@ export default {
    // request specific disorder information from db
    getThisDisData: function(data) {
     console.log('im getting schizophrenia');
-   return axios.get("/disorders/:id", data);
+   return axios.get("/disorders/:name", data);
   },
 
 };

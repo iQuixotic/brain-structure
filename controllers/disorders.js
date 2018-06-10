@@ -12,15 +12,14 @@ module.exports = {
                     console.log(res)
                     res.json(dbModel) 
                 })
-                // await console.log((dbModel))
                 .catch(err => res.json(err));
     },    
     
     // find a single disorder by name
-    findOne: async (req, res, next) => {
+    findOne: function(req, res, next)  {
         db.Disorder
             .find({ name: req.body.disName}) 
-            await (dbModel => res.json(dbModel))
+            .then(dbModel => res.json(dbModel))
             .catch(err => res.json(err))
     }    
 
