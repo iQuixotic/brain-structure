@@ -5,7 +5,9 @@
 /* Css for components in the PAGES FOLDER ONLY */
     /* ID's */
 
-
+/* #bd {
+    padding: 0px;
+} */
 
 #button-card {
     height: 389px;
@@ -79,7 +81,6 @@
     margin-right: auto;
     margin-left: auto;
 }
-
 
 .pad-vert {
     padding: 100px 0;

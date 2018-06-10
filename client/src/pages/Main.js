@@ -6,9 +6,11 @@ import {Card} from '../container/Card/index';
 import {Carousel} from '../container/Carousel/index';
 import './pages.css';
 import API from '../utils/API';
-import {fc} from '../assets/brainImages/index'
+import {fc} from '../assets/brainImages/index';
+import {brain3d} from '../assets/3d/index';
 
 let startingBD = {img: fc}
+let brainView = {img: brain3d}
 
 
 class MainPage extends Component {
@@ -79,7 +81,7 @@ flipCardHandler = () => {
             <Row id="main-bd-row"> 
                 <Col id="" size="md-2">
                     <Card id="button-card" >
-                        {/* <Carousel /> */}
+                        <BackDrop view={brainView.img} />
                     </Card>
                 </Col>
                 <Col size="md-8">
