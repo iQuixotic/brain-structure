@@ -15,6 +15,7 @@ componentDidUpdate = () => {
 }
 
 inputChangeHandler = () => {
+    this.checked="checked"
     document.getElementById("Research").checked ?
     this.setState({
         cardType: false
@@ -31,14 +32,14 @@ inputChangeHandler = () => {
             <Card id="note-input-crd">
                 <form className="form-control pretty-form">
                 
-                <input id="Notes" onClick={this.inputChangeHandler} type="radio" name="input" />
+                <input id="My Notes" defaultChecked={true} onClick={this.inputChangeHandler} type="radio" name="input" />
                 <label className="lab" for="Notes">Notes</label>
                
                 <input id="Research" onClick={this.inputChangeHandler} type="radio" name="input" />
                 <label className="lab" for="Research">Research Studies</label>
                 {
                     this.state.cardType ?
-                    <textarea className="input-field size" type="text" name="name" rows="9" /> :
+                    <textarea className="input-field size" type="text" name="name" rows="9" placeholder="...my notes here" /> :
                     <div>
                     <textarea className="input-field marg1" type="text" name="name" rows="2" placeholder="...link" />
                     <textarea className="input-field marg2" type="text" name="name" rows="5" placeholder="...summary" />
@@ -46,9 +47,9 @@ inputChangeHandler = () => {
                 }
                     
                     <Row id="input-crd-btn-row">
-                        <Btn>Make</Btn> 
-                        <Btn>Add</Btn>
-                        <Btn>Edit</Btn> 
+                        <Btn disabled >Make</Btn> 
+                        <Btn onClick={this.handleNoteSubmit}>Add</Btn>
+                        <Btn onClick={this.updateNote}>Edit</Btn> 
                     </Row>
                 </form>
             </Card>

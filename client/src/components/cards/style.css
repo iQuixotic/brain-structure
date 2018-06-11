@@ -67,8 +67,15 @@
 }
 
 .lab {
+    color: rgba(255, 10, 112, 0.452);
+    margin: 0px 15px 5px 15px;
+}
+
+input:checked+label {
     color: rgb(255, 10, 112);
     margin: 0px 15px 5px 15px;
+    font-size:1.5em;
+    font-weight: bold;
 }
 
 .marg1 {
@@ -76,11 +83,11 @@
 }
 
 .marg2 {
-    margin: 15px 0px 9px;
+    margin: 4px 0px 9px;
 }
 
 .size {
-    height: 233px;
+    height: 223px;
 }
 
 .pad-right {
