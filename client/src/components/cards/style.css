@@ -41,13 +41,13 @@
     -webkit-box-shadow: 3px 3px   rgb(49, 49, 49);
     box-shadow: 0px;
     /* position: relative; */
-    transition: transform 1s;
-    transform-style: preserve-3d;
+    /* transition: transform 1s;
+    transform-style: preserve-3d; */
 }
 
-#note-card-content:active {
+/* #note-card-content:active {
     transform: rotateY(180deg); 
-}
+} */
 
 #note-input-crd {
     padding: 10px 8px 20px 8px;

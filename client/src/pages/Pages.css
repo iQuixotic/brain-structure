@@ -32,6 +32,7 @@
 
 #length {
     height: 400px;
+    overflow: scroll;
 }
 
 #long2 {
@@ -58,6 +59,17 @@
 #main-bd-row {
     margin: 15px 0 0 0;
     padding: 10px;
+}
+
+
+#note-card-content {
+    color: black;
+    background: rgb(250, 248, 227);
+    margin: 1px;
+    /* perspective: 635px; */
+    -moz-box-shadow:    3px 3px  rgb(49, 49, 49);
+    -webkit-box-shadow: 3px 3px   rgb(49, 49, 49);
+    box-shadow: 0px;
 }
 
     /* CLASSES */
