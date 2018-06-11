@@ -164,12 +164,10 @@ prevCardHandler = () => {
                                  front = {this.state.iCard.content.front}
                                  back = {this.state.iCard.content.back}
                                  conClass="card-content-class"
-                                ><DeleteBtn /> 
-                            </Card>
-                        </Col>
-                    
+                                >
+                                <DeleteBtn className="del-class"/> 
 
-                        <Col size="md-12">                
+                            <Col size="md-12">                
                             {this.state.iCard._id === 1 ?
                             <Row id="btnR">
                                 <Btn disabled click={this.prevCardHandler}>Back</Btn>
@@ -181,6 +179,14 @@ prevCardHandler = () => {
                             </Row>
                             }                    
                     </Col>
+
+
+                            </Card>
+                        </Col>
+                    
+                    
+                      
+                   
             
                 </Card>
 

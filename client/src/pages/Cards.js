@@ -51,7 +51,6 @@ frontOrBack = () => {
             frontOrBack={this.frontOrBack}
             front = {liCard.content.front}
             back = {liCard.content.back}
-            
             conClass="safe-divs"
            
 >

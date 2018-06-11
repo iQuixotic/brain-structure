@@ -5,6 +5,10 @@
 /* Css for components in the PAGES FOLDER ONLY */
     /* ID's */
 
+#btnR {
+    padding: 30px;
+    padding-right: 120px;
+}
 #button-card {
     height: 389px;
 }
@@ -65,12 +69,14 @@
 
 #note-card-content {
     color: black;
-    height: 350px;
+    font-size: 1.1em;
+    height: 390px;
     background: rgb(250, 248, 227);
-    padding: 40px 60px;
+    padding: 30px 40px;
     margin: 1px;
     word-wrap: break-word;
     border: 50px solid #333;
+    border-bottom: 100px solid #333;
     border-radius: 5px;
     box-shadow: 0px;
     align-content: center;
@@ -93,10 +99,29 @@
     font-style: italic;
 }
 
+
+.card-content-class {
+    height: 160px;
+}
+
 .cent {
     float: none;
     margin-right: auto;
     margin-left: auto;
+}
+
+.del-class {
+    padding-left: 440px;
+    color: rgba(255, 0, 0, 0.432);
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+.del-class:hover {
+    font-weight: boldest;
+    cursor: pointer;
+    color: red;
 }
 
 .pad-vert {

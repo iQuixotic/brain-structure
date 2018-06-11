@@ -18,7 +18,7 @@ flipUpdateHandler() {
 
     render() {
     return(
-    <div id="CardCrd" onClick={this.props.click} onMouseOver={this.props.mo} className="flipper">
+    <div id="CardCrd" onClick={this.props.click} onMouseOver={this.props.mo}>
         <div  id={this.props.id}  className="card-body my-card">
            {
             this.state.contentShowingBool ? 

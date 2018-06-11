@@ -23,19 +23,15 @@ input:checked+label {
     border-radius: 10px;
     background: rgb(248, 247, 247);
     color: rgb(55, 52, 66);
-    border-width: 0 1px 1px 0;
+    border-width: 0 3px 2px 0;
     border-style: solid;
-    border-color: rgba(255, 255, 255, 0.568);
+    border-color: rgba(177, 174, 174, 0.616);
     padding: 7px 7px 60px 7px;
-    /* -moz-box-shadow:    3px 3px 5px 6px   rgb(134, 133, 134);
-    -webkit-box-shadow: 3px 3px 3px 3px   rgb(134, 133, 134);
-    box-shadow:         2px 2px 3px 3px  rgb(78, 78, 78); */
-    transition: box-shadow 0.4s ease-in-out;
 }
 
-.my-card:hover { 
+/* .my-card:hover { 
     transition: box-shadow 0.4s ease-in-out; 
-    -moz-box-shadow:    3px 3px  rgb(182, 180, 180);
-    -webkit-box-shadow: 3px 3px  rgb(182, 180, 180);
-    box-shadow:         3px 3px  rgb(182, 180, 180);
-}
+    -moz-box-shadow:    2px 2px  rgb(182, 180, 180);
+    -webkit-box-shadow: 2px 2px  rgb(182, 180, 180);
+    box-shadow:         2px 2px  rgb(182, 180, 180);
+} */
