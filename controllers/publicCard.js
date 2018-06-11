@@ -48,12 +48,10 @@ module.exports = {
 
     // find a single note card by ID
     findById: function(req, res) {
-        console.log('ididididididididididididdi')
         db.NoteCard
           .findById(req.params.id)
           .then((dbModel) => { 
             res.json(dbModel) 
-            console.log(res)
         })
           .catch(err => res.status(422).json(err));
     },

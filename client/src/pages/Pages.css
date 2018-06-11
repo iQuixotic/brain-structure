@@ -61,15 +61,22 @@
     padding: 10px;
 }
 
+#note-card {
+    height: 400px;
+}
+
 
 #note-card-content {
     color: black;
+    height: 330px;
     background: rgb(250, 248, 227);
+    padding: 40px 60px;
     margin: 1px;
-    /* perspective: 635px; */
-    -moz-box-shadow:    3px 3px  rgb(49, 49, 49);
-    -webkit-box-shadow: 3px 3px   rgb(49, 49, 49);
+    word-wrap: break-word;
+    border: 50px solid #333;
     box-shadow: 0px;
+    align-content: center;
+    justify-content: center;
 }
 
     /* CLASSES */

@@ -157,47 +157,31 @@ prevCardHandler = () => {
                     <InputCard />
                 </Col>
                 <Col id="crd-col" size="md-6">
-                <Card id="note-card">
-                <Col size="md-12" className="center">
-                    <Row>
-
-
-
-                        <Card id="note-card-content">
-                            <Wrap cn="float-right green pad-right">
-                            {/* Dynamic plus or minus signs to be printed depending validity ratio */}
-                                <Row>                                                               
-                                    {/* <Plus size="2x"  />
-                                    <Plus size="2x"  />                    */}
-                                </Row>
-                            </Wrap>
-                            <Row>
-                                {/* Content must be mapped over to know which card to display... a 
-                                ternary operator will be used to decide whether to dispay the front or back */}
-                                <Card
+                    <Card id="note-card">
+                        <Col size="md-12" className="center">
+                            <Card
+                                id="note-card-content"
                                  front = {this.state.iCard.content.front}
                                  back = {this.state.iCard.content.back}
                                 >
-                                </Card>
-                            </Row> 
-                        </Card>
-                    </Row>
-                </Col>
-                <Col size="md-12">
-                (
-                    {this.state.iCard._id === 1 ?
-                    <Row id="btnR">
-                        <Btn disabled click={this.prevCardHandler}>Back</Btn>
-                        <Btn click={this.nextCardHandler}>Next</Btn>                    
-                    </Row> :
-                    <Row id="btnR">
-                        <Btn click={this.prevCardHandler}>Back</Btn>
-                        <Btn click={this.nextCardHandler}>Next</Btn>                    
-                    </Row>
-                    }
-                    )
-                </Col>
-            </Card>
+                            </Card>
+                        </Col>
+                    
+
+                        <Col size="md-12">                
+                            {this.state.iCard._id === 1 ?
+                            <Row id="btnR">
+                                <Btn disabled click={this.prevCardHandler}>Back</Btn>
+                                <Btn click={this.nextCardHandler}>Next</Btn>                    
+                            </Row> :
+                            <Row id="btnR">
+                                <Btn click={this.prevCardHandler}>Back</Btn>
+                                <Btn click={this.nextCardHandler}>Next</Btn>                    
+                            </Row>
+                            }                    
+                    </Col>
+            
+                </Card>
 
 
 

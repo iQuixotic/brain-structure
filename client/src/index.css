@@ -25,3 +25,9 @@ body {
 .pix-pad2 {
   padding-left: 55px;
 }
+
+.pretty-form {
+  border: 10px solid #333;
+  border-top: 22px solid #333;
+  background: #333;
+}

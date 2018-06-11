@@ -27,25 +27,6 @@
     justify-content: center;
 }
 
-#note-card {
-    /* height: 500px; */
-    align-content: center; 
-}
-
-#note-card-content {
-    color: black;
-    background: rgb(250, 248, 227);
-    margin: 1px;
-    /* perspective: 635px; */
-    -moz-box-shadow:    3px 3px  rgb(49, 49, 49);
-    -webkit-box-shadow: 3px 3px   rgb(49, 49, 49);
-    box-shadow: 0px;
-}
-
-/* #note-card-content:active {
-    transform: rotateY(180deg); 
-} */
-
 #note-input-crd {
     padding: 10px 8px 20px 8px;
 }
@@ -88,12 +69,6 @@
 
 .pad-right {
     padding-right: 7px;
-}
-
-.pretty-form {
-    border: 10px solid #333;
-    border-top: 22px solid #333;
-    background: #333;
 }
 
 .whole-con {
