@@ -5,17 +5,13 @@
 /* Css for components in the PAGES FOLDER ONLY */
     /* ID's */
 
-/* #bd {
-    padding: 0px;
-} */
-
 #button-card {
     height: 389px;
 }
 
 #cp-cards {
     justify-content: center;
-    width: 65%;
+    width: 85%;
     align-content: center;
     height: 240px;
     padding: 20px;
@@ -41,14 +37,16 @@
     justify-content: center;
 }
 
-#mini-card-d1 {
+.mini-card-d1 {
     padding: 15px;
     font-size: 1.2em;
     overflow: hidden;
-    display:block;
-    width:100%;
+    /* display:block; */
+    width:190%;
     height:137px;
 }
+
+
 
 #MyDecksCard {
     height: 187px;
@@ -105,8 +103,8 @@
     padding: 100px 0;
 }
 
-.safe-div {
-    height: 63%;
+.safe-divs {
+    height: 123px;
     margin: 25px;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }

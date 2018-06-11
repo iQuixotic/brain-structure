@@ -5,11 +5,10 @@ module.exports = {
 
     // return all cards from the db
     findAll: function(req, res, next) {
-        console.log('already here')
         db.NoteCard
             .find({})
             .then((dbModel) => { 
-                res.json(dbModel) 
+            res.json(dbModel) 
             })
             .catch(err => res.json(err))
     },
@@ -18,7 +17,7 @@ module.exports = {
         db.NoteCard
             .findOne({})
             .then((dbModel) => { 
-                res.json(dbModel) 
+            res.json(dbModel) 
             })
             .catch(err => res.json(err))
     },

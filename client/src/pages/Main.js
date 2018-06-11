@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Navbar, Footer} from '../components/nav/index';
 import {CardSpace, BackDrop, MyDecks} from '../components/cards/index';
-import {Btn} from '../components/buttons/index';
+import {Btn, DeleteBtn} from '../components/buttons/index';
 import {Disorders} from '../components/disorders/index';
 import {Col, Row, Wrap} from '../components/grid/index';
 import {Card, InputCard} from '../container/Card/index';
@@ -163,7 +163,8 @@ prevCardHandler = () => {
                                 id="note-card-content"
                                  front = {this.state.iCard.content.front}
                                  back = {this.state.iCard.content.back}
-                                >
+                                 conClass="card-content-class"
+                                ><DeleteBtn /> 
                             </Card>
                         </Col>
                     

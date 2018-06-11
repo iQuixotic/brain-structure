@@ -19,6 +19,17 @@
     border: 10px gray;
 }
 
+.card-content-class {
+    /* display: flex; */
+}
+
+.delete-btn {
+    float: right;
+    display: flex;
+    color: #e74944;
+  }
+ 
+
 .fwd-caret {
     color: rgba(255, 250, 250, 0);
     -webkit-text-stroke-width: 5px;
@@ -102,41 +113,4 @@
     color: rgb(102, 147, 202);
 }
 
-
-/* -------------------------------------------- NOT IN USE -----------------------------------------------------------*/
-
-#VerifyBtn .btn-verify {
-    background: green;
-    color: white;
-    padding: 5px;
-    font-size: 1.2em;    
-}
-
-#VerifyBtn .btn-reject {
-    background: red;
-    color: white;
-    padding: 5px;
-    font-size: 1.2em;    
-}
-
-#VerifyBtn .marginize {
-    padding: 10px;
-    margin: 10px;
-}
-
-
-#ComboBtn .btn-combo {
-    margin: 10px;
-    flex: 0%;
-}
-
-/* Scoped for the delete button*/
-
-#DeleteBtn .btn-del {
-    background: red;
-    color: white;
-    margin: 5px;
-    padding: 5px 10px 5px 10px;
-    font-size: 1.2em;    
-}
 

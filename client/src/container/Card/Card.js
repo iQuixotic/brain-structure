@@ -22,8 +22,11 @@ flipUpdateHandler() {
         <div  id={this.props.id}  className="card-body my-card">
            {
             this.state.contentShowingBool ? 
-            <div onClick={() => this.flipUpdateHandler(this.props.id)} className={this.props.className} >{this.props.front} </div>:
-            <div onClick={() => this.flipUpdateHandler(this.props.id)} className={this.props.className}> {this.props.back}  </div>  
+            <div onClick={() => this.flipUpdateHandler(this.props.id)} 
+            className={this.props.conClass} >{this.props.front} </div> :
+
+            <div onClick={() => this.flipUpdateHandler(this.props.id)} 
+            className={this.props.conClass}> {this.props.back}  </div>  
            }
            {this.props.children}
         </div>
