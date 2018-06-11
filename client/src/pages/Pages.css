@@ -31,7 +31,7 @@
 }
 
 #length {
-    height: 400px;
+    height: 427px;
     overflow: scroll;
 }
 
@@ -52,7 +52,6 @@
 
 #MyDecksCard {
     height: 187px;
-    /* overflow: scroll; */
     margin-bottom: 14px;
 }
 
@@ -62,18 +61,19 @@
 }
 
 #note-card {
-    height: 400px;
+    height: 427px;
 }
 
 
 #note-card-content {
     color: black;
-    height: 330px;
+    height: 350px;
     background: rgb(250, 248, 227);
     padding: 40px 60px;
     margin: 1px;
     word-wrap: break-word;
     border: 50px solid #333;
+    border-radius: 5px;
     box-shadow: 0px;
     align-content: center;
     justify-content: center;

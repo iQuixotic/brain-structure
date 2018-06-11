@@ -10,7 +10,7 @@
 
 
 .my-card {
-    background: rgb(226, 224, 224);
+    background: rgb(218, 218, 218);
     color: rgb(55, 52, 66);
     border-width: 0 1px 1px 0;
     border-style: solid;
@@ -18,7 +18,7 @@
     padding: 7px 7px 60px 7px;
     -moz-box-shadow:    3px 3px 5px 6px   rgb(134, 133, 134);
     -webkit-box-shadow: 3px 3px 3px 3px   rgb(134, 133, 134);
-    box-shadow:         2px 2px 3px 3px  rgb(134, 133, 134);
+    box-shadow:         2px 2px 3px 3px  rgb(78, 78, 78);
     transition: box-shadow 0.4s ease-in-out;
 }
 

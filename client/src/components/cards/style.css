@@ -66,6 +66,22 @@
     width: 100%
 }
 
+.lab {
+    color: rgb(255, 10, 112);
+    margin: 0px 15px 5px 15px;
+}
+
+.marg1 {
+    margin: 0px 0px 25px;
+}
+
+.marg2 {
+    margin: 15px 0px 9px;
+}
+
+.size {
+    height: 233px;
+}
 
 .pad-right {
     padding-right: 7px;
