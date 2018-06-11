@@ -1,13 +1,23 @@
 
-/* .flipper:active {
-    transform-style: preserve-3d;
-    transform: rotateY(180deg); 
-    transition: -webkit-transform ease 500ms;
-    transition: transform ease-in-out 500ms;
-    backface-visibility: hidden;
-} */
+.lab {
+    color: rgba(255, 10, 112, 0.452);
+    margin: 0px 15px 5px 15px;
+}
 
+input:checked+label {
+    color: rgb(255, 10, 112);
+    margin: 0px 15px 5px 15px;
+    font-size:1.5em;
+    font-weight: bold;
+}
 
+.marg1 {
+    margin: 0px 0px 25px;
+}
+
+.marg2 {
+    margin: 4px 0px 9px;
+}
 
 .my-card {
     background: rgb(238, 237, 237);

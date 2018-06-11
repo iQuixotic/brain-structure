@@ -5,14 +5,12 @@ module.exports = {
 
      // find and return all disorders in the db
     findAll: function(req, res, next) {
-         console.log('made it here') 
         db.Disorder
             .find({})  
-                .then((dbModel) => { 
-                    console.log(res)
-                    res.json(dbModel) 
-                })
-                .catch(err => res.json(err));
+            .then((dbModel) => { 
+                res.json(dbModel) 
+            })
+            .catch(err => res.json(err));
     },    
     
     // find a single disorder by name

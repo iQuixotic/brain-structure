@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Navbar, Footer} from '../components/nav/index';
-import {CardSpace, InputCard, BackDrop, MyDecks} from '../components/cards/index';
+import {CardSpace, BackDrop, MyDecks} from '../components/cards/index';
 import {Btn} from '../components/buttons/index';
 import {Disorders} from '../components/disorders/index';
 import {Col, Row, Wrap} from '../components/grid/index';
-import {Card} from '../container/Card/index';
+import {Card, InputCard} from '../container/Card/index';
 import {Carousel} from '../container/Carousel/index';
 import './pages.css';
 import API from '../utils/API';
