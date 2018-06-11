@@ -37,5 +37,11 @@ export default {
   getLastCard: function(id) {
     return axios.get("/cards/public/" + id);
   },
+
+  // get last card
+  deleteCard: function(id) {
+  return axios.delete("/cards/public/" + id);
+  },
+
  
 };

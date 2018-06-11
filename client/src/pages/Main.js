@@ -127,6 +127,10 @@ prevCardHandler = () => {
     })          
 };
 
+deleteCard = () => {
+    API.deleteCard(this.state.iCard._id)
+}
+
   render() {
     return (
         <div id="MainPage">
@@ -159,13 +163,17 @@ prevCardHandler = () => {
                 <Col id="crd-col" size="md-6">
                     <Card id="note-card">
                         <Col size="md-12" className="center">
+
+
                             <Card
                                 id="note-card-content"
                                  front = {this.state.iCard.content.front}
                                  back = {this.state.iCard.content.back}
                                  conClass="card-content-class"
                                 >
-                                <DeleteBtn className="del-class"/> 
+                                <DeleteBtn
+                                click={this.deleteCard}
+                                className="del-class"/> 
 
                             <Col size="md-12">                
                             {this.state.iCard._id === 1 ?

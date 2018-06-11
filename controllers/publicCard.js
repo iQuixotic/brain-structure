@@ -22,29 +22,6 @@ module.exports = {
             .catch(err => res.json(err))
     },
 
-
-    // findNext: function(req, res, next) {
-    //     console.log('hit the db 222e')
-    //     db.NoteCard
-    //         .find().next()
-    //         .then((dbModel) => { 
-    //             console.log(res)
-    //             res.json(dbModel) 
-    //         })
-    //         .catch(err => res.json(err))
-    // },
-
-    // findPrev: function(req, res, next) {
-    //     console.log('hit the db 222e')
-    //     db.NoteCard
-    //         .findOne({})
-    //         .then((dbModel) => { 
-    //             console.log(res)
-    //             res.json(dbModel) 
-    //         })
-    //         .catch(err => res.json(err))
-    // },
-
     // find a single note card by ID
     findById: function(req, res) {
         db.NoteCard
@@ -55,22 +32,15 @@ module.exports = {
           .catch(err => res.status(422).json(err));
     },
 
-    // return cards within a given category
-    findbyCat: async (req, res, next) => {
-        db.NoteCard
-            .find(({category: req.body.cat}))
-            await (res => res.json())
-            .catch(res => res.json(error))
-    },
-
     // delete a single notcard from the database
-    erase: async (req, res, next) => {
+    erase: function(req, res) {
         db.NoteCard
             .findById({ _id: req.params.id })
-            await (dbModel => dbModel.remove())
-            await (dbModel => res.json(dbModel))
+            .then((dbModel) => dbModel.remove())
+            .then((dbModel) => res.json(dbModel))
             .catch(res => res.json(error))
     },    
+
 
     // create a new note card and add to the data base
     create: async (req, res, next) => {
@@ -87,5 +57,14 @@ module.exports = {
             await (dbModel => res.json(dbModel))
             .catch(err => res.json(error));
     },
+
+             // return cards within a given category
+    findbyCat: async (req, res, next) => {
+        db.NoteCard
+            .find(({category: req.body.cat}))
+            await (res => res.json())
+            .catch(res => res.json(error))
+    },
+    
 
 }

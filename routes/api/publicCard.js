@@ -12,14 +12,6 @@ router.route('/cards/public')
 router.route('/cards/public/one')
     .get(pubCardController.findOne)
 
-//     //first next card in sequence
-// router.route('/cards/public/next')
-//     .get(pubCardController.findNext)
-
-//     //first previous card in sequence
-// router.route('/cards/public/prev')
-//     .get(pubCardController.findPrev)
-
     // cards by id
 router.route('/cards/public/:id')
     .get(pubCardController.findById)

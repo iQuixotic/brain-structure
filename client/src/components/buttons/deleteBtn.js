@@ -3,7 +3,7 @@ import "./style.css";
 
 
 const DeleteBtn = props => (
-  <span className="delete-btn" {...props}>
+  <span onClick={props.click} className="delete-btn" {...props}>
     X
   </span>
 );
