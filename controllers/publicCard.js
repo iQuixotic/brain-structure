@@ -9,17 +9,52 @@ module.exports = {
         db.NoteCard
             .find({})
             .then((dbModel) => { 
-                console.log(res)
                 res.json(dbModel) 
             })
             .catch(err => res.json(err))
     },
 
+    findOne: function(req, res) {
+        db.NoteCard
+            .findOne({})
+            .then((dbModel) => { 
+                res.json(dbModel) 
+            })
+            .catch(err => res.json(err))
+    },
+
+
+    // findNext: function(req, res, next) {
+    //     console.log('hit the db 222e')
+    //     db.NoteCard
+    //         .find().next()
+    //         .then((dbModel) => { 
+    //             console.log(res)
+    //             res.json(dbModel) 
+    //         })
+    //         .catch(err => res.json(err))
+    // },
+
+    // findPrev: function(req, res, next) {
+    //     console.log('hit the db 222e')
+    //     db.NoteCard
+    //         .findOne({})
+    //         .then((dbModel) => { 
+    //             console.log(res)
+    //             res.json(dbModel) 
+    //         })
+    //         .catch(err => res.json(err))
+    // },
+
     // find a single note card by ID
-    findById: async (req, res, next) => {
+    findById: function(req, res) {
+        console.log('ididididididididididididdi')
         db.NoteCard
           .findById(req.params.id)
-          await (dbModel => res.json(dbModel))
+          .then((dbModel) => { 
+            res.json(dbModel) 
+            console.log(res)
+        })
           .catch(err => res.status(422).json(err));
     },
 

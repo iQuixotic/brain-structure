@@ -14,54 +14,64 @@ import {brain3d} from '../assets/3d/index';
 let startingBD = {img: fc}
 let brainView = {img: brain3d}
 
-let i = 0;
-let contentHolder = [];
+// let i = 0;
+// let contentHolder = [];
 class MainPage extends Component {
 
 state = {
     backDropView: brainView.img,
-    iCard: {
-        i:0,
+    iCard: {        
+        _id: 0,
+        next: 7,
+        prev: 0,
         likes: 0,
         dislikes: 0,
         makingNote: false,
-        content: [],
+        content: {_id: '57894037584rue',
+                    content: {
+                        front: 'here',
+                        back: 'wego'
+                    }},
     },
     disorders: [],
     disorderUsing: 'Schizophrenia'
 }
 
-componentDidUpdate = () => {
- 
-}
-
-componentWillMount = () => {
-    this.getAllPublicCards();
+componentDidMount = () => {
     this.getAllDisorders();
+    this.getFirstCard();
   }
   
-  getAllPublicCards = () => {     
-    API.getAllPublicCards()
+  getFirstCard = () => {     
+    API.getCard()
         .then(res => { 
         this.setState({
-            content: res.data                
+            iCard: {
+                _id: res.data._id,
+                next: res.data._id+1,
+                prev: res.data._id-1,
+                likes: res.data.likes,
+                dislikes: res.data.dislikes,
+                makingNote: false,
+                content: res.data.content        
+            }       
         })      
-        contentHolder.push(res.data)
-        console.log(contentHolder)
+        console.log(this.state.iCard._id)
+        console.log(this.state.iCard.next)
+        console.log(this.state.iCard.prev)
+        console.log(res.data)
         })          
   };
 
 
+
 getAllDisorders = () => {     
     API.getDisData()
-        .then(res => { console.log('res.json')
+        .then(res => { 
         this.setState({
             disorders: res.data                
         })      
-        console.log(res.data) 
-        })          
-        console.log(this.state.disorders)
-        
+    })          
 };
 
 // getOneDisorder = (disorderUsing) => {
@@ -84,10 +94,38 @@ changeViewHandler = using => {
     })
 }
 
+nextCardHandler = () => {
+    API.getNextCard(this.state.iCard._id+1)
+        .then(res => { 
+        this.setState({
+            iCard: {
+                _id: res.data._id,
+                likes: res.data.likes,
+                dislikes: res.data.dislikes,
+                makingNote: false,
+                content: res.data.content        
+            }       
+        })      
+        console.log(res.data)
+        })          
+  };
 
-flipCardHandler = () => {
-    console.log('Im gonna flip')
-}
+prevCardHandler = () => {
+    API.getLastCard(this.state.iCard._id-1)
+    .then(res => { 
+    this.setState({
+        iCard: {
+            _id: res.data._id,
+            likes: res.data.likes,
+            dislikes: res.data.dislikes,
+            makingNote: false,
+            content: res.data.content        
+        }       
+    })      
+    console.log(res.data)
+    console.log(this.state.iCard._id)
+    })          
+};
 
   render() {
     return (
@@ -137,21 +175,27 @@ flipCardHandler = () => {
                                 {/* Content must be mapped over to know which card to display... a 
                                 ternary operator will be used to decide whether to dispay the front or back */}
                                 <Card
-                                 front = {contentHolder[i].content.front}
-                                //  back = {this.state.content[0].content.back}
+                                 front = {this.state.iCard.content.front}
+                                 back = {this.state.iCard.content.back}
                                 >
-                               
-                                  
                                 </Card>
-                            </Row>
+                            </Row> 
                         </Card>
                     </Row>
                 </Col>
                 <Col size="md-12">
+                (
+                    {this.state.iCard._id === 1 ?
                     <Row id="btnR">
-                        <Btn>Back</Btn>
-                        <Btn>Next</Btn>                    
+                        <Btn disabled click={this.prevCardHandler}>Back</Btn>
+                        <Btn click={this.nextCardHandler}>Next</Btn>                    
+                    </Row> :
+                    <Row id="btnR">
+                        <Btn click={this.prevCardHandler}>Back</Btn>
+                        <Btn click={this.nextCardHandler}>Next</Btn>                    
                     </Row>
+                    }
+                    )
                 </Col>
             </Card>
 

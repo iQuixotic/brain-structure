@@ -40,9 +40,6 @@
     -moz-box-shadow:    3px 3px  rgb(49, 49, 49);
     -webkit-box-shadow: 3px 3px   rgb(49, 49, 49);
     box-shadow: 0px;
-    /* position: relative; */
-    /* transition: transform 1s;
-    transform-style: preserve-3d; */
 }
 
 /* #note-card-content:active {
