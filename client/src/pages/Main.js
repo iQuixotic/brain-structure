@@ -25,8 +25,8 @@ constructor(props) {
         noteCards: 'df',
         noteCard: {
             content: {
-                front: 'totally legit words here',
-                back: 'bla ba'
+                front: '',
+                back: ''
             }
         },
         i:1,

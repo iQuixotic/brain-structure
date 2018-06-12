@@ -8,6 +8,7 @@ const cors = require('cors');
 const routes = require('./routes');
 const app = express();
 
+
 //connection to server and listening port
 const PORT = process.env.PORT || 3001;
 const connectMe = process.env.MONGODB_URI || 'mongodb://localhost/brain_db'; 
@@ -49,6 +50,9 @@ app.use((error, req, res, next) => {
   })
 });
 // - - - - - - - - - - - - - - - - - - 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // start server
 app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);

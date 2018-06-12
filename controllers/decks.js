@@ -43,7 +43,7 @@ module.exports = {
         .catch(res => res.json(error))
     },
     // update a deck by deleting a card
-    updateDel: async (req, res, next) => {
+    updateDelCard: async (req, res, next) => {
         db.User.decks
             .findOneAndUpdate({ _id: req.params.id }, req.body)
             await (dbModel =>  dbModel.remove())
@@ -52,7 +52,7 @@ module.exports = {
     },
 
     // update a deck by adding a card
-    updateAdd: async (req, res, next) => {
+    updateAddCard: async (req, res, next) => {
         db.User.decks
             .findOneAndUpdate({ _id: req.params.id }, req.body)
             await (dbModel => res.json(dbModel))

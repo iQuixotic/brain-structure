@@ -16,8 +16,8 @@ router.route('/:id')
 
 // for cards within decks
 router.route('/card/:id')
-    .delete(deckController.updateDel)
-    .put(deckController.updateAdd);
+    .delete(deckController.updateDelCard)
+    .put(deckController.updateAddCard);
     
     
 module.exports = router;

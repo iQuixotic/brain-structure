@@ -27,16 +27,35 @@ radioChangeHandler = () => {
 }
 
 handleNoteSubmit = () => {
-    this.state.cardType ?
-    console.log('handleNoteSubmit called and true ' + this.state.cardType) :
-    console.log('handleNoteSubmit called and false ' + this.state.cardType)
+    console.log('handle Note Submit called ') 
 }
 
-updateNote = () => {
-    this.state.cardType ?
-    console.log('Update Note called and true ' + this.state.cardType) :
-    console.log('update Note called and false ' + this.state.cardType)
+handleCardSubmit = () => {
+    console.log('handle Card Submit called ') 
 }
+
+NoteSubmitHandler = () => {   
+
+    this.state.cardType ?
+    console.log('im doing thiiiiiiiisssssssss') :
+    console.log('im doing thaaaaaaaaaaaattttt')
+    // let userName = this.state.nameU;
+    // let firstName = this.state.nameF;
+    // let lastName = this.state.nameL;
+    // let email = this.state.email;
+    // let password = this.state.pass;   
+    
+    // API.postRegData({
+    //     userName: userName,
+    //     firstName: firstName,
+    //     lastName: lastName,
+    //     email: email,
+    //     password: password      
+    // }).then(res =>
+    //     this.setState({nameU: "", nameL: "", nameF: "", email: "", pass: "", pwordCheck: "" })
+    //   )
+    //   .catch(err => console.log(err));
+};
 
 inputChangeHandler = event => {
     this.setState({[event.target.name]: [event.target.value]});
