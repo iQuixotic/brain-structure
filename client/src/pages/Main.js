@@ -198,7 +198,6 @@ deleteCard = async () => {
                         chem={disorder.neuroChem}
                         h33='Famous Studies'
                         studies={disorder.studies}
-                        
                         />
                                 )
                             )
