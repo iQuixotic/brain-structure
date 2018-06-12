@@ -38,7 +38,7 @@ export default {
     return axios.get("/cards/public/" + id);
   },
 
-  // get last card
+  // delete a single card from the database
   deleteCard: function(id) {
   return axios.delete("/cards/public/" + id);
   },

@@ -118,10 +118,7 @@ category: 'Depression',
 author: 'ben123',
 likes: 5,
 dislikes: 3
-}
-
-
-);
+});
 
 db.Disorder.insert({
   name: "Depression",

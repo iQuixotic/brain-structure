@@ -18,12 +18,12 @@ flipUpdateHandler() {
 
     render() {
     return(
-    <div id="CardCrd" onClick={this.props.click} onMouseOver={this.props.mo}>
+    <div className='target' onClick={this.props.click} onMouseOver={this.props.mo}>
         <div  id={this.props.id}  className="card-body my-card">
            {
             this.state.contentShowingBool ? 
             <div onClick={() => this.flipUpdateHandler(this.props.id)} 
-            className={this.props.conClass} >{this.props.front} </div> :
+            className={this.props.conClass} data-id={this.props.data_id} >{this.props.front} </div> :
 
             <div onClick={() => this.flipUpdateHandler(this.props.id)} 
             className={this.props.conClass}> {this.props.back}  </div>  

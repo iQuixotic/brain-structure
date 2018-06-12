@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {Navbar, Footer} from '../components/nav/index';
 import {CardSpace, BackDrop, MyDecks} from '../components/cards/index';
 import {Btn, DeleteBtn} from '../components/buttons/index';
@@ -14,54 +15,49 @@ import {brain3d} from '../assets/3d/index';
 let startingBD = {img: fc}
 let brainView = {img: brain3d}
 
-// let i = 0;
+let i = 1;
 // let contentHolder = [];
 class MainPage extends Component {
-
-state = {
-    backDropView: brainView.img,
-    iCard: {        
-        _id: 0,
-        next: 7,
-        prev: 0,
-        likes: 0,
-        dislikes: 0,
-        makingNote: false,
-        content: {_id: '57894037584rue',
-                    content: {
-                        front: 'here',
-                        back: 'wego'
-                    }},
-    },
-    disorders: [],
-    disorderUsing: 'Schizophrenia'
+constructor(props) {
+    super(props)
+    this.state = {
+        backDropView: brainView.img,
+        noteCards: 'df',
+        noteCard: {
+            content: {
+                front: 'totally legit words here',
+                back: 'bla ba'
+            }
+        },
+        i:1,
+        disorders: [],
+        disorderUsing: 'Schizophrenia'
+    }
 }
 
-componentDidMount = () => {
+
+componentWillMount= () => {
     this.getAllDisorders();
-    this.getFirstCard();
+    this.getAllPublicCards();
+ 
   }
   
-  getFirstCard = () => {     
-    API.getCard()
-        .then(res => { 
+  getAllPublicCards = () => {
+      API.getAllPublicCards()
+      .then(res => {
         this.setState({
-            iCard: {
-                _id: res.data._id,
-                next: res.data._id+1,
-                prev: res.data._id-1,
-                likes: res.data.likes,
-                dislikes: res.data.dislikes,
-                makingNote: false,
-                content: res.data.content        
-            }       
-        })      
-        console.log(this.state.iCard._id)
-        console.log(this.state.iCard.next)
-        console.log(this.state.iCard.prev)
-        console.log(res.data)
-        })          
-  };
+          
+          noteCards: res.data,
+          noteCard: res.data[this.state.i]
+      })
+      console.log(res.data[this.state.i])
+    //   console.log(this.state.noteCard)
+    })
+  }
+
+  pleaseWork = () => {
+      console.log('please work')
+  }
 
 
 
@@ -74,18 +70,6 @@ getAllDisorders = () => {
     })          
 };
 
-// getOneDisorder = (disorderUsing) => {
-//     API.getThisDisData()
-//         .then(res => {
-//             console.log('get this disorder booooyyyy')
-//             this.setState({
-//                 disorderUsing: res.data
-//             })
-//             console.log(res.data)
-//         })
-//         console.log(this.state.disorders)
-// }
-
 
 changeViewHandler = using => {
     console.log('i made it here ')
@@ -95,44 +79,45 @@ changeViewHandler = using => {
 }
 
 nextCardHandler = () => {
-    API.getNextCard(this.state.iCard._id+1)
-        .then(res => { 
+     
         this.setState({
-            iCard: {
-                _id: res.data._id,
-                likes: res.data.likes,
-                dislikes: res.data.dislikes,
-                makingNote: false,
-                content: res.data.content        
-            }       
+            i: this.state.i+1,
+            noteCard: this.state.noteCards[this.state.i],                         
         })      
-        console.log(res.data)
-        })          
+        console.log(this.state.noteCard.content.front)
+
   };
 
 prevCardHandler = () => {
-    API.getLastCard(this.state.iCard._id-1)
-    .then(res => { 
+  
     this.setState({
-        iCard: {
-            _id: res.data._id,
-            likes: res.data.likes,
-            dislikes: res.data.dislikes,
-            makingNote: false,
-            content: res.data.content        
-        }       
-    })      
-    console.log(res.data)
-    console.log(this.state.iCard._id)
-    })          
+        i: this.state.i-1,
+        noteCard: this.state.noteCards[this.state.i],     
+        })       
+    console.log(this.state.noteCard)
+    console.log(this.state.i)
+     
 };
 
-deleteCard = () => {
-    API.deleteCard(this.state.iCard._id)
+deleteCard = async () => {
+    console.log(this.state.noteCard._id)
+    API.deleteCard(this.state.noteCard._id)
+    .then(res => {
+        this.setState({
+            i:1,
+            noteCards: this.state.noteCards,
+            noteCard: this.state.noteCards[this.state.i]
+    })
+
+});
 }
 
   render() {
+   
     return (
+        // this.state.noteCard.content == undefined  ?
+        // <div><h1>I'm a little slow, so please don't make fun of me while i load...</h1></div> :
+
         <div id="MainPage">
 
             <Navbar header="I Believe"/>
@@ -166,9 +151,9 @@ deleteCard = () => {
 
 
                             <Card
-                                id="note-card-content"
-                                 front = {this.state.iCard.content.front}
-                                 back = {this.state.iCard.content.back}
+                                 id="note-card-content"
+                                 front = {this.state.noteCard.content.front}
+                                 back = {this.state.noteCard.content.back}
                                  conClass="card-content-class"
                                 >
                                 <DeleteBtn
@@ -176,11 +161,11 @@ deleteCard = () => {
                                 className="del-class"/> 
 
                             <Col size="md-12">                
-                            {this.state.iCard._id === 1 ?
+                            {this.state.noteCard == this.state.noteCards[1] ?
                             <Row id="btnR">
-                                <Btn disabled click={this.prevCardHandler}>Back</Btn>
+                                <Btn disabled>Back</Btn>
                                 <Btn click={this.nextCardHandler}>Next</Btn>                    
-                            </Row> :
+                            </Row>  :
                             <Row id="btnR">
                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                 <Btn click={this.nextCardHandler}>Next</Btn>                    
@@ -204,10 +189,6 @@ deleteCard = () => {
                 <Col size="md-3">
                     <Card id="length">
                     {this.state.disorders.map(disorder => (
-                        // <Disorders 
-                        // title={disorder.name}
-                        // />
-
                         <Disorders 
                         title={disorder.name}
                         description={disorder.summary}
@@ -233,5 +214,6 @@ deleteCard = () => {
     );
     }
 }      
+
 
 export default MainPage;

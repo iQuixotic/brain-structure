@@ -38,7 +38,7 @@ module.exports = {
             .findById({ _id: req.params.id })
             .then((dbModel) => dbModel.remove())
             .then((dbModel) => res.json(dbModel))
-            .catch(res => res.json(error))
+            .catch(err => res.json(error))
     },    
 
 
