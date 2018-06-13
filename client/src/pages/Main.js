@@ -17,6 +17,8 @@ let startingBD = {img: fc}
 let brainView = {img: brain3d}
 
 let i = 1;
+let j = 0;
+let available = 0;
 // let contentHolder = [];
 class MainPage extends Component {
 constructor(props) {
@@ -30,10 +32,10 @@ constructor(props) {
                 back: ''
             }
         },
-        i:1,
         toggleNotes: true,
         disorders: [],
-        disorderUsing: 'Schizophrenia'
+        disorderUsing: 'Schizophrenia',
+        useNotes: true
     }
 }
 
@@ -50,9 +52,11 @@ componentWillMount= () => {
         this.setState({
           
           noteCards: res.data,
-          noteCard: res.data[this.state.i]
+          noteCard: res.data[i]
       })
-      console.log(res.data[this.state.i])
+      console.log(res.data[i])
+      available = this.state.noteCards.length;
+      console.log(available)
     //   console.log(this.state.noteCard)
     })
   }
@@ -81,37 +85,43 @@ changeViewHandler = using => {
 }
 
 nextCardHandler = () => {
-     
+        i++;
+        j++;
         this.setState({
-            i: this.state.i+1,
-            noteCard: this.state.noteCards[this.state.i],                         
+            noteCard: this.state.noteCards[j],                         
         })      
-        console.log(this.state.noteCard.content.front)
-
+        console.log(j)
+        console.log(this.state.noteCard !== this.state.noteCards[0])
   };
 
 prevCardHandler = () => {
-  
+    i--;
+    j--;
     this.setState({
-        i: this.state.i-1,
-        noteCard: this.state.noteCards[this.state.i],     
+        noteCard: this.state.noteCards[j],     
         })       
-    console.log(this.state.noteCard)
-    console.log(this.state.i)
+    console.log(j)
+    console.log(this.state.noteCard !== this.state.noteCards[0])
      
 };
 
-deleteCard = async () => {
-    console.log(this.state.noteCard._id)
-    API.deleteCard(this.state.noteCard._id)
-    .then(res => {
-        this.setState({
-            i:1,
-            noteCards: this.state.noteCards,
-            noteCard: this.state.noteCards[this.state.i]
-    })
+deleteCard = (id) => {
+    console.log(id)
+//     // API.deleteCard(this.state.noteCard._id)
+//     .then(res => {
+//         this.setState({
+//             // noteCards: this.state.noteCards,
+//             noteCard: this.state.noteCards[i]
+//     })
 
-});
+// });
+}
+toggleNotes = () => {
+    let notesUsed = this.state.useNotes;
+    this.setState({
+        useNotes: !notesUsed
+    })
+    console.log(this.state.useNotes)
 }
 
   render() {
@@ -151,11 +161,12 @@ deleteCard = async () => {
                     <Card id="note-card">
                         <Col size="md-12" className="center">
                         <CardIcon 
+                                click={this.toggleNotes}
                                 size="2x"
                                 cn='my-icon'
                                 />
                                 {
-                                    this.state.toggleNotes ?
+                                    this.state.useNotes ?
                                     <div className="looking-at">My Notes</div> :
                                     <div className="looking-at">Resarch Studies</div>
                                  }
@@ -167,23 +178,36 @@ deleteCard = async () => {
                                 >
                               
                                 <DeleteBtn
-                                click={this.deleteCard}
+                                click={this.deleteCard.bind(this, this.state.noteCard._id)}
                                 className="del-class"/> 
 
-                            <Col size="md-12">                
-                            {this.state.noteCard == this.state.noteCards[1] ?
-                            
-                            <Row id="btnR">
-                              
-                                <Btn disabled>Back</Btn>
-                                <Btn click={this.nextCardHandler}>Next</Btn>                    
-                            </Row>  :
-                            <Row id="btnR">
-                                
-                                <Btn click={this.prevCardHandler}>Back</Btn>
-                                <Btn click={this.nextCardHandler}>Next</Btn>                    
-                            </Row>
-                            }                    
+                                <Col size="md-12">      
+
+                                <Row id="btnR">                                
+                                    {
+                                        <div className="white"> {i}/{this.state.noteCards.length} </div>
+                                    }
+
+                                     {this.state.noteCard !== this.state.noteCards[0] ?
+                                        (
+                                            this.state.noteCard !== this.state.noteCards[this.state.noteCards.length-1] ?
+                                            <div>
+                                                <Btn click={this.prevCardHandler}>Back</Btn>
+                                                <Btn click={this.nextCardHandler}>Next</Btn>
+                                            </div> 
+                                                :
+                                            <div>
+                                                <Btn click={this.prevCardHandler}>Back</Btn>
+                                                <Btn disabled>Next</Btn> 
+                                            </div>
+                                            ) :
+                                            <div>
+                                                <Btn disabled>Back</Btn>
+                                                <Btn click={this.nextCardHandler}>Next</Btn> 
+                                            </div>
+                                    }
+                                </Row>                            
+                                                 
                     </Col>
 
 

@@ -18,7 +18,7 @@ module.exports = {
         console.log('you hit me')
 
         // deconstruct
-        const {userName, firstName, lastName, email, password} = req.body;
+        const {userName, email, password} = req.body;
 
         // check for duplicate emails
         const copy = await User.findOne({email});
@@ -28,7 +28,7 @@ module.exports = {
         }
 
         // construct a new user and save to db
-        const newUser = new User({ userName, firstName, lastName, email, password })
+        const newUser = new User({ userName, email, password })
         await newUser.save();
         console.log('im trying herer')
 

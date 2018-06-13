@@ -4,46 +4,40 @@ const bcrypt = require('bcryptjs')
 
 let UserSchema = new Schema({
 
-    userName: {
-        type: String,
-        // required: true
-    },
-    firstName: {
-        type: String,
-        // required: true
-    },
-    lastName: {
-        type: String,
-        // required: true
-    },
     email: {
         type: String,
-        // required: true
+        required: true
     }, 
     password: {
         type: String,
-        // required: true
+        required: true
     }, 
-    decks: {
-        title: {
-            type: String,
-        },
-        owned:{
-            cards: {
-                type: Schema.Types.ObjectId, // ref to cards here
-                notes: {
-                   type: Array,
-                   content: String,
-                   back: String
-                }
-            }
-
-        } 
+    cards: {
+        type: String,
     },
-    hasLikedOrDis: {
-        type: Array, // must contain a reference to card
+    Notes: {
+        type: Array,
+    }
+    // decks: {
+    //     title: {
+    //         type: String,
+    //     },
+        // owned:{
+        //     cards: {
+        //         type: Schema.Types.ObjectId, // ref to cards here
+        //         notes: {
+        //            type: Array,
+        //            content: String,
+        //            back: String
+        //         }
+        //     }
 
-    }  
+        // } 
+    // },
+    // hasLikedOrDis: {
+    //     type: Array, // must contain a reference to card
+
+    // }  
 });
 
 // 

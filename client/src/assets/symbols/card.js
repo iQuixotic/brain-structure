@@ -6,7 +6,7 @@ import {Icon} from 'react-fa';
 const CardIcon = (props) => {
     return(
     <div id="CardIcon">
-         <Icon name="fas fa-exchange" size={props.size} className={props.cn} />
+         <Icon name="fas fa-exchange" size={props.size} onClick={props.click} className={props.cn} />
     </div>
     );
 }
