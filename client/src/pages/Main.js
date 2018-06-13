@@ -47,6 +47,8 @@ componentWillMount= () => {
   }
   
   getAllPublicCards = () => {
+      i=1;
+      j=0;
       API.getAllPublicCards()
       .then(res => {
         this.setState({
@@ -102,6 +104,8 @@ prevCardHandler = () => {
 };
 
 deleteCard = (id, next) => {
+    i=1;
+    j=0;
     console.log(id)
     API.deleteCard(id ,next)
     .then(() => next());
@@ -185,8 +189,7 @@ toggleNotes = () => {
                                             <div>
                                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                                 <Btn click={this.nextCardHandler}>Next</Btn>
-                                            </div> 
-                                                :
+                                            </div> :
                                             <div>
                                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                                 <Btn disabled>Next</Btn> 

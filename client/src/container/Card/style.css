@@ -24,7 +24,7 @@ input:checked+label {
     border-radius: 10px;
     /* background: rgb(248, 247, 247); */
     background: rgba(224, 223, 224, 0.932);
-    color: rgb(55, 52, 66);
+    color: rgb(58, 57, 57);
     border-width: 0 3px 2px 0;
     border-style: solid;
     border-color: rgb(192, 192, 192);

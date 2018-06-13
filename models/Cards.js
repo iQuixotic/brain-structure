@@ -18,7 +18,7 @@ let NoteCardSchema = new Schema({
         type: String,
     },
     author: {
-        type: String, // reference
+        type: String,
     },
     likes: {
         type: Number,

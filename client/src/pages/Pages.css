@@ -78,8 +78,8 @@
     margin: 1px;
     width: 96%;
     word-wrap: break-word;
-    border: 50px solid #333;
-    border-bottom: 100px solid #333;
+    border: 50px solid rgb(53, 52, 52);
+    border-bottom: 100px solid rgb(53, 52, 52);
     border-radius: 5px;
     box-shadow: 0px;
     align-content: center;

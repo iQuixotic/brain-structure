@@ -2,14 +2,10 @@
 
 db.Users.create([{
     userName: 'dan123',
-    firstName: 'Dan',
-    lastName: 'Thomas',
     email: 'dan@dan.com',
     password: '123'
   }, {
     userName: 'ben123',
-    firstName: 'Ben',
-    lastName: 'Drips',
     email: 'ben@ben.com',
     password: '123'
   }]);
