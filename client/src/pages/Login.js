@@ -9,7 +9,7 @@ class LoginPage extends Component {
     return (
         <div id="LoginPage">
 
-        <Navbar header="You Can do it" />
+        <Navbar header="Neuro-Cards" />
        
             <Container>                
                 <Wrap cn="pad-vert cent">

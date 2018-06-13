@@ -1,5 +1,6 @@
 
 .lab {
+    font-family: 'Courgette', cursive;
     color: rgba(255, 10, 112, 0.452);
     margin: 0px 15px 5px 15px;
 }
@@ -21,11 +22,12 @@ input:checked+label {
 
 .my-card {
     border-radius: 10px;
-    background: rgb(248, 247, 247);
+    /* background: rgb(248, 247, 247); */
+    background: rgba(224, 223, 224, 0.932);
     color: rgb(55, 52, 66);
     border-width: 0 3px 2px 0;
     border-style: solid;
-    border-color: rgba(177, 174, 174, 0.616);
+    border-color: rgb(192, 192, 192);
     padding: 7px 7px 60px 7px;
 }
 

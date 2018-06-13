@@ -36,11 +36,9 @@ frontOrBack = () => {
   render() {
     return (
       <Wrap>
-          <Navbar header="The Great and Powerful Cards"/>
+          <Navbar header="Neuro-Cards"/>
           <Wrap cn="pad"/>
             <Container>
-
-{/* Row 1               */}
            
           {this.state.liCards.map(liCard => (
             

@@ -19,10 +19,6 @@
     border: 10px gray;
 }
 
-.card-content-class {
-    /* display: flex; */
-}
-
 .delete-btn {
     float: right;
     display: flex;

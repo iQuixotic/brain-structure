@@ -11,6 +11,7 @@ import './pages.css';
 import API from '../utils/API';
 import {fc} from '../assets/brainImages/index';
 import {brain3d} from '../assets/3d/index';
+import {CardIcon} from '../assets/symbols/index';
 
 let startingBD = {img: fc}
 let brainView = {img: brain3d}
@@ -30,6 +31,7 @@ constructor(props) {
             }
         },
         i:1,
+        toggleNotes: true,
         disorders: [],
         disorderUsing: 'Schizophrenia'
     }
@@ -120,7 +122,7 @@ deleteCard = async () => {
 
         <div id="MainPage">
 
-            <Navbar header="I Believe"/>
+            <Navbar header="Neuro-Cards"/>
         
             <Row id="main-bd-row"> 
                 <Col id="" size="md-2">
@@ -148,25 +150,36 @@ deleteCard = async () => {
                 <Col id="crd-col" size="md-6">
                     <Card id="note-card">
                         <Col size="md-12" className="center">
-
-
+                        <CardIcon 
+                                size="2x"
+                                cn='my-icon'
+                                />
+                                {
+                                    this.state.toggleNotes ?
+                                    <div className="looking-at">My Notes</div> :
+                                    <div className="looking-at">Resarch Studies</div>
+                                 }
                             <Card
-                                 id="note-card-content"
+                                 id="note-card-content"                                 
                                  front = {this.state.noteCard.content.front}
                                  back = {this.state.noteCard.content.back}
                                  conClass="card-content-class"
                                 >
+                              
                                 <DeleteBtn
                                 click={this.deleteCard}
                                 className="del-class"/> 
 
                             <Col size="md-12">                
                             {this.state.noteCard == this.state.noteCards[1] ?
+                            
                             <Row id="btnR">
+                              
                                 <Btn disabled>Back</Btn>
                                 <Btn click={this.nextCardHandler}>Next</Btn>                    
                             </Row>  :
                             <Row id="btnR">
+                                
                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                 <Btn click={this.nextCardHandler}>Next</Btn>                    
                             </Row>
@@ -190,6 +203,7 @@ deleteCard = async () => {
                     <Card id="length">
                     {this.state.disorders.map(disorder => (
                         <Disorders 
+                        cnHeaders="dis-headers"
                         title={disorder.name}
                         description={disorder.summary}
                         h31='Brain Architecture'

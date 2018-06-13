@@ -68,12 +68,15 @@
 
 
 #note-card-content {
+    
     color: black;
-    font-size: 1.1em;
-    height: 390px;
+    font-size: 1.2em;
+    font-weight: 700;
+    height: 404px;
     background: rgb(250, 248, 227);
-    padding: 30px 40px;
+    padding: 27px 30px;
     margin: 1px;
+    width: 96%;
     word-wrap: break-word;
     border: 50px solid #333;
     border-bottom: 100px solid #333;
@@ -81,6 +84,8 @@
     box-shadow: 0px;
     align-content: center;
     justify-content: center;
+    position: absolute;
+    z-index: 1;
 }
 
     /* CLASSES */
@@ -122,6 +127,38 @@
     font-weight: boldest;
     cursor: pointer;
     color: red;
+}
+
+.dis-headers {
+    color: rgb(2, 179, 16);
+    font-family: 'Courgette', cursive;    
+    font-weight: 200;
+    font-size: 2.0em;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.looking-at {
+    font-family: 'Courgette', cursive;    
+    color: rgb(255, 10, 112);
+    font-size: 1.8em;
+    font-weight: 780;
+    padding-top: 10px;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 3;
+}
+
+.my-icon {
+    color: rgb(2, 179, 16);
+    /* color:  rgb(102, 147, 202); */
+    position: relative;
+    padding: 15px 0px 0px 15px;
+    z-index:  4;
+    float: left;
+}
+
+.my-icon:hover { 
+    color:  rgb(255, 10, 112);
 }
 
 .pad-vert {

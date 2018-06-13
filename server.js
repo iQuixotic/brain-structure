@@ -49,6 +49,7 @@ app.use((error, req, res, next) => {
     }
   })
 });
+
 // - - - - - - - - - - - - - - - - - - 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -57,6 +58,5 @@ if (process.env.NODE_ENV === "production") {
 app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);
 });
-
 
 

@@ -10,7 +10,7 @@ class RegisterPage extends Component {
   render() {
     return (
     <div className="RegisterPage">   
-        <Navbar header="You are the greatest coder of all time !!!"/>
+        <Navbar header="Neuro-Cards"/>
             <Container>                
                 <Wrap cn="pad-vert cent">
                     <Row>

@@ -1,0 +1,21 @@
+
+
+#Disorders {
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Courgette', cursive; */
+    color: rgb(255, 10, 112);
+    background: #333;
+    padding-top: 7px;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.4s;
+}
+
+.p {
+    border-collapse: collapse;
+    font-size: 1.2em;
+    word-break: auto;
+    word-wrap: auto;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}

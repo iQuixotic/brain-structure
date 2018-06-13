@@ -7,16 +7,16 @@ const Disorders = (props) => {
     <div id="Disorders">
         <div id={props.id}  className={props.cn}>
 
-           <h1 id={props.disorder} className="dis-header">{props.title}</h1>
+           <h1 id={props.disorder} className={props.cnHeaders}>{props.title}</h1>
                 <p className="p">{props.description}</p>
 
-            <h3 className="dis-header">{props.h31}</h3>
+            <h3 className={props.cnHeaders}>{props.h31}</h3>
                 <p className="p">{props.structureData}</p>
 
-            <h3 className="dis-header">{props.h32}</h3>
+            <h3 className={props.cnHeaders}>{props.h32}</h3>
                 <p className="p">{props.chem}</p>
 
-            <h3 className="dis-header">{props.h33}</h3>
+            <h3 className={props.cnHeaders}>{props.h33}</h3>
                 <p className="p">{props.studies}</p>
         </div>
     </div>
