@@ -13,6 +13,8 @@ db.Users.create([{
     email: 'ben@ben.com',
     password: '123'
   }]);
+
+  
   
 db.NoteCard.create({
     _id:1,

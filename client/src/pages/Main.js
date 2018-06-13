@@ -66,7 +66,6 @@ componentWillMount= () => {
   }
 
 
-
 getAllDisorders = () => {     
     API.getDisData()
         .then(res => { 
@@ -91,7 +90,6 @@ nextCardHandler = () => {
             noteCard: this.state.noteCards[j],                         
         })      
         console.log(j)
-        console.log(this.state.noteCard !== this.state.noteCards[0])
   };
 
 prevCardHandler = () => {
@@ -101,21 +99,14 @@ prevCardHandler = () => {
         noteCard: this.state.noteCards[j],     
         })       
     console.log(j)
-    console.log(this.state.noteCard !== this.state.noteCards[0])
-     
 };
 
-deleteCard = (id) => {
+deleteCard = (id, next) => {
     console.log(id)
-//     // API.deleteCard(this.state.noteCard._id)
-//     .then(res => {
-//         this.setState({
-//             // noteCards: this.state.noteCards,
-//             noteCard: this.state.noteCards[i]
-//     })
-
-// });
+    API.deleteCard(id ,next)
+    .then(() => next());
 }
+
 toggleNotes = () => {
     let notesUsed = this.state.useNotes;
     this.setState({
@@ -178,7 +169,7 @@ toggleNotes = () => {
                                 >
                               
                                 <DeleteBtn
-                                click={this.deleteCard.bind(this, this.state.noteCard._id)}
+                                click={this.deleteCard.bind(this, this.state.noteCard._id, this.getAllPublicCards)}
                                 className="del-class"/> 
 
                                 <Col size="md-12">      
