@@ -33,6 +33,11 @@ frontOrBack = () => {
   Card.flipUpdateHandler() 
 }
 
+addLiCard = (id) => {
+  console.log('i clicked')
+  console.log(id)
+}
+
   render() {
     return (
       <Wrap>
@@ -40,8 +45,14 @@ frontOrBack = () => {
           <Wrap cn="pad"/>
             <Container>
            
+
+
+              
+
+
           {this.state.liCards.map(liCard => (
-            
+            <ul>
+              <li>
     <Wrap id="pageWrap">
             <Card id="cp-cards"
             ref = {this.child}
@@ -49,16 +60,15 @@ frontOrBack = () => {
             frontOrBack={this.frontOrBack}
             front = {liCard.content.front}
             back = {liCard.content.back}
-            conClass="safe-divs"
-           
->
+            conClass="safe-divs">
        
           
             {/* Inner Card row for bottom */}
             <Wrap id="mini-card-d2">
               <Row>
                 <Col size="md-3">
-                  <input type="checkbox" className="bl" />
+                  <input type="checkbox" className="bl"
+                  onClick={() => this.addLiCard(liCard._id)}/>
                   <label className="bll" for="bl">Add</label>
                 </Col>
                 <Col size="md-6" />
@@ -74,7 +84,8 @@ frontOrBack = () => {
             </Wrap>              
           </Card>   
           </Wrap>
-          
+          </li>
+          </ul>
           ))}
           </Container>
           <Footer />

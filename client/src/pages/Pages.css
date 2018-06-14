@@ -26,6 +26,10 @@
     float: none;
 }
 
+#dis-name {
+    font-size: 2.5em;
+}
+
 #index-card-row {
     margin: 20px 0 0 0;
 }
@@ -66,7 +70,6 @@
     height: 427px;
 }
 
-
 #note-card-content {
     
     color: black;
@@ -80,7 +83,7 @@
     word-wrap: break-word;
     border: 50px solid rgb(53, 52, 52);
     border-bottom: 100px solid rgb(53, 52, 52);
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0px;
     align-content: center;
     justify-content: center;
@@ -133,7 +136,7 @@
     color: rgb(2, 179, 16);
     font-family: 'Courgette', cursive;    
     font-weight: 200;
-    font-size: 2.0em;
+    font-size: 1.7em;
     /* font-family: 'Josefin Sans', sans-serif; */
 }
 

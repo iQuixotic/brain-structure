@@ -221,6 +221,7 @@ toggleNotes = () => {
                     <Card id="length">
                     {this.state.disorders.map(disorder => (
                         <Disorders 
+                        disorder="dis-name"
                         cnHeaders="dis-headers"
                         title={disorder.name}
                         description={disorder.summary}

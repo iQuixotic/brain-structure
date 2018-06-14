@@ -14,7 +14,7 @@ let UserSchema = new Schema({
     }, 
     cards: {
         type: Schema.Types.ObjectId, 
-        ref: 'notecards',
+        ref: 'Notecard',
             notes: {
                 type: Array,
             }
