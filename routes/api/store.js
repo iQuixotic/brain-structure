@@ -8,6 +8,10 @@ router.route('/store/all')
     .get(storeController.findAll)
     // .post(storeController.create);
 
+    // for cards by id
+// router.route('/store/all/:id')
+    // .post(storeController.add);
+
 module.exports = router;
 
 

@@ -45,7 +45,7 @@ export default {
 
   // associate a card from the cards page with a user
   addCardById: function(data) {
-  return axios.post("/cards/user/" + data.id, data);
+  return axios.post("/myCards/" + data.id, data);
   },
 
   // create a new card 
@@ -59,5 +59,4 @@ export default {
     console.log('yeyseyye')
     return axios.get('/store/all');
   },
- 
 };

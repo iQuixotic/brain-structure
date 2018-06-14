@@ -4,7 +4,7 @@ const passportConf = require('../../passport');
 const userCardController = require('../../controllers/privateCard');
 
 // for cards by id
-router.route('/cards/user/:id')
+router.route('/myCards/:id')
     .post(userCardController.add);
 
     

@@ -14,13 +14,14 @@ module.exports = {
             .catch(err => res.json(err))
     },
 
-    // create a new note card and add to the data base
-    create: function(req, res) {
+     // create a new note card and add to the users data base
+     create: function(req, res) {
+         console.log(req.body)
         console.log('yes i am heere')
-        db.Store
+        db.NoteCard
           .create(req.body)
           .then(dbModel => res.json(dbModel))
-          .catch(err => res.json(error));
+          .catch(err => res.json(error))
       },
 
 }
