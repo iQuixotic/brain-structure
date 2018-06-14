@@ -48,9 +48,16 @@ export default {
   return axios.post("/cards/user/" + data.id, data);
   },
 
+  // create a new card 
   createCard: function(arg, arg2) {
     console.log('i do it')
     return axios.post('cards/public')
-  }
+  },
+
+  // get all cards in the entire db
+  getAllFromStore: function() {
+    console.log('yeyseyye')
+    return axios.get('/store/all');
+  },
  
 };

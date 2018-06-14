@@ -1,5 +1,6 @@
 module.exports = {
     User: require('./Users'),
     NoteCard: require('./Cards'),
-    Disorder: require('./Disorders')
+    Disorder: require('./Disorders'),
+    Store: require('./Store')
 }

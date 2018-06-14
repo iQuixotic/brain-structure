@@ -17,11 +17,11 @@ class CardPage extends Component {
   }
 
 componentWillMount = () => {
-  this.getAllPublicCards();
+  this.getAllFromStore();
 }
 
-getAllPublicCards = () => {     
-  API.getAllPublicCards()
+getAllFromStore = () => {     
+  API.getAllFromStore()
       .then(res => { 
       this.setState({
           liCards: res.data                
@@ -39,6 +39,7 @@ addLiCard = (id, front, back) => {
     back: back,
     id: id
   }
+  
   API.addCardById(data);
   console.log('i clicked')
   console.log(id)
@@ -51,10 +52,6 @@ addLiCard = (id, front, back) => {
           <Wrap cn="pad"/>
             <Container>
            
-
-
-              
-
 
           {this.state.liCards.map(liCard => (
             <ul>
