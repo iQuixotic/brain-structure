@@ -161,7 +161,7 @@ toggleNotes = () => {
                                 {
                                     this.state.useNotes ?
                                     <div className="looking-at">My Notes</div> :
-                                    <div className="looking-at">Resarch Studies</div>
+                                    <div className="looking-at">Research Studies</div>
                                  }
                             <Card
                                  id="note-card-content"                                 
@@ -183,7 +183,8 @@ toggleNotes = () => {
 
                                      {this.state.noteCard !== this.state.noteCards[0] && j !== 0 ?
                                         (
-                                            this.state.noteCard !== this.state.noteCards[this.state.noteCards.length-1] && j !== 0 ?
+                                            this.state.noteCard !== this.state.noteCards[this.state.noteCards.length-1] 
+                                            && j !== 0 ?
                                             <div>
                                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                                 <Btn click={this.nextCardHandler}>Next</Btn>

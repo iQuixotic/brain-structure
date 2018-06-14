@@ -6,7 +6,7 @@ const pubCardController = require('../../controllers/publicCard');
     // all cards
 router.route('/cards/public')
     .get(pubCardController.findAll)
-    // .post(pubCardController.create);
+    .post(pubCardController.create);
 
     //first card on main page
 router.route('/cards/public/one')

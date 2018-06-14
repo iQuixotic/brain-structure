@@ -5,8 +5,9 @@ module.exports = {
 
     // return all cards from the db
     findAll: function(req, res, next) {
+        console.log('wrong place i think')
         db.NoteCard
-            .find({})
+            .find({}) 
             .then((dbModel) => { 
             res.json(dbModel) 
             })
@@ -43,10 +44,11 @@ module.exports = {
 
 
     // create a new note card and add to the data base
-    create: async (req, res, next) => {
+    create: function(req, res) {
+        console.log('yes i am heere')
         db.NoteCard
           .create(req.body)
-          await (dbModel => res.json(dbModel))
+          .then(dbModel => res.json(dbModel))
           .catch(err => res.json(error));
       },
 

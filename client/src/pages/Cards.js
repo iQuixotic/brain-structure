@@ -33,8 +33,13 @@ frontOrBack = () => {
   Card.flipUpdateHandler() 
 }
 
-addLiCard = (id) => {
-  API.addCardById(id);
+addLiCard = (id, front, back) => {
+  let data = {
+    front: front,
+    back: back,
+    id: id
+  }
+  API.addCardById(data);
   console.log('i clicked')
   console.log(id)
 }
@@ -69,7 +74,7 @@ addLiCard = (id) => {
               <Row>
                 <Col size="md-3">
                   <input type="checkbox" className="bl"
-                  onClick={() => this.addLiCard(liCard._id)}/>
+                  onClick={() => this.addLiCard(liCard._id, liCard.content.front, liCard.content.back)}/>
                   <label className="bll" for="bl">Add</label>
                 </Col>
                 <Col size="md-6" />

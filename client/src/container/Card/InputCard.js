@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Btn} from '../../components/buttons/index';
 import {Row} from '../../components/grid/index';
 import {Card} from './index';
+import API from '../../utils/API';
 import './style.css';
 import '../../index.css';
 
@@ -24,21 +25,30 @@ radioChangeHandler = () => {
     this.setState({
         cardType: true
     })
+    console.log(this.state.cardType)
 }
 
-handleNoteSubmit = () => {
+handleNoteSubmit = (arg) => {
     console.log('handle Note Submit called ') 
+
 }
 
-handleCardSubmit = () => {
+handleCardSubmit = (arg, arg2) => {
     console.log('handle Card Submit called ') 
+    API.createCard({
+        linkInput: arg,
+        summaryInput: arg2
+    });
 }
 
-NoteSubmitHandler = () => {   
+noteSubmitHandler = () => {   
+    let notesInput = this.state.notesInput;
+    let linkInput = this.state.linkInput;
+    let summaryInput = this.state.summaryInput;
 
     this.state.cardType ?
-    console.log('im doing thiiiiiiiisssssssss') :
-    console.log('im doing thaaaaaaaaaaaattttt')
+    this.handleNoteSubmit(linkInput, summaryInput) :
+    this.handleCardSubmit(notesInput)
     // let userName = this.state.nameU;
     // let firstName = this.state.nameF;
     // let lastName = this.state.nameL;
@@ -71,7 +81,7 @@ inputChangeHandler = event => {
                 
                 <input id="My Notes" defaultChecked={true} 
                 onClick={this.radioChangeHandler} type="radio" name="input" />
-                <label className="lab" for="Notes">Notes</label>
+                <label className="lab" for="Notes">My Notes</label>
                
                 <input id="Research" onClick={this.radioChangeHandler} 
                 type="radio" name="input" />
@@ -97,7 +107,7 @@ inputChangeHandler = event => {
                     <Row id="input-crd-btn-row">
                         <Btn disabled >Make</Btn> 
                         <Btn onClick={this.handleNoteSubmit}>Add</Btn>
-                        <Btn onClick={this.updateNote}>Edit</Btn> 
+                        <Btn disabled onClick={this.updateNote}>Edit</Btn> 
                     </Row>
                 </form>
             </Card>
