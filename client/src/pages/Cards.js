@@ -34,6 +34,7 @@ frontOrBack = () => {
 }
 
 addLiCard = (id) => {
+  API.addCardById(id);
   console.log('i clicked')
   console.log(id)
 }

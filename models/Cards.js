@@ -6,6 +6,10 @@ let NoteCardSchema = new Schema({
     _id: {
         type: Number,
     },
+    belongs: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }],
     content: {
         front: {
             type: String

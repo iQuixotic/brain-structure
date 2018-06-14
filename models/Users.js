@@ -12,13 +12,11 @@ let UserSchema = new Schema({
         type: String,
         required: true
     }, 
-    cards: {
+    cards: [{
         type: Schema.Types.ObjectId, 
-        ref: 'Notecard',
-            notes: {
-                type: Array,
-            }
-    },
+        ref: 'NoteCard',
+        // notes: []
+    }],
  
     // decks: {
     //     title: {

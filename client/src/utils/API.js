@@ -43,5 +43,9 @@ export default {
   return axios.delete("/cards/public/" + id);
   },
 
+    // associate a card from the cards page with a user
+    addCardById: function(id) {
+      return axios.post("/cards/user/" + id);
+      },
  
 };

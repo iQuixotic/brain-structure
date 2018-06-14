@@ -18,8 +18,6 @@ let brainView = {img: brain3d}
 
 let i = 1;
 let j = 0;
-let available = 0;
-// let contentHolder = [];
 class MainPage extends Component {
 constructor(props) {
     super(props)
@@ -57,8 +55,8 @@ componentWillMount= () => {
           noteCard: res.data[i]
       })
       console.log(res.data[i])
-      available = this.state.noteCards.length;
-      console.log(available)
+    //   available = this.state.noteCards.length;
+    //   console.log(available)
     //   console.log(this.state.noteCard)
     })
   }
@@ -183,9 +181,9 @@ toggleNotes = () => {
                                         <div className="white"> {i}/{this.state.noteCards.length} </div>
                                     }
 
-                                     {this.state.noteCard !== this.state.noteCards[0] ?
+                                     {this.state.noteCard !== this.state.noteCards[0] && j !== 0 ?
                                         (
-                                            this.state.noteCard !== this.state.noteCards[this.state.noteCards.length-1] ?
+                                            this.state.noteCard !== this.state.noteCards[this.state.noteCards.length-1] && j !== 0 ?
                                             <div>
                                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                                 <Btn click={this.nextCardHandler}>Next</Btn>
