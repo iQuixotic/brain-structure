@@ -22,7 +22,7 @@ class MainPage extends Component {
 constructor(props) {
     super(props)
     this.state = {
-        backDropView: brainView.img,
+        backDropView: startingBD.img,
         noteCards: 'df',
         noteCard: {
             content: {
@@ -54,6 +54,7 @@ componentWillMount= () => {
           noteCards: res.data,
           noteCard: res.data[i]
       })
+      console.log(this.state.noteCards)
       console.log(res.data[i])
     //   available = this.state.noteCards.length;
     //   console.log(available)

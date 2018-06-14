@@ -12,7 +12,7 @@ db.Users.create([{
 
   
   
-db.Store.create({
+db.NoteCard.create({
     _id:1,
     content: {front: 'Pavlov called the dogs\'\ anticipatory salivation "psychic secretion". Putting these informal observations to an experimental test, Pavlov presented a stimulus (e.g. the sound of a metronome) and then gave the dog food; after a few repetitions, the dogs started to salivate in response to the stimulus.',
             back: 'https://www.sciencedirect.com/science/article/pii/S0960982203000666'},

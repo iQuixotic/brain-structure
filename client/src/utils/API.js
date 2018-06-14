@@ -49,7 +49,13 @@ export default {
   },
 
   // create a new card 
-  createCard: function(arg, arg2) {
+  createCard: function(data) {
+    console.log('i do it')
+    return axios.post('/store/all/' + data)
+  },
+
+  // create a new personal note 
+  createNote: function(arg, arg2) {
     console.log('i do it')
     return axios.post('cards/public')
   },

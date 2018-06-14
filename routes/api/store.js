@@ -7,6 +7,10 @@ const storeController = require('../../controllers/store');
 router.route('/store/all')
     .get(storeController.findAll)
     // .post(storeController.create);
+    
+
+router.route('/store/all/:data')
+    .post(storeController.create);
 
     // for cards by id
 // router.route('/store/all/:id')

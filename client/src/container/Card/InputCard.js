@@ -29,16 +29,20 @@ radioChangeHandler = () => {
 }
 
 handleNoteSubmit = (arg) => {
-    console.log('handle Note Submit called ') 
+    console.log('handle Note Submit called ')
+    API.createNote({
+        notesInput: arg
+    });
 
 }
 
 handleCardSubmit = (arg, arg2) => {
-    console.log('handle Card Submit called ') 
-    API.createCard({
+    let data = {
         linkInput: arg,
         summaryInput: arg2
-    });
+        }
+    console.log('handle Card Submit called ') 
+    API.createCard(data);
 }
 
 noteSubmitHandler = () => {   
@@ -48,7 +52,7 @@ noteSubmitHandler = () => {
 
     this.state.cardType ?
     this.handleNoteSubmit(linkInput, summaryInput) :
-    this.handleCardSubmit(notesInput)
+    this.handleCardSubmit(linkInput, summaryInput)
     // let userName = this.state.nameU;
     // let firstName = this.state.nameF;
     // let lastName = this.state.nameL;
@@ -106,7 +110,7 @@ inputChangeHandler = event => {
                     
                     <Row id="input-crd-btn-row">
                         <Btn disabled >Make</Btn> 
-                        <Btn onClick={this.handleNoteSubmit}>Add</Btn>
+                        <Btn onClick={this.noteSubmitHandler}>Add</Btn>
                         <Btn disabled onClick={this.updateNote}>Edit</Btn> 
                     </Row>
                 </form>

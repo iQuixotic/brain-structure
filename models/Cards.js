@@ -17,9 +17,7 @@ let NoteCardSchema = new Schema({
     category: {
         type: String,
     },
-    owned: {
-        type: Boolean,
-    },
+    
     author: {
         type: String,
     },

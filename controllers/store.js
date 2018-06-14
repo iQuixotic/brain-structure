@@ -16,7 +16,7 @@ module.exports = {
 
      // create a new note card and add to the users data base
      create: function(req, res) {
-         console.log(req.body)
+         console.log(req)
         console.log('yes i am heere')
         db.NoteCard
           .create(req.body)
