@@ -16,6 +16,7 @@ import {CardIcon} from '../assets/symbols/index';
 let startingBD = {img: fc}
 let brainView = {img: brain3d}
 
+let decksNumber = 0;
 let i = 1;
 let j = 0;
 class MainPage extends Component {
@@ -33,7 +34,12 @@ constructor(props) {
         toggleNotes: true,
         disorders: [],
         disorderUsing: 'Schizophrenia',
-        useNotes: true
+        useNotes: true,
+        decksShowing: [],
+        decksNames: [{name: 'deck 1'}, {name: 'my deck 2'}, {name: 'Fire Deck 3'}, {name: 'Water Deck 4'}, 
+        {name: 'deck 5'}, {name: 'my deck 6'}, {name: 'Fire Deck 7'}, {name: 'Water Deck 8'},
+        {name: 'deck 9'}, {name: 'my deck 10'}, {name: 'Fire Deck 11'}, {name: 'Water Deck 12'}]
+        
     }
 }
 
@@ -43,6 +49,53 @@ componentWillMount= () => {
     this.getAllPublicCards();
  
   }
+
+
+adjustDecksShowing = () => {
+    
+    console.log(decksNumber)
+    this.setState({
+        decksShowing: [this.state.decksNames[decksNumber].name, 
+        this.state.decksNames[decksNumber+1].name,
+        this.state.decksNames[decksNumber+2].name]
+    })
+    console.log(this.state.decksShowing)
+}
+
+deckShowDecrement = () => {
+    {    
+        this.state.decksNames[decksNumber-6] ?    
+        decksNumber -=3 : 
+            (this.state.decksNames[decksNumber-5] ?
+            decksNumber -=2 :
+                (
+                    (this.state.decksNames[decksNumber-4] ?
+                        decksNumber -- : decksNumber=0
+                    )
+                )
+            )
+        }
+        this.adjustDecksShowing()
+        console.log(decksNumber)
+}
+
+deckShowIncrement = () => {
+    {    
+    this.state.decksNames[decksNumber+6] ?    
+    decksNumber +=3 : 
+        (this.state.decksNames[decksNumber+5] ?
+        decksNumber +=2 :
+            (
+                (this.state.decksNames[decksNumber+4] ?
+                    decksNumber ++ : decksNumber=this.state.decksNames.length-3
+                )
+            )
+        )
+    }
+    this.adjustDecksShowing()
+    console.log(decksNumber)
+}
+
   
   getAllPublicCards = () => {
       i=1;
@@ -143,7 +196,37 @@ toggleNotes = () => {
                     <Card id="long2">
                         <Carousel view={this.changeViewHandler.bind(this)} />
                     </Card>
-                    <MyDecks crdId="MyDecksCard" />
+
+                     {/* {this.state.decksNames.map(deck => (
+                    contentBack={this.state.name}
+                            )
+                        )
+                    } */}
+
+                    <MyDecks 
+                    contain="deck-contain"
+                    cn="deck-transform deck-contain"
+                    side1="deck-side card my-card"
+                    side2="deck-side deck-back"
+                   contentBack={
+                    <div>
+                        <div>
+                            {this.state.decksNames[decksNumber].name}
+                        </div>
+                        <div>
+                            {this.state.decksNames[decksNumber+1].name}
+                        </div>
+                        <div>
+                            {this.state.decksNames[decksNumber+2].name}
+                        </div>
+                        <button onClick={this.deckShowDecrement}>see Prev</button>
+                        <button onClick={this.deckShowIncrement}>see next</button>
+                    </div>
+                   }
+                    >
+                   
+                    </MyDecks>
+
                 </Col>
             </Row>
 
@@ -194,7 +277,7 @@ toggleNotes = () => {
                                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                                 <Btn disabled>Next</Btn> 
                                             </div>
-                                            ) :
+                                        ) :
                                             <div>
                                                 <Btn disabled>Back</Btn>
                                                 <Btn click={this.nextCardHandler}>Next</Btn> 

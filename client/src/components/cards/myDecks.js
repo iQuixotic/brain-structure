@@ -6,11 +6,18 @@ import '../../index.css';
 
 const MyDecks =(props) => {
         return(
-        <div id={props.id} className={props.cn} >
-            <Card id={props.crdId} clicked={this.flipCardHandler}>
-                <Icon name="fas fa-archive" size='5x' className="archive" />
-            </Card>
-        </div>
+            <div className={props.contain}>
+                <div id={props.id} className={props.cn} >
+                    <div className={props.side1} clicked={this.flipCardHandler}>
+                        <Icon name="fas fa-archive" size='5x' className="archive" />
+                    </div>
+                    <div className={props.scroll}>
+                        <div className={props.side2}>
+                            {props.contentBack}
+                        </div>
+                    </div>
+                </div>
+            </div>
         );
 }
 

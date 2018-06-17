@@ -45,21 +45,7 @@
     justify-content: center;
 }
 
-.mini-card-d1 {
-    padding: 15px;
-    font-size: 1.2em;
-    overflow: hidden;
-    /* display:block; */
-    width:190%;
-    height:137px;
-}
 
-
-
-#MyDecksCard {
-    height: 187px;
-    margin-bottom: 14px;
-}
 
 #main-bd-row {
     margin: 15px 0 0 0;
@@ -118,6 +104,52 @@
     margin-left: auto;
 }
 
+.deck-back {
+    background: rgb(102, 147, 202);
+    font-size: 1.3em;
+    font-weight: 800;
+    color: #333;
+    height: 187px;
+    overflow: hidden;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.deck-contain {
+    cursor: pointer;
+    height: 187px;
+    perspective: 600;
+    position: relative;
+}
+
+.deck-mapped {
+    padding: 20px 10px 0px 16px;
+}
+
+
+
+.deck-side {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    /* height: 100%; */
+    position: absolute;
+    /* overflow: hidden; */
+    width: 100%;
+}
+
+.deck-transform {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+}
+
+.deck-transform:hover {
+    transform: rotateY(180deg);
+    /* height: 100%; */
+}
+
 .del-class {
     bottom: 0;
     padding-left: 510px;
@@ -153,6 +185,23 @@
     position: relative;
     z-index: 3;
 }
+
+.mini-card-d1 {
+    padding: 15px;
+    font-size: 1.2em;
+    overflow: hidden;
+    /* display:block; */
+    width:190%;
+    height:137px;
+}
+
+
+
+/* .my-decks-card {
+    height: 187px;
+     margin-bottom: 14px; 
+} */
+
 
 .my-icon {
     color: rgb(2, 179, 16);
