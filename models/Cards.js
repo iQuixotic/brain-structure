@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 let NoteCardSchema = new Schema({
 
-    // _id: {
-    //     type: Number,
-    // },
+    _id: {
+        type: Number,
+    },
     content: {
         front: {
             type: String

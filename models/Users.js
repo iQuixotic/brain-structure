@@ -12,31 +12,41 @@ let UserSchema = new Schema({
         type: String,
         // required: true
     }, 
-    cards: {
-        type: Array, 
-        // notes: []
-    },
  
-    // decks: {
-    //     title: {
-    //         type: String,
-    //     },
-        // owned:{
-        //     cards: {
-        //         type: Schema.Types.ObjectId, // ref to cards here
-        //         notes: {
-        //            type: Array,
-        //            content: String,
-        //            back: String
-        //         }
-        //     }
-
-        // } 
-    // },
-    // hasLikedOrDis: {
-    //     type: Array, // must contain a reference to card
-
-    // }  
+    decks: [{
+        title: {
+            type: String,
+        },
+        cards: [{
+            _id: {
+                type: Number,
+            },
+            content: {
+                front: {
+                    type: String
+                },
+                back: {
+                    type: String
+                }
+            },
+            category: {
+                type: String,
+            },
+            
+            author: {
+                type: String,
+            },
+            likes: {
+                type: Number,
+            },
+            dislikes: {
+                type: Number,
+            }
+        }],
+        notes: {
+            type: Array
+        },
+    }],
 });
 
 
