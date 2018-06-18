@@ -7,7 +7,7 @@ import './style.css';
 const FwdCaret = (props) => {
     return(
     <div id="FwdCaret">
-         <Icon name="caret-right" onClick={props.click} size={props.size} className="fwd-caret" />
+         <Icon name="caret-right" onClick={props.click} size={props.size} className={props.cn} />
     </div>
     );
 }

@@ -13,7 +13,10 @@ const MyDecks =(props) => {
                     </div>
                     <div className={props.scroll}>
                         <div className={props.side2}>
-                            {props.contentBack}
+                            <div id="my-decks-title"> My Decks</div>
+                            <div className={props.underTitle}>
+                                {props.contentBack}
+                            </div>
                         </div>
                     </div>
                 </div>

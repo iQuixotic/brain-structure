@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {Navbar, Footer} from '../components/nav/index';
 import {CardSpace, BackDrop, MyDecks} from '../components/cards/index';
-import {Btn, DeleteBtn} from '../components/buttons/index';
+import {Btn, DeleteBtn, FwdCaret, BackCaret} from '../components/buttons/index';
 import {Disorders} from '../components/disorders/index';
 import {Col, Row, Wrap} from '../components/grid/index';
 import {Card, InputCard} from '../container/Card/index';
@@ -80,6 +80,7 @@ deckShowDecrement = () => {
 }
 
 deckShowIncrement = () => {
+    console.log('am trying')
     {    
     this.state.decksNames[decksNumber+6] ?    
     decksNumber +=3 : 
@@ -159,7 +160,7 @@ deleteCard = (id, next) => {
     i=1;
     j=0;
     console.log(id)
-    API.deleteCard(id ,next)
+    API.deleteCard(id, next)
     .then(() => next());
 }
 
@@ -197,19 +198,17 @@ toggleNotes = () => {
                         <Carousel view={this.changeViewHandler.bind(this)} />
                     </Card>
 
-                     {/* {this.state.decksNames.map(deck => (
-                    contentBack={this.state.name}
-                            )
-                        )
-                    } */}
-
                     <MyDecks 
                     contain="deck-contain"
                     cn="deck-transform deck-contain"
                     side1="deck-side card my-card"
                     side2="deck-side deck-back"
-                   contentBack={
-                    <div>
+                    underTitle="deck-under"
+                    contentBack={
+                       <div>
+                    <Row >
+                        <Wrap cn="b4-buttons">
+                        <Col size='md-10'>
                         <div>
                             {this.state.decksNames[decksNumber].name}
                         </div>
@@ -219,13 +218,27 @@ toggleNotes = () => {
                         <div>
                             {this.state.decksNames[decksNumber+2].name}
                         </div>
-                        <button onClick={this.deckShowDecrement}>see Prev</button>
-                        <button onClick={this.deckShowIncrement}>see next</button>
+                        </Col>
+                        </Wrap>
+                        
+                        <Col size='md-1'>
+                        
+                        </Col>
+                        </Row>
+                    <Row>
+                        <Wrap cn="carets">
+                        <BackCaret size="3x" click={this.deckShowDecrement} cn="b-caret"></BackCaret>
+                       
+                        <FwdCaret size="3x" click={this.deckShowIncrement} cn="f-caret"> </FwdCaret>
+                        </Wrap>
+                        </Row>
+               
                     </div>
                    }
                     >
                    
                     </MyDecks>
+                  
 
                 </Col>
             </Row>

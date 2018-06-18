@@ -6,7 +6,7 @@ import './style.css';
 const BackCaret = (props) => {
     return(
     <div id="BackCaret">
-         <Icon name="caret-left" onClick={props.click} size={props.size} className="back-caret" />
+         <Icon name="caret-left" onClick={props.click} size={props.size} className={props.cn} />
     </div>
     );
 }
