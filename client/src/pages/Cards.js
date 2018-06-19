@@ -7,7 +7,7 @@ import API from '../utils/API';
 import './pages.css';
 
 let holding = []
-
+let index;
 class CardPage extends Component {
   constructor(props) {
     super(props);
@@ -44,9 +44,10 @@ checkLiCard = (id, content, deckTitle) => {
     }
   }
   let thisInput = document.getElementById(id)
+ 
   thisInput.checked ?
   this.addToGroup(data) :
-  this.takeFromGroup(data)
+  this.takeFromGroup(data, id)
 }
 
 addToGroup = (data) => {
@@ -54,15 +55,21 @@ addToGroup = (data) => {
   this.setState({
     prepGroup: holding
   })
+
   console.log(this.state.prepGroup)
 }
 
-takeFromGroup = (data) => {
-  holding.pop(data)
+
+
+takeFromGroup = (data, id) => {
+
+  let index = holding.findIndex(obj => obj.cards.id === data.cards.id)
+  holding.splice(index, 1) 
+  
   this.setState({
     prepGroup: holding
   })
-  console.log(this.state.prepGroup)
+  console.log(this.state.prepGroup) 
 }
 
 addLiCard = (id, content, deckTitle) => {
@@ -105,7 +112,7 @@ addLiCard = (id, content, deckTitle) => {
             <Wrap id="mini-card-d2">
               <Row>  
                 <Col size="md-3">
-                  <input id={liCard._id} type="checkbox" className="bl"
+                  <input id={liCard._id} type="checkbox" className="bl" name="liCard"
                   onClick={() => this.checkLiCard(liCard._id, liCard.content, "myDeck")}/> 
                   <label className="bll" for="bl">Add</label>
                 </Col>
