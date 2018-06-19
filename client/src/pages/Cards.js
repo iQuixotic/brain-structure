@@ -6,13 +6,14 @@ import {Card} from '../container/Card/index';
 import API from '../utils/API';
 import './pages.css';
 
-
+let holding = []
 
 class CardPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       liCards: [], 
+      prepGroup: []
     }
   }
 
@@ -29,8 +30,39 @@ getAllFromStore = () => {
       })          
 };
 
-frontOrBack = () => {  
-  Card.flipUpdateHandler() 
+// frontOrBack = () => {  
+//   Card.flipUpdateHandler() 
+// }
+
+
+checkLiCard = (id, content, deckTitle) => {
+  let data = {
+    title: deckTitle,
+    cards:{
+      content: content,
+      id: id
+    }
+  }
+  let thisInput = document.getElementById(id)
+  thisInput.checked ?
+  this.addToGroup(data) :
+  this.takeFromGroup(data)
+}
+
+addToGroup = (data) => {
+  holding.push(data)
+  this.setState({
+    prepGroup: holding
+  })
+  console.log(this.state.prepGroup)
+}
+
+takeFromGroup = (data) => {
+  holding.pop(data)
+  this.setState({
+    prepGroup: holding
+  })
+  console.log(this.state.prepGroup)
 }
 
 addLiCard = (id, content, deckTitle) => {
@@ -62,6 +94,7 @@ addLiCard = (id, content, deckTitle) => {
             <Card id="cp-cards"
             ref = {this.child}
             flipUpdateHandler={this.flipUpdateHandler}
+            isChecked={this.isChecked}
             frontOrBack={this.frontOrBack}
             front = {liCard.content.front}
             back = {liCard.content.back}
@@ -70,10 +103,10 @@ addLiCard = (id, content, deckTitle) => {
           
             {/* Inner Card row for bottom */}
             <Wrap id="mini-card-d2">
-              <Row>
+              <Row>  
                 <Col size="md-3">
-                  <input type="checkbox" className="bl"
-                  onClick={() => this.addLiCard(liCard._id, liCard.content, "myDeck")}/>
+                  <input id={liCard._id} type="checkbox" className="bl"
+                  onClick={() => this.checkLiCard(liCard._id, liCard.content, "myDeck")}/> 
                   <label className="bll" for="bl">Add</label>
                 </Col>
                 <Col size="md-6" />

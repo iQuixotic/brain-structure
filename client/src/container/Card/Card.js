@@ -6,7 +6,8 @@ class Card extends Component {
 constructor(props) {
     super(props)
     this.state = {
-        contentShowingBool: true
+        contentShowingBool: true,
+        isCheckedBool: false
     }
 }  
 flipUpdateHandler() {
@@ -14,6 +15,17 @@ flipUpdateHandler() {
     this.setState({
         contentShowingBool: !contentShowingBool
     })
+}
+
+isChecked() {
+    console.log('nonono')
+//     let isCheckedBool = this.state.isCheckedBool;
+//     this.setState({
+//         isCheckedBool: !isCheckedBool
+//     })
+//   this.state.isCheckedBool ? 
+//   console.log('Its checked so hard right now'):
+//   console.log('its not checked')
 }
 
     render() {
