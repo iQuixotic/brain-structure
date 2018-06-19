@@ -35,7 +35,7 @@ constructor(props) {
         disorders: [],
         disorderUsing: 'Schizophrenia',
         useNotes: true,
-        decksShowing: [],
+        decksShowing: '',
         decksNames: [{name: 'deck 1'}, {name: 'my deck 2'}, {name: 'Fire Deck 3'}, {name: 'Water Deck 4'}, 
         {name: 'deck 5'}, {name: 'my deck 6'}, {name: 'Fire Deck 7'}, {name: 'Water Deck 8'},
         {name: 'deck 9'}, {name: 'my deck 10'}, {name: 'Fire Deck 11'}, {name: 'Water Deck 12'}]
@@ -55,25 +55,16 @@ adjustDecksShowing = () => {
     
     console.log(decksNumber)
     this.setState({
-        decksShowing: [this.state.decksNames[decksNumber].name, 
-        this.state.decksNames[decksNumber+1].name,
-        this.state.decksNames[decksNumber+2].name]
+        decksShowing: this.state.decksNames[decksNumber].name
     })
     console.log(this.state.decksShowing)
 }
 
 deckShowDecrement = () => {
     {    
-        this.state.decksNames[decksNumber-6] ?    
-        decksNumber -=3 : 
-            (this.state.decksNames[decksNumber-5] ?
-            decksNumber -=2 :
-                (
-                    (this.state.decksNames[decksNumber-4] ?
-                        decksNumber -- : decksNumber=0
-                    )
-                )
-            )
+        this.state.decksNames[decksNumber-1] ?    
+        decksNumber -- : 
+        decksNumber = decksNumber;
         }
         this.adjustDecksShowing()
         console.log(decksNumber)
@@ -82,16 +73,10 @@ deckShowDecrement = () => {
 deckShowIncrement = () => {
     console.log('am trying')
     {    
-    this.state.decksNames[decksNumber+6] ?    
-    decksNumber +=3 : 
-        (this.state.decksNames[decksNumber+5] ?
-        decksNumber +=2 :
-            (
-                (this.state.decksNames[decksNumber+4] ?
-                    decksNumber ++ : decksNumber=this.state.decksNames.length-3
-                )
-            )
-        )
+    this.state.decksNames[decksNumber+1] ?    
+    decksNumber ++ : 
+    decksNumber=decksNumber;
+        
     }
     this.adjustDecksShowing()
     console.log(decksNumber)
@@ -209,15 +194,10 @@ toggleNotes = () => {
                     <Row >
                         <Wrap cn="b4-buttons">
                         <Col size='md-10'>
-                        <div>
+                        <Wrap cn="deck-back-each">
                             {this.state.decksNames[decksNumber].name}
-                        </div>
-                        <div>
-                            {this.state.decksNames[decksNumber+1].name}
-                        </div>
-                        <div>
-                            {this.state.decksNames[decksNumber+2].name}
-                        </div>
+                        </Wrap>
+                       
                         </Col>
                         </Wrap>
                         

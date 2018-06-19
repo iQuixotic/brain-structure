@@ -105,8 +105,7 @@
 
 .f-caret {
     /* padding: 0 0 400px 0  ; */
-    padding-left: 85px;   
-   
+    margin-left: 85px;   
 }
 
 .carets {
@@ -132,11 +131,9 @@
     background: rgb(250, 248, 227);
     border: 20px solid #333;
     border-top: 0px;
-    /* padding-top: 0px; */
-    /* background: rgb(102, 147, 202); */
     font-size: 1.1em;
     font-weight: 800;
-    color: #333;
+    /* color: #333; */
     height: 187px;
     overflow: hidden;
     transform: rotateY(180deg);
@@ -153,16 +150,15 @@
 .b4-buttons {
     height: 90px;
     overflow: hidden;
-    width: 110%;
+    width: 126%;
     position: absolute;
 }
+
 
 .deck-side {
     backface-visibility: hidden;
     border-radius: 6px;
-    /* height: 100%; */
     position: absolute;
-    /* overflow: hidden; */
     width: 100%;
 }
 
