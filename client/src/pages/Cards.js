@@ -15,7 +15,7 @@ class CardPage extends Component {
     this.state = {
       liCards: [], 
       prepGroup: [],
-      deckName: ''
+      deckName: ['']
     }
   }
 
@@ -92,6 +92,8 @@ regSubmitHandler = () => {
     title: this.state.deckName[0],
     cards: this.state.prepGroup
   }
+
+  API.postNewDeck(data);
 
   
   console.log(data)

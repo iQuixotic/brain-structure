@@ -1,11 +1,11 @@
 const router = require('express-promise-router')();
 const passport = require('passport');
 const passportConf = require('../../passport');
-const userCardController = require('../../controllers/privateCard');
+const decksController = require('../../controllers/decks');
 
-// for cards by id
-router.route('/myCards/:data')
-    .post(userCardController.add);
+// for creating a new deck
+router.route('/myCards/')
+    .post(decksController.create);
 
     
 module.exports = router;

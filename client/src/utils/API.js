@@ -43,9 +43,14 @@ export default {
   return axios.delete("/cards/public/" + id);
   },
 
-  // associate a card from the cards page with a user
-  addCardById: function(data) {
-  return axios.post("/myCards/" + data.id, data);
+  // // associate a card from the cards page with a user
+  // addCardById: function(data) {
+  // return axios.post("/myCards/" + data.id, data);
+  // },
+
+  // create a new deck associated with a user
+  postNewDeck: function(data) {
+  return axios.post("/myCards/", data);
   },
 
   // create a new card 
