@@ -26,6 +26,8 @@ constructor(props) {
     this.state = {
         backDropView: startingBD.img,
         noteCards: 'df',
+        notes: ['but i can'],
+        note: 'i havent chs',
         noteCard: {
             content: {
                 front: '',
@@ -60,10 +62,14 @@ getAllDecks = () => {
 }
 
 setNoteCardsState = () => {
+  
+    
     this.setState({
         noteCards: this.state.decksNames[decksNumber].cards,
-        noteCard: this.state.decksNames[decksNumber].cards[j]
-    })
+        noteCard: this.state.decksNames[decksNumber].cards[j],
+        notes: ['fdlsafd;las'],
+        note: this.state.notes[j]
+    }) 
 }
 
 adjustDecksShowing = () => {
@@ -80,9 +86,9 @@ deckShowDecrement = () => {
         this.state.decksNames[decksNumber-1] ?    
         decksNumber -- : 
         decksNumber = decksNumber;
-        }
-        this.adjustDecksShowing()
-        console.log(decksNumber)
+    }
+    this.adjustDecksShowing()
+    console.log(decksNumber)
 }
 
 deckShowIncrement = () => {
@@ -131,9 +137,6 @@ changeViewHandler = using => {
 nextCardHandler = () => {
         i++;
         j++;
-        // this.setState({
-        //     noteCard: this.state.noteCards[j],                         
-        // })      
         this.setNoteCardsState()
   };
 
@@ -153,18 +156,21 @@ deleteCard = (id, next) => {
     .then(() => next());
 }
 
-toggleNotes = () => {
-    let notesUsed = this.state.useNotes;
+
+toggleNotes = async () => {
+    let notesUsed = this.state.useNotes
+    let notes = this.state.notes
     this.setState({
-        useNotes: !notesUsed
+        useNotes: !notesUsed,
+        note: notes[j]
     })
+    await this.adjustDecksShowing()
+    await console.log(this.state.noteCard)
 }
 
   render() {
    
     return (
-        // this.state.noteCard.content == undefined  ?
-        // <div><h1>I'm a little slow, so please don't make fun of me while i load...</h1></div> :
 
         <div id="MainPage">
 
@@ -177,8 +183,6 @@ toggleNotes = () => {
                     </Card>
                 </Col>
                 <Col size="md-8">
-                {/* i think i need to update something here maybe, but maybe
-                i can do it from the other component... */}
                     <BackDrop view={this.state.backDropView} id="bd"/>
                 </Col>
                 <Col size="md-2">
@@ -245,26 +249,36 @@ toggleNotes = () => {
                                  }
                             <Card
                                  id="note-card-content"                                 
-                                 front = {this.state.noteCard.content.front}
-                                 back = {this.state.noteCard.content.back}
+                                 front = {!this.state.useNotes ? 
+                                    this.state.noteCard.content.front : 
+                                    'this.state.noteCard.content.back'}
+                                 back = {!this.state.useNotes ? 
+                                    this.state.noteCard.content.back : 
+                                    'success'}
                                  conClass="card-content-class"
                                 >
                               
                                 <DeleteBtn
-                                click={this.deleteCard.bind(this, this.state.noteCard._id, this.getAllPublicCards)}
+                                // click={this.deleteCard.bind(this, this.state.noteCard._id, this.getAllPublicCards)}
                                 className="del-class"/> 
 
                                 <Col size="md-12">      
 
                                 <Row id="btnR">                                
                                     {
+                                        this.state.useNotes ?
+                                        <div className="white"> {i}/{this.state.notes.length} </div> :
                                         <div className="white"> {i}/{this.state.noteCards.length} </div>
                                     }
+                                    
 
-                                     {this.state.noteCard !== this.state.noteCards[0] && j !== 0 ?
+                                     {
+                                         !this.state.useNotes ?
+                                         (
+                                         this.state.noteCard !== this.state.noteCards[0] && j !== 0 && !this.state.useNotes ?
                                         (
                                             this.state.noteCard !== this.state.noteCards[this.state.noteCards.length-1] 
-                                            && j !== 0 ?
+                                            && j !== 0 && !this.state.useNotes?
                                             <div>
                                                 <Btn click={this.prevCardHandler}>Back</Btn>
                                                 <Btn click={this.nextCardHandler}>Next</Btn>
@@ -278,6 +292,7 @@ toggleNotes = () => {
                                                 <Btn disabled>Back</Btn>
                                                 <Btn click={this.nextCardHandler}>Next</Btn> 
                                             </div>
+                                         ) : <div>hello</div>
                                     }
                                 </Row>                            
                                                  
