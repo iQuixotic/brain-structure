@@ -5,7 +5,8 @@ const decksController = require('../../controllers/decks');
 
 // for creating a new deck
 router.route('/myCards/')
-    .post(decksController.create);
+    .post(decksController.create)
+    .get(decksController.getAll)
 
     
 module.exports = router;

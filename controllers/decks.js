@@ -30,7 +30,15 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.json(err))
 },
-    
+
+    // get all decks from a paricular user
+    getAll: function (req, res) {
+        db.User
+            .findById("5b2a77667886f31b0079171d")
+            .then(dbModel => res.json(dbModel.decks))
+            .catch(err => res.json(err))
+    },
+
     // // delete a card reference from users profile
     // erase: async (req, res, next) => {
     //     db.User.decks

@@ -18,10 +18,15 @@ export default {
    return axios.get("/disorders/:name", data);
   },
 
-  // request all cards (public) from db
-  getAllPublicCards: function() {
-  return axios.get("/cards/public");
-  },
+  // // request all cards (public) from db
+  // getAllPublicCards: function() {
+  // return axios.get("/cards/public");
+  // },
+
+   // request all cards (public) from db
+   getAllDecks: function() {
+    return axios.get("/myCards/");
+    },
 
   // get first card from public cards
   getCard: function() {

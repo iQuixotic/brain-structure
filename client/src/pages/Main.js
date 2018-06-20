@@ -19,6 +19,7 @@ let brainView = {img: brain3d}
 let decksNumber = 0;
 let i = 1;
 let j = 0;
+
 class MainPage extends Component {
 constructor(props) {
     super(props)
@@ -36,9 +37,7 @@ constructor(props) {
         disorderUsing: 'Schizophrenia',
         useNotes: true,
         decksShowing: '',
-        decksNames: [{name: 'deck 1'}, {name: 'my deck 2'}, {name: 'Fire Deck 3'}, {name: 'Water Deck 4'}, 
-        {name: 'deck 5'}, {name: 'my deck 6'}, {name: 'Fire Deck 7'}, {name: 'Water Deck 8'},
-        {name: 'deck 9'}, {name: 'my deck 10'}, {name: 'Fire Deck 11'}, {name: 'Water Deck 12'}]
+        decksNames: [{name: 'deck 1'}, {name: 'my deck 2'}  ]
         
     }
 }
@@ -46,18 +45,42 @@ constructor(props) {
 
 componentWillMount= () => {
     this.getAllDisorders();
-    this.getAllPublicCards();
- 
-  }
+    this.getAllDecks()
+    // .then(res => this.getAllPublicCards())
+    // .catch(err => res.json(err))
+}
 
+getAllDecks = () => {
+    API.getAllDecks()
+        .then(res => {
+            this.setState({
+                decksNames: res.data,
+            })
+        })
+        // console.log(this.state.decksNames)
+        .then(res => this.adjustDecksShowing())
+        // .then(res => this.setNoteCardsState())
+        // .catch(err => res.json(err))
+  
+}
+
+setNoteCardsState = () => {
+    console.log('i am going to print the things now...')
+    console.log(this.state.decksNames)
+    this.setState({
+        noteCards: this.state.decksNames[decksNumber].cards,
+        noteCard: this.state.decksNames[decksNumber].cards[i]
+    })
+}
 
 adjustDecksShowing = () => {
-    
-    console.log(decksNumber)
+    i=1;
+    j=0;
     this.setState({
-        decksShowing: this.state.decksNames[decksNumber].name
+        decksShowing: this.state.decksNames[decksNumber].title
     })
-    console.log(this.state.decksShowing)
+    // console.log(this.state.decksShowing)
+    this.setNoteCardsState()
 }
 
 deckShowDecrement = () => {
@@ -75,35 +98,26 @@ deckShowIncrement = () => {
     {    
     this.state.decksNames[decksNumber+1] ?    
     decksNumber ++ : 
-    decksNumber=decksNumber;
-        
+    decksNumber=decksNumber;        
     }
     this.adjustDecksShowing()
     console.log(decksNumber)
 }
 
   
-  getAllPublicCards = () => {
-      i=1;
-      j=0;
-      API.getAllPublicCards()
-      .then(res => {
-        this.setState({
-          
-          noteCards: res.data,
-          noteCard: res.data[i]
-      })
-      console.log(this.state.noteCards)
-      console.log(res.data[i])
-    //   available = this.state.noteCards.length;
-    //   console.log(available)
-    //   console.log(this.state.noteCard)
-    })
-  }
-
-  pleaseWork = () => {
-      console.log('please work')
-  }
+//   getAllPublicCards = () => {
+//       i=1;
+//       j=0;
+//       API.getAllPublicCards()
+//       .then(res => {
+//         this.setState({
+//           noteCards: res.data,
+//           noteCard: res.data[i]
+//       })
+//       console.log(this.state.noteCards)
+//       console.log(res.data[i])
+//     })
+//   }
 
 
 getAllDisorders = () => {     
@@ -129,7 +143,6 @@ nextCardHandler = () => {
         this.setState({
             noteCard: this.state.noteCards[j],                         
         })      
-        console.log(j)
   };
 
 prevCardHandler = () => {
@@ -138,7 +151,6 @@ prevCardHandler = () => {
     this.setState({
         noteCard: this.state.noteCards[j],     
         })       
-    console.log(j)
 };
 
 deleteCard = (id, next) => {
@@ -154,7 +166,6 @@ toggleNotes = () => {
     this.setState({
         useNotes: !notesUsed
     })
-    console.log(this.state.useNotes)
 }
 
   render() {
@@ -195,7 +206,7 @@ toggleNotes = () => {
                         <Wrap cn="b4-buttons">
                         <Col size='md-10'>
                         <Wrap cn="deck-back-each">
-                            {this.state.decksNames[decksNumber].name}
+                            {this.state.decksNames[decksNumber].title}
                         </Wrap>
                        
                         </Col>
