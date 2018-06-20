@@ -58,7 +58,7 @@ addToGroup = (data) => {
 
 takeFromGroup = (data, id) => {
 
-  let index = holding.findIndex(obj => obj.cards.id === data.cards.id)
+  let index = holding.findIndex(obj => obj.id === data.id)
   holding.splice(index, 1) 
 
   this.setState({
