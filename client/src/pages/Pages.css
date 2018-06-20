@@ -154,6 +154,15 @@
     position: absolute;
 }
 
+#deck-input {
+    /* width: 150%; */
+    font-size: 1.3em;
+    display: inline;
+}
+
+.deck-form {
+    padding-left: 20%;
+}
 
 .deck-side {
     backface-visibility: hidden;

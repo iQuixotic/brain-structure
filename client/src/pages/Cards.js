@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import {Navbar, Footer} from "../components/nav/index";
-import {Like, Dislike, DeleteBtn} from "../components/buttons/index";
+import {Like, Dislike, DeleteBtn, Btn} from "../components/buttons/index";
 import {Container, Wrap, Row, Col} from "../components/grid/index";
 import {Card} from '../container/Card/index';
 import API from '../utils/API';
 import './pages.css';
 
-let holding = []
+let data;
+let holding = [];
 let index;
 class CardPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       liCards: [], 
-      prepGroup: []
+      prepGroup: [],
+      deckName: ''
     }
   }
 
@@ -30,18 +32,11 @@ getAllFromStore = () => {
       })          
 };
 
-// frontOrBack = () => {  
-//   Card.flipUpdateHandler() 
-// }
 
-
-checkLiCard = (id, content, deckTitle) => {
-  let data = {
-    title: deckTitle,
-    cards:{
+checkLiCard = (id, content) => {
+  data = {
       content: content,
       id: id
-    }
   }
   let thisInput = document.getElementById(id)
  
@@ -65,25 +60,48 @@ takeFromGroup = (data, id) => {
 
   let index = holding.findIndex(obj => obj.cards.id === data.cards.id)
   holding.splice(index, 1) 
-  
+
   this.setState({
     prepGroup: holding
   })
   console.log(this.state.prepGroup) 
 }
 
-addLiCard = (id, content, deckTitle) => {
-  let data = {
-    title: deckTitle,
-    cards:{
-      content: content,
-      id: id
-    }
-  }
+// addLiCard = (id, content, deckTitle) => {
+//   let data = {
+//     title: deckTitle,
+//     cards:{
+//       content: content,
+//       id: id
+//     }
+//   }
   
-  API.addCardById(data);
-  console.log('i clicked')
-  console.log(id)
+//   API.addCardById(data);
+//   console.log('i clicked')
+//   console.log(id)
+// }
+
+regChangeHandler = event => {
+  this.setState({[event.target.name]: [event.target.value]});
+  console.log(this.state.deckName );  
+}
+
+regSubmitHandler = () => {
+  console.log('subbbbbbbbbbmmmmmmmmmiiiittttttttteeeeeeddddddddd')
+  data = {
+    title: this.state.deckName[0],
+    cards: this.state.prepGroup
+  }
+
+  
+  console.log(data)
+  
+  // API.postRegData({
+  //     title: title,
+  // }).then(res =>
+      this.setState({ deckName: "" })
+    // )
+    // .catch(err => console.log(err));
 }
 
   render() {
@@ -132,6 +150,16 @@ addLiCard = (id, content, deckTitle) => {
           </li>
           </ul>
           ))}
+          <Row>
+            <Wrap cn="deck-form">
+              <input id="deck-input" size="40"
+              name="deckName"
+              value={this.state.deckName}
+               onChange={this.regChangeHandler.bind(this)} 
+              placeholder="deck name here..." />
+              <Btn click={this.regSubmitHandler}type="submit">SUBMIT</Btn>
+            </Wrap>
+          </Row>
           </Container>
           <Footer />
         </Wrap>
