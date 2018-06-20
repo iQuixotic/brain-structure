@@ -46,8 +46,6 @@ constructor(props) {
 componentWillMount= () => {
     this.getAllDisorders();
     this.getAllDecks()
-    // .then(res => this.getAllPublicCards())
-    // .catch(err => res.json(err))
 }
 
 getAllDecks = () => {
@@ -57,19 +55,14 @@ getAllDecks = () => {
                 decksNames: res.data,
             })
         })
-        // console.log(this.state.decksNames)
         .then(res => this.adjustDecksShowing())
-        // .then(res => this.setNoteCardsState())
-        // .catch(err => res.json(err))
   
 }
 
 setNoteCardsState = () => {
-    console.log('i am going to print the things now...')
-    console.log(this.state.decksNames)
     this.setState({
         noteCards: this.state.decksNames[decksNumber].cards,
-        noteCard: this.state.decksNames[decksNumber].cards[i]
+        noteCard: this.state.decksNames[decksNumber].cards[j]
     })
 }
 
@@ -79,7 +72,6 @@ adjustDecksShowing = () => {
     this.setState({
         decksShowing: this.state.decksNames[decksNumber].title
     })
-    // console.log(this.state.decksShowing)
     this.setNoteCardsState()
 }
 
@@ -94,11 +86,10 @@ deckShowDecrement = () => {
 }
 
 deckShowIncrement = () => {
-    console.log('am trying')
     {    
-    this.state.decksNames[decksNumber+1] ?    
-    decksNumber ++ : 
-    decksNumber=decksNumber;        
+        this.state.decksNames[decksNumber+1] ?    
+        decksNumber ++ : 
+        decksNumber=decksNumber;        
     }
     this.adjustDecksShowing()
     console.log(decksNumber)
@@ -140,9 +131,10 @@ changeViewHandler = using => {
 nextCardHandler = () => {
         i++;
         j++;
-        this.setState({
-            noteCard: this.state.noteCards[j],                         
-        })      
+        // this.setState({
+        //     noteCard: this.state.noteCards[j],                         
+        // })      
+        this.setNoteCardsState()
   };
 
 prevCardHandler = () => {
