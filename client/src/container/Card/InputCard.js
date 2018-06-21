@@ -49,7 +49,7 @@ noteSubmitHandler = () => {
     let notesInput = this.state.notesInput;
     let linkInput = this.state.linkInput;
     let summaryInput = this.state.summaryInput;
-
+   
     this.state.cardType ?
     this.handleNoteSubmit(notesInput) :
     this.handleCardSubmit(linkInput, summaryInput)

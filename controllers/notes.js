@@ -5,13 +5,15 @@ module.exports = {
 
     // add a new card reference to the db
     create: function(req, res) {
+        // let num = req.body.deckNum;
         console.log(req.body.deckNum)
         console.log(req.body.notesInput[0])
-        console.log('this route!!')
-        // db.User
-            // .create(req.body)
-            // .then(dbModel => res.json(dbModel))
-            // .catch(err => res.json(err))
+        db.User
+        .findByIdAndUpdate("5b2a77667886f31b0079171d", 
+        {$push: {'decks.0.notes': req.body.notesInput[0]
+        } }, )
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.json(err))
     },
    
 
