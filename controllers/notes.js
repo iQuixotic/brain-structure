@@ -3,15 +3,16 @@ const db = require('../models');
 
 module.exports = {
 
-    // // add a new card reference to the db
-    // add: function(req, res) {
-    //     console.log(req.body)
-    //     console.log('this route!!')
-    //     db.NoteCard
-    //         .create(req.body)
-    //         .then(dbModel => res.json(dbModel))
-    //         .catch(err => res.json(err))
-    // },
+    // add a new card reference to the db
+    create: function(req, res) {
+        console.log(req.body.deckNum)
+        console.log(req.body.notesInput[0])
+        console.log('this route!!')
+        // db.User
+            // .create(req.body)
+            // .then(dbModel => res.json(dbModel))
+            // .catch(err => res.json(err))
+    },
    
 
 

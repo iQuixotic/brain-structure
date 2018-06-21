@@ -31,9 +31,9 @@ radioChangeHandler = () => {
 handleNoteSubmit = (arg) => {
     console.log('handle Note Submit called ')
     API.createNote({
-        notesInput: arg
+        notesInput: arg,
+        deckNum: 0
     });
-
 }
 
 handleCardSubmit = (arg, arg2) => {
@@ -51,24 +51,8 @@ noteSubmitHandler = () => {
     let summaryInput = this.state.summaryInput;
 
     this.state.cardType ?
-    this.handleNoteSubmit(linkInput, summaryInput) :
+    this.handleNoteSubmit(notesInput) :
     this.handleCardSubmit(linkInput, summaryInput)
-    // let userName = this.state.nameU;
-    // let firstName = this.state.nameF;
-    // let lastName = this.state.nameL;
-    // let email = this.state.email;
-    // let password = this.state.pass;   
-    
-    // API.postRegData({
-    //     userName: userName,
-    //     firstName: firstName,
-    //     lastName: lastName,
-    //     email: email,
-    //     password: password      
-    // }).then(res =>
-    //     this.setState({nameU: "", nameL: "", nameF: "", email: "", pass: "", pwordCheck: "" })
-    //   )
-    //   .catch(err => console.log(err));
 };
 
 inputChangeHandler = event => {

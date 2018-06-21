@@ -67,7 +67,7 @@ export default {
   // create a new personal note 
   createNote: function(arg, arg2) {
     console.log('i do it')
-    return axios.post('cards/public')
+    return axios.post('/decks/notes/', arg, arg2)
   },
 
   // get all cards in the entire db
