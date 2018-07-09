@@ -31,7 +31,7 @@ state= {
 regChangeHandler = event => {
     this.setState({[event.target.name]: [event.target.value]});
     console.log(this.state.email, this.state.pass, this.state.pwordCheck );
-}
+} 
 
 // sets each state to a variable to pass through object
 // to backend/db

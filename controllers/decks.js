@@ -22,7 +22,7 @@ module.exports = {
     create: function(req, res) {
         console.log(req.body)
         db.User
-        .findByIdAndUpdate("5b2a77667886f31b0079171d", 
+        .findByIdAndUpdate("5b42b6f17df5183ef03b66c3", 
         {$push: {decks: {
             title: req.body.title,
             cards: req.body.cards
@@ -34,7 +34,7 @@ module.exports = {
     // get all decks from a paricular user
     getAll: function (req, res) {
         db.User
-            .findById("5b2a77667886f31b0079171d")
+            .findById("5b42b6f17df5183ef03b66c3")
             .then(dbModel => res.json(dbModel.decks))
             .catch(err => res.json(err))
     },

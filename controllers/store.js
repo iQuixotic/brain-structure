@@ -5,7 +5,7 @@ module.exports = {
 
     // return all cards from the db
     findAll: function(req, res) {
-        console.log('wrong place i think')
+        console.log('ima try to find it now')
         db.Store
             .find({}) 
             .then((dbModel) => { 
